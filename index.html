@@ -157,6 +157,22 @@
   .dots i{width:7px;height:7px;border-radius:50%;background:var(--d2);display:block}
   .dots i.pale{background:var(--d5)}
 
+  /* ---------------------------------------------------------- columns */
+  .colwrap{padding-top:4px}
+  .cols{display:flex;align-items:flex-end;gap:6px;height:132px}
+  .cell{flex:1;min-width:0;display:flex;flex-direction:column;justify-content:flex-end;height:100%}
+  .cell .cap{font-size:11px;font-weight:700;text-align:center;color:var(--ink);
+             font-variant-numeric:tabular-nums;height:15px;line-height:15px}
+  .cell .bar{background:var(--d2);border-radius:4px 4px 0 0;width:100%;max-width:26px;
+             margin:0 auto;min-height:2px}
+  .cell.zero .bar{background:var(--d5);opacity:.4;height:2px!important}
+  .colaxis{height:1px;background:var(--hair)}
+  .months{display:flex;gap:6px;margin-top:8px}
+  .months span{flex:1;min-width:0;font-size:10px;letter-spacing:.03em;color:var(--muted);
+               text-align:center;white-space:nowrap;overflow:hidden}
+  .shipsum{margin-top:16px;font-size:13px;color:var(--muted);line-height:1.55}
+  .shipsum strong{color:var(--d2);font-weight:700}
+
   /* ---------------------------------------------------------- the run */
   .runwrap{position:relative;padding:6px 0 0}
   .runline{display:grid;gap:0}
@@ -325,6 +341,19 @@
     </div>
   </section>
 
+  <section class="band" id="secShipped" hidden>
+    <div class="head">
+      <h2>What he shipped</h2>
+      <p class="blurb">Every release Spotify still lists a date for. It only surfaces its most recent listings, so the earlier months show what it will admit to rather than everything. From today the record keeps itself.</p>
+    </div>
+    <div class="card colwrap">
+      <div class="cols" id="shipped"></div>
+      <div class="colaxis"></div>
+      <div class="months" id="shippedMonths"></div>
+      <div class="shipsum" id="shippedSum"></div>
+    </div>
+  </section>
+
   <section class="band" id="secRun" hidden>
     <div class="head">
       <h2>The run</h2>
@@ -401,6 +430,7 @@ var D2='#3E6B70', D5='#95AFB1', WASH='rgba(62,107,112,0.10)';
 
 var days = [];
 var catalogue = {};
+var releases = {};   /* releaseId -> { name, date, type, tracks } */
 var updatedAt = null;
 var draft = {};
 var trendKey = 'spotifyListeners';
@@ -776,6 +806,7 @@ function render(){
   renderSongs(v);
   renderCities(v);
   renderCatalogue(v);
+  renderShipped();
   renderRun(v);
   renderNearly(ms);
   renderTables(v);
@@ -952,6 +983,58 @@ function renderCatalogue(v){
   });
 }
 
+/* the one stretch of real history that exists today: what went out, and when */
+function renderShipped(){
+  var sec=document.getElementById('secShipped');
+  var rows=[];
+  for (var id in releases){
+    if (!Object.prototype.hasOwnProperty.call(releases,id)) continue;
+    var r=releases[id];
+    if (r && r.date) rows.push(r);
+  }
+  if (rows.length<3){ sec.hidden=true; return; }
+  sec.hidden=false;
+
+  /* twelve month buckets ending with the current month */
+  var now=new Date(), buckets=[];
+  for (var i=11;i>=0;i--){
+    var d=new Date(Date.UTC(now.getUTCFullYear(), now.getUTCMonth()-i, 1));
+    buckets.push({ key:d.toISOString().slice(0,7), when:d, n:0, tracks:0 });
+  }
+  var index={};
+  buckets.forEach(function(b){ index[b.key]=b; });
+  var inWindow=0, trackTotal=0;
+  rows.forEach(function(r){
+    var b=index[r.date.slice(0,7)];
+    if (!b) return;
+    b.n++; b.tracks += (r.tracks||1);
+    inWindow++; trackTotal += (r.tracks||1);
+  });
+
+  var peak=Math.max.apply(null,buckets.map(function(b){ return b.n; }))||1;
+  var host=document.getElementById('shipped');
+  var mo=document.getElementById('shippedMonths');
+  host.innerHTML=''; mo.innerHTML='';
+  buckets.forEach(function(b){
+    var cell=elt('div','cell'+(b.n?'':' zero'));
+    cell.appendChild(elt('div','cap', b.n?String(b.n):''));
+    var bar=elt('div','bar');
+    bar.style.height = b.n ? Math.max(6,(b.n/peak)*100)+'%' : '2px';
+    bar.title = b.n + (b.n===1?' release in ':' releases in ') +
+                b.when.toLocaleDateString('en-GB',{month:'long',year:'numeric',timeZone:'UTC'});
+    cell.appendChild(bar);
+    host.appendChild(cell);
+    mo.appendChild(elt('span',null,
+      b.when.toLocaleDateString('en-GB',{month:'short',timeZone:'UTC'})));
+  });
+
+  var oldest=rows.map(function(r){ return r.date; }).sort()[0];
+  document.getElementById('shippedSum').innerHTML=
+    '<strong>'+fmt(inWindow)+'</strong> releases in the last twelve months that Spotify still lists, '+
+    '<strong>'+fmt(trackTotal)+'</strong> tracks between them. '+
+    'The oldest it will still show us is '+oldest.slice(0,4)+'.';
+}
+
 function renderRun(v){
   var host=document.getElementById('run');
   var t=dayNo(v.today.date);
@@ -1055,7 +1138,16 @@ function renderTables(v){
   table('Cities', ['City','Listeners'],
     v.cities.map(function(c){ return [c.city, fmt(c.n)]; }));
 
-  table('The run', ['Release','Date'],
+  var relRows=[];
+  for (var rid in releases){
+    if (!Object.prototype.hasOwnProperty.call(releases,rid)) continue;
+    var rr=releases[rid];
+    if (rr && rr.date) relRows.push([rr.date, rr.name, rr.type||'', rr.tracks||'']);
+  }
+  relRows.sort(function(a,b){ return b[0].localeCompare(a[0]); });
+  table('What he shipped', ['Date','Release','Type','Tracks'], relRows);
+
+  table('The run ahead', ['Release','Date'],
     CALENDAR.map(function(r){ return [r.name, r.date]; }));
 }
 
@@ -1088,10 +1180,11 @@ function record(values){
 /* ---------------------------------------------------------- boot */
 
 function unpack(raw){
-  if (Array.isArray(raw)) return {days:raw,tracks:{},updated:null};
+  if (Array.isArray(raw)) return {days:raw,tracks:{},releases:{},updated:null};
   if (raw && Array.isArray(raw.days))
-    return {days:raw.days,tracks:raw.tracks||{},updated:raw.updated||null};
-  return {days:[],tracks:{},updated:null};
+    return {days:raw.days,tracks:raw.tracks||{},releases:raw.releases||{},
+            updated:raw.updated||null};
+  return {days:[],tracks:{},releases:{},updated:null};
 }
 
 function absorb(feed){
@@ -1106,14 +1199,16 @@ function absorb(feed){
   });
   days=Object.keys(byDate).sort().map(function(k){ return byDate[k]; });
   catalogue=Object.assign({},catalogue,feed.tracks);
+  releases=Object.assign({},releases,feed.releases);
   if (feed.updated) updatedAt=feed.updated;
-  stash(HIST_KEY,{days:days,tracks:catalogue});
+  stash(HIST_KEY,{days:days,tracks:catalogue,releases:releases});
 }
 
 (function boot(){
   var saved=unpack(load(HIST_KEY));
   days=saved.days;
   catalogue=saved.tracks;
+  releases=saved.releases||{};
   render();
   buildFields();
 

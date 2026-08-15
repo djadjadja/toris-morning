@@ -13,7 +13,12 @@ Substrate notes, so nobody re-derives this at 2am:
     breaks, look at the embed page first, not at the API.
   - queryArtistOverview carries far more than the two headline numbers:
     ten tracks with cumulative playcounts, five cities with listener counts,
-    the next scheduled release, and catalogue totals. All of it is free.
+    the next scheduled release, catalogue totals, and about 28 releases with
+    real dates on them. All of it is free.
+  - YouTube: the /channel page's "viewCountText" is an OBJECT and belongs to
+    whichever video the page happens to feature. We recorded that by mistake
+    until 2026-08-15 and were undercounting by two million. The real channel
+    total is a bare STRING on the /about panel, next to subscriberCountText.
 """
 
 import json, os, re, sys, urllib.request, urllib.parse
@@ -51,19 +56,19 @@ def num(v):
 # ------------------------------------------------------------------ spotify
 
 def spotify():
-    """Returns (day_fields, track_catalogue). Either can be empty, never raises."""
-    day, cat = {}, {}
+    """Returns (day_fields, track_catalogue, releases). Any can be empty, never raises."""
+    day, cat, rel = {}, {}, {}
 
     try:
         page = get("https://open.spotify.com/embed/artist/" + ARTIST_ID)
         m = re.search(r'"accessToken":"([^"]+)"', page)
         if not m:
             print("spotify: no token in the embed page")
-            return day, cat
+            return day, cat, rel
         tok = m.group(1)
     except Exception as e:
         print("spotify: embed page failed,", str(e)[:120])
-        return day, cat
+        return day, cat, rel
 
     try:
         variables = {"uri": "spotify:artist:" + ARTIST_ID, "locale": ""}
@@ -80,7 +85,7 @@ def spotify():
         au = r["data"]["artistUnion"]
     except Exception as e:
         print("spotify: overview query failed,", str(e)[:160])
-        return day, cat
+        return day, cat, rel
 
     # headline numbers
     stats = au.get("stats") or {}
@@ -141,8 +146,36 @@ def spotify():
     if counts:
         day["counts"] = counts
 
-    print("spotify: ok,", len(tracks), "tracks,", len(cities), "cities")
-    return day, cat
+    # every release we can see, with a real date on it. the window of ten
+    # albums and ten singles slides, so we merge and never delete: the store
+    # accumulates the full release history from today forward.
+    def take(node):
+        for it in (node.get("items") or []):
+            r = it
+            if isinstance(it.get("releases"), dict):
+                inner = it["releases"].get("items") or []
+                r = inner[0] if inner else {}
+            rid = r.get("id")
+            if rid and r.get("name"):
+                rel[rid] = {"name": r["name"],
+                            "date": iso_date(r.get("date")),
+                            "type": (r.get("type") or "").title(),
+                            "tracks": (r.get("tracks") or {}).get("totalCount")}
+
+    for key in ("albums", "singles", "compilations", "popularReleasesAlbums"):
+        node = disc.get(key)
+        if isinstance(node, dict):
+            take(node)
+    if latest.get("id") and latest.get("name"):
+        rel[latest["id"]] = {"name": latest["name"],
+                             "date": iso_date(latest.get("date")),
+                             "type": (latest.get("type") or "").title(),
+                             "tracks": (latest.get("tracks") or {}).get("totalCount")}
+    rel = {k: v for k, v in rel.items() if v.get("date")}
+
+    print("spotify: ok,", len(tracks), "tracks,", len(cities), "cities,",
+          len(rel), "dated releases")
+    return day, cat, rel
 
 
 # ------------------------------------------------------------------ youtube
@@ -156,18 +189,31 @@ def to_int(s):
 
 
 def youtube():
+    """The about panel carries the channel's own lifetime total. Do not read
+    viewCountText off the channel page: there it is an object belonging to a
+    single featured video."""
     out = {}
     try:
-        h = get("https://www.youtube.com/channel/" + YT_CHANNEL)
-        m = re.search(r'([\d.,]+[KMB]?)\s+subscribers', h)
-        if m and to_int(m.group(1)):
-            out["youtubeSubs"] = to_int(m.group(1))
-        m = re.search(r'"viewCountText".{0,200}?"([\d.,]+[KMB]?)\s+views?"', h)
+        h = get("https://www.youtube.com/channel/" + YT_CHANNEL + "/about?hl=en")
+        m = re.search(r'"viewCountText"\s*:\s*"([\d,]+)\s+views"', h)
         if m and to_int(m.group(1)):
             out["youtubeViews"] = to_int(m.group(1))
-        print("youtube:", out or "nothing found")
+        m = re.search(r'"subscriberCountText"\s*:\s*"([\d.,]+[KMB]?)\s+subscribers"', h)
+        if m and to_int(m.group(1)):
+            out["youtubeSubs"] = to_int(m.group(1))
     except Exception as e:
-        print("youtube: failed,", str(e)[:120])
+        print("youtube: about panel failed,", str(e)[:120])
+
+    if "youtubeSubs" not in out:
+        try:
+            h = get("https://www.youtube.com/channel/" + YT_CHANNEL)
+            m = re.search(r'([\d.,]+[KMB]?)\s+subscribers', h)
+            if m and to_int(m.group(1)):
+                out["youtubeSubs"] = to_int(m.group(1))
+        except Exception as e:
+            print("youtube: channel page failed,", str(e)[:120])
+
+    print("youtube:", out or "nothing found")
     return out
 
 
@@ -192,18 +238,19 @@ def load():
     except Exception:
         raw = None
     if isinstance(raw, list):
-        return {"tracks": {}, "days": raw}
+        return {"tracks": {}, "days": raw, "releases": {}}
     if isinstance(raw, dict) and isinstance(raw.get("days"), list):
         raw.setdefault("tracks", {})
+        raw.setdefault("releases", {})
         return raw
-    return {"tracks": {}, "days": []}
+    return {"tracks": {}, "days": [], "releases": {}}
 
 
 def main():
     today = datetime.now(TZ).strftime("%Y-%m-%d")
     store = load()
 
-    day, cat = spotify()
+    day, cat, rel = spotify()
     day.update(youtube())
 
     if not day:
@@ -211,6 +258,7 @@ def main():
         return 0
 
     store["tracks"].update(cat)
+    store.setdefault("releases", {}).update(rel)
 
     entry = next((e for e in store["days"] if e.get("date") == today), None)
     if entry is None:
