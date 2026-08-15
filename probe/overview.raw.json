@@ -1,0 +1,3975 @@
+{
+ "data": {
+  "artistUnion": {
+   "__typename": "Artist",
+   "discography": {
+    "albums": {
+     "items": [
+      {
+       "releases": {
+        "items": [
+         {
+          "copyright": {
+           "items": [
+            {
+             "text": "(C) 2026 David Andrew, exclusively distributed by Wings Music Group",
+             "type": "C"
+            },
+            {
+             "text": "(P) 2026 David Andrew, exclusively distributed by Wings Music Group",
+             "type": "P"
+            }
+           ]
+          },
+          "coverArt": {
+           "sources": [
+            {
+             "height": 300,
+             "url": "https://i.scdn.co/image/ab67616d00001e020fcffce265bfd7ff8072520c",
+             "width": 300
+            },
+            {
+             "height": 64,
+             "url": "https://i.scdn.co/image/ab67616d000048510fcffce265bfd7ff8072520c",
+             "width": 64
+            },
+            {
+             "height": 640,
+             "url": "https://i.scdn.co/image/ab67616d0000b2730fcffce265bfd7ff8072520c",
+             "width": 640
+            }
+           ]
+          },
+          "date": {
+           "day": 12,
+           "month": 6,
+           "precision": "DAY",
+           "year": 2026
+          },
+          "id": "58jbB5biKaLhxTlIIFgkNp",
+          "label": "Wings Music Group",
+          "name": "Modern Hymns: He Reigns",
+          "playability": {
+           "playable": true,
+           "reason": "PLAYABLE"
+          },
+          "sharingInfo": {
+           "shareId": "yhTSTTfnQRWqxImEWlHocw",
+           "shareUrl": "https://open.spotify.com/album/58jbB5biKaLhxTlIIFgkNp?si=yhTSTTfnQRWqxImEWlHocw"
+          },
+          "tracks": {
+           "totalCount": 13
+          },
+          "type": "ALBUM",
+          "uri": "spotify:album:58jbB5biKaLhxTlIIFgkNp"
+         }
+        ]
+       }
+      },
+      {
+       "releases": {
+        "items": [
+         {
+          "copyright": {
+           "items": [
+            {
+             "text": "(C) 2026 David Andrew, exclusively distributed by Wings Music Group",
+             "type": "C"
+            },
+            {
+             "text": "(P) 2026 David Andrew, exclusively distributed by Wings Music Group",
+             "type": "P"
+            }
+           ]
+          },
+          "coverArt": {
+           "sources": [
+            {
+             "height": 300,
+             "url": "https://i.scdn.co/image/ab67616d00001e026ea69a087ea278bf40731929",
+             "width": 300
+            },
+            {
+             "height": 64,
+             "url": "https://i.scdn.co/image/ab67616d000048516ea69a087ea278bf40731929",
+             "width": 64
+            },
+            {
+             "height": 640,
+             "url": "https://i.scdn.co/image/ab67616d0000b2736ea69a087ea278bf40731929",
+             "width": 640
+            }
+           ]
+          },
+          "date": {
+           "day": 22,
+           "month": 5,
+           "precision": "DAY",
+           "year": 2026
+          },
+          "id": "2dPmiSp1vTWKbH4PuYUlfk",
+          "label": "Wings Music Group",
+          "name": "Father Daughter Songs",
+          "playability": {
+           "playable": true,
+           "reason": "PLAYABLE"
+          },
+          "sharingInfo": {
+           "shareId": "LWCnbxOZREel4qEy0yXyQQ",
+           "shareUrl": "https://open.spotify.com/album/2dPmiSp1vTWKbH4PuYUlfk?si=LWCnbxOZREel4qEy0yXyQQ"
+          },
+          "tracks": {
+           "totalCount": 10
+          },
+          "type": "ALBUM",
+          "uri": "spotify:album:2dPmiSp1vTWKbH4PuYUlfk"
+         }
+        ]
+       }
+      },
+      {
+       "releases": {
+        "items": [
+         {
+          "copyright": {
+           "items": [
+            {
+             "text": "(C) 2026 David Andrew, exclusively distributed by Wings Music Group",
+             "type": "C"
+            },
+            {
+             "text": "(P) 2026 David Andrew, exclusively distributed by Wings Music Group",
+             "type": "P"
+            }
+           ]
+          },
+          "coverArt": {
+           "sources": [
+            {
+             "height": 300,
+             "url": "https://i.scdn.co/image/ab67616d00001e02bebb3582925d90c507920dc5",
+             "width": 300
+            },
+            {
+             "height": 64,
+             "url": "https://i.scdn.co/image/ab67616d00004851bebb3582925d90c507920dc5",
+             "width": 64
+            },
+            {
+             "height": 640,
+             "url": "https://i.scdn.co/image/ab67616d0000b273bebb3582925d90c507920dc5",
+             "width": 640
+            }
+           ]
+          },
+          "date": {
+           "day": 1,
+           "month": 5,
+           "precision": "DAY",
+           "year": 2026
+          },
+          "id": "3ikONvxVZ3nwP7B7VvNAMq",
+          "label": "Wings Music Group",
+          "name": "Modern Hymns: Here I Am To Worship",
+          "playability": {
+           "playable": true,
+           "reason": "PLAYABLE"
+          },
+          "sharingInfo": {
+           "shareId": "9LQXNdUTQLqmnRnWXOGWSw",
+           "shareUrl": "https://open.spotify.com/album/3ikONvxVZ3nwP7B7VvNAMq?si=9LQXNdUTQLqmnRnWXOGWSw"
+          },
+          "tracks": {
+           "totalCount": 13
+          },
+          "type": "ALBUM",
+          "uri": "spotify:album:3ikONvxVZ3nwP7B7VvNAMq"
+         }
+        ]
+       }
+      },
+      {
+       "releases": {
+        "items": [
+         {
+          "copyright": {
+           "items": [
+            {
+             "text": "(C) 2026 David Andrew, exclusively distributed by Wings Music Group",
+             "type": "C"
+            },
+            {
+             "text": "(P) 2026 David Andrew, exclusively distributed by Wings Music Group",
+             "type": "P"
+            }
+           ]
+          },
+          "coverArt": {
+           "sources": [
+            {
+             "height": 300,
+             "url": "https://i.scdn.co/image/ab67616d00001e021c861c5ac557c416b82aa4c7",
+             "width": 300
+            },
+            {
+             "height": 64,
+             "url": "https://i.scdn.co/image/ab67616d000048511c861c5ac557c416b82aa4c7",
+             "width": 64
+            },
+            {
+             "height": 640,
+             "url": "https://i.scdn.co/image/ab67616d0000b2731c861c5ac557c416b82aa4c7",
+             "width": 640
+            }
+           ]
+          },
+          "date": {
+           "day": 16,
+           "month": 1,
+           "precision": "DAY",
+           "year": 2026
+          },
+          "id": "3iBsip1pSBw8xgzzvUgoJk",
+          "label": "Wings Music Group",
+          "name": "Beyond Words",
+          "playability": {
+           "playable": true,
+           "reason": "PLAYABLE"
+          },
+          "sharingInfo": {
+           "shareId": "HrwAX-ccTPieD1kwwPLO2A",
+           "shareUrl": "https://open.spotify.com/album/3iBsip1pSBw8xgzzvUgoJk?si=HrwAX-ccTPieD1kwwPLO2A"
+          },
+          "tracks": {
+           "totalCount": 11
+          },
+          "type": "ALBUM",
+          "uri": "spotify:album:3iBsip1pSBw8xgzzvUgoJk"
+         }
+        ]
+       }
+      },
+      {
+       "releases": {
+        "items": [
+         {
+          "copyright": {
+           "items": [
+            {
+             "text": "2025 Hillsong Music",
+             "type": "C"
+            },
+            {
+             "text": "2025 Hillsong Music",
+             "type": "P"
+            }
+           ]
+          },
+          "coverArt": {
+           "sources": [
+            {
+             "height": 300,
+             "url": "https://i.scdn.co/image/ab67616d00001e022cf0d197ad6b6924ac1d4925",
+             "width": 300
+            },
+            {
+             "height": 64,
+             "url": "https://i.scdn.co/image/ab67616d000048512cf0d197ad6b6924ac1d4925",
+             "width": 64
+            },
+            {
+             "height": 640,
+             "url": "https://i.scdn.co/image/ab67616d0000b2732cf0d197ad6b6924ac1d4925",
+             "width": 640
+            }
+           ]
+          },
+          "date": {
+           "day": 8,
+           "month": 8,
+           "precision": "DAY",
+           "year": 2025
+          },
+          "id": "2IBW5h6ERBEfBHWbvOuOD3",
+          "label": "Hillsong Music",
+          "name": "Preludes (Cello & Piano)",
+          "playability": {
+           "playable": true,
+           "reason": "PLAYABLE"
+          },
+          "sharingInfo": {
+           "shareId": "sotoDoFVQWelEuvgzfVNqw",
+           "shareUrl": "https://open.spotify.com/album/2IBW5h6ERBEfBHWbvOuOD3?si=sotoDoFVQWelEuvgzfVNqw"
+          },
+          "tracks": {
+           "totalCount": 11
+          },
+          "type": "ALBUM",
+          "uri": "spotify:album:2IBW5h6ERBEfBHWbvOuOD3"
+         }
+        ]
+       }
+      },
+      {
+       "releases": {
+        "items": [
+         {
+          "copyright": {
+           "items": [
+            {
+             "text": "2025 David Andrew",
+             "type": "C"
+            },
+            {
+             "text": "2025 David Andrew",
+             "type": "P"
+            }
+           ]
+          },
+          "coverArt": {
+           "sources": [
+            {
+             "height": 300,
+             "url": "https://i.scdn.co/image/ab67616d00001e02a68414febc4e9c5587820a37",
+             "width": 300
+            },
+            {
+             "height": 64,
+             "url": "https://i.scdn.co/image/ab67616d00004851a68414febc4e9c5587820a37",
+             "width": 64
+            },
+            {
+             "height": 640,
+             "url": "https://i.scdn.co/image/ab67616d0000b273a68414febc4e9c5587820a37",
+             "width": 640
+            }
+           ]
+          },
+          "date": {
+           "day": 16,
+           "month": 5,
+           "precision": "DAY",
+           "year": 2025
+          },
+          "id": "3PKtpm4iSnmHkOQ1WXd8L5",
+          "label": "David Andrew",
+          "name": "Beginning At The End",
+          "playability": {
+           "playable": true,
+           "reason": "PLAYABLE"
+          },
+          "sharingInfo": {
+           "shareId": "S1qwXRrnRYuUAki5u1551Q",
+           "shareUrl": "https://open.spotify.com/album/3PKtpm4iSnmHkOQ1WXd8L5?si=S1qwXRrnRYuUAki5u1551Q"
+          },
+          "tracks": {
+           "totalCount": 8
+          },
+          "type": "ALBUM",
+          "uri": "spotify:album:3PKtpm4iSnmHkOQ1WXd8L5"
+         }
+        ]
+       }
+      },
+      {
+       "releases": {
+        "items": [
+         {
+          "copyright": {
+           "items": [
+            {
+             "text": "2024 David Andrew",
+             "type": "C"
+            },
+            {
+             "text": "2024 David Andrew",
+             "type": "P"
+            }
+           ]
+          },
+          "coverArt": {
+           "sources": [
+            {
+             "height": 300,
+             "url": "https://i.scdn.co/image/ab67616d00001e0232be6b44290eb4c35d0c8068",
+             "width": 300
+            },
+            {
+             "height": 64,
+             "url": "https://i.scdn.co/image/ab67616d0000485132be6b44290eb4c35d0c8068",
+             "width": 64
+            },
+            {
+             "height": 640,
+             "url": "https://i.scdn.co/image/ab67616d0000b27332be6b44290eb4c35d0c8068",
+             "width": 640
+            }
+           ]
+          },
+          "date": {
+           "day": 26,
+           "month": 10,
+           "precision": "DAY",
+           "year": 2024
+          },
+          "id": "2u6bq7Q4JyLWnh2vlGzYUD",
+          "label": "David Andrew",
+          "name": "Piano Piece of Mind, Vol. 3",
+          "playability": {
+           "playable": true,
+           "reason": "PLAYABLE"
+          },
+          "sharingInfo": {
+           "shareId": "0gA-aPGpRYefVrio6lnERg",
+           "shareUrl": "https://open.spotify.com/album/2u6bq7Q4JyLWnh2vlGzYUD?si=0gA-aPGpRYefVrio6lnERg"
+          },
+          "tracks": {
+           "totalCount": 11
+          },
+          "type": "ALBUM",
+          "uri": "spotify:album:2u6bq7Q4JyLWnh2vlGzYUD"
+         }
+        ]
+       }
+      },
+      {
+       "releases": {
+        "items": [
+         {
+          "copyright": {
+           "items": [
+            {
+             "text": "2024 David Andrew",
+             "type": "C"
+            },
+            {
+             "text": "2024 David Andrew",
+             "type": "P"
+            }
+           ]
+          },
+          "coverArt": {
+           "sources": [
+            {
+             "height": 300,
+             "url": "https://i.scdn.co/image/ab67616d00001e02df0cd86b300ad5feb686814d",
+             "width": 300
+            },
+            {
+             "height": 64,
+             "url": "https://i.scdn.co/image/ab67616d00004851df0cd86b300ad5feb686814d",
+             "width": 64
+            },
+            {
+             "height": 640,
+             "url": "https://i.scdn.co/image/ab67616d0000b273df0cd86b300ad5feb686814d",
+             "width": 640
+            }
+           ]
+          },
+          "date": {
+           "day": 28,
+           "month": 9,
+           "precision": "DAY",
+           "year": 2024
+          },
+          "id": "0OjpTPfbhElUtSP3mCtiFz",
+          "label": "David Andrew",
+          "name": "Piano Piece of Mind, Vol. 2 (Piano Version)",
+          "playability": {
+           "playable": true,
+           "reason": "PLAYABLE"
+          },
+          "sharingInfo": {
+           "shareId": "2vKyOtvwSC2M8uy-SBBDXw",
+           "shareUrl": "https://open.spotify.com/album/0OjpTPfbhElUtSP3mCtiFz?si=2vKyOtvwSC2M8uy-SBBDXw"
+          },
+          "tracks": {
+           "totalCount": 12
+          },
+          "type": "ALBUM",
+          "uri": "spotify:album:0OjpTPfbhElUtSP3mCtiFz"
+         }
+        ]
+       }
+      },
+      {
+       "releases": {
+        "items": [
+         {
+          "copyright": {
+           "items": [
+            {
+             "text": "2024 David Andrew",
+             "type": "C"
+            },
+            {
+             "text": "2024 David Andrew",
+             "type": "P"
+            }
+           ]
+          },
+          "coverArt": {
+           "sources": [
+            {
+             "height": 300,
+             "url": "https://i.scdn.co/image/ab67616d00001e0265aa17fd94d5c33bba9e94c0",
+             "width": 300
+            },
+            {
+             "height": 64,
+             "url": "https://i.scdn.co/image/ab67616d0000485165aa17fd94d5c33bba9e94c0",
+             "width": 64
+            },
+            {
+             "height": 640,
+             "url": "https://i.scdn.co/image/ab67616d0000b27365aa17fd94d5c33bba9e94c0",
+             "width": 640
+            }
+           ]
+          },
+          "date": {
+           "day": 30,
+           "month": 8,
+           "precision": "DAY",
+           "year": 2024
+          },
+          "id": "2AjOe51uc89wcbRezYiIH0",
+          "label": "David Andrew",
+          "name": "Piano Piece of Mind, Vol. 1 (Piano Version)",
+          "playability": {
+           "playable": true,
+           "reason": "PLAYABLE"
+          },
+          "sharingInfo": {
+           "shareId": "7ocOrQPnTwqnWxtoOBwiog",
+           "shareUrl": "https://open.spotify.com/album/2AjOe51uc89wcbRezYiIH0?si=7ocOrQPnTwqnWxtoOBwiog"
+          },
+          "tracks": {
+           "totalCount": 12
+          },
+          "type": "ALBUM",
+          "uri": "spotify:album:2AjOe51uc89wcbRezYiIH0"
+         }
+        ]
+       }
+      },
+      {
+       "releases": {
+        "items": [
+         {
+          "copyright": {
+           "items": [
+            {
+             "text": "2023 Hillsong Music & Resources LLC",
+             "type": "C"
+            },
+            {
+             "text": "2023 Hillsong Music & Resources LLC",
+             "type": "P"
+            }
+           ]
+          },
+          "coverArt": {
+           "sources": [
+            {
+             "height": 300,
+             "url": "https://i.scdn.co/image/ab67616d00001e020fbbc7c0e1ad8b983c11d717",
+             "width": 300
+            },
+            {
+             "height": 64,
+             "url": "https://i.scdn.co/image/ab67616d000048510fbbc7c0e1ad8b983c11d717",
+             "width": 64
+            },
+            {
+             "height": 640,
+             "url": "https://i.scdn.co/image/ab67616d0000b2730fbbc7c0e1ad8b983c11d717",
+             "width": 640
+            }
+           ]
+          },
+          "date": {
+           "day": 15,
+           "month": 9,
+           "precision": "DAY",
+           "year": 2023
+          },
+          "id": "3jIE3FAYsCMqblnnH4Au7N",
+          "label": "Hillsong Music",
+          "name": "Piano Reflections Vol. 11 (Grand Piano)",
+          "playability": {
+           "playable": true,
+           "reason": "PLAYABLE"
+          },
+          "sharingInfo": {
+           "shareId": "bSmPoNsGSK6uOHD3KE6unw",
+           "shareUrl": "https://open.spotify.com/album/3jIE3FAYsCMqblnnH4Au7N?si=bSmPoNsGSK6uOHD3KE6unw"
+          },
+          "tracks": {
+           "totalCount": 25
+          },
+          "type": "ALBUM",
+          "uri": "spotify:album:3jIE3FAYsCMqblnnH4Au7N"
+         }
+        ]
+       }
+      }
+     ],
+     "totalCount": 40
+    },
+    "compilations": {
+     "items": [],
+     "totalCount": 0
+    },
+    "latest": {
+     "copyright": {
+      "items": [
+       {
+        "text": "(C) 2026 David Andrew, exclusively distributed by Wings Music Group",
+        "type": "C"
+       },
+       {
+        "text": "(P) 2026 David Andrew, exclusively distributed by Wings Music Group",
+        "type": "P"
+       }
+      ]
+     },
+     "coverArt": {
+      "sources": [
+       {
+        "height": 300,
+        "url": "https://i.scdn.co/image/ab67616d00001e02f17704a9e91613cc96f67db4",
+        "width": 300
+       },
+       {
+        "height": 64,
+        "url": "https://i.scdn.co/image/ab67616d00004851f17704a9e91613cc96f67db4",
+        "width": 64
+       },
+       {
+        "height": 640,
+        "url": "https://i.scdn.co/image/ab67616d0000b273f17704a9e91613cc96f67db4",
+        "width": 640
+       }
+      ]
+     },
+     "date": {
+      "day": 14,
+      "month": 8,
+      "precision": "DAY",
+      "year": 2026
+     },
+     "id": "1sBdHk9PiLcsXHbeZPeCrr",
+     "label": "Wings Music Group",
+     "name": "Wonderwall (Piano Version - Instrumental)",
+     "playability": {
+      "playable": true,
+      "reason": "PLAYABLE"
+     },
+     "sharingInfo": {
+      "shareId": "sgu_mBpQQC6tSCG7tulXgg",
+      "shareUrl": "https://open.spotify.com/album/1sBdHk9PiLcsXHbeZPeCrr?si=sgu_mBpQQC6tSCG7tulXgg"
+     },
+     "tracks": {
+      "totalCount": 1
+     },
+     "type": "SINGLE",
+     "uri": "spotify:album:1sBdHk9PiLcsXHbeZPeCrr"
+    },
+    "popularReleasesAlbums": {
+     "items": [
+      {
+       "copyright": {
+        "items": [
+         {
+          "text": "2015 Hillsong Music and Resources LLC",
+          "type": "C"
+         },
+         {
+          "text": "2015 Hillsong Music and Resources LLC",
+          "type": "P"
+         }
+        ]
+       },
+       "coverArt": {
+        "sources": [
+         {
+          "height": 300,
+          "url": "https://i.scdn.co/image/ab67616d00001e02db38d7c1dae2ab572c0b26e5",
+          "width": 300
+         },
+         {
+          "height": 64,
+          "url": "https://i.scdn.co/image/ab67616d00004851db38d7c1dae2ab572c0b26e5",
+          "width": 64
+         },
+         {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab67616d0000b273db38d7c1dae2ab572c0b26e5",
+          "width": 640
+         }
+        ]
+       },
+       "date": {
+        "day": 13,
+        "month": 3,
+        "precision": "DAY",
+        "year": 2015
+       },
+       "id": "0GNTTpbax8oLbef8g2OwAy",
+       "label": "Hillsong Music",
+       "name": "Piano Reflections Vol. 1",
+       "playability": {
+        "playable": true,
+        "reason": "PLAYABLE"
+       },
+       "sharingInfo": {
+        "shareId": "ETI2U7K5QluasfuNlrRqAg",
+        "shareUrl": "https://open.spotify.com/album/0GNTTpbax8oLbef8g2OwAy?si=ETI2U7K5QluasfuNlrRqAg"
+       },
+       "tracks": {
+        "totalCount": 11
+       },
+       "type": "ALBUM",
+       "uri": "spotify:album:0GNTTpbax8oLbef8g2OwAy"
+      },
+      {
+       "copyright": {
+        "items": [
+         {
+          "text": "2021 David Andrew",
+          "type": "C"
+         },
+         {
+          "text": "2021 David Andrew",
+          "type": "P"
+         }
+        ]
+       },
+       "coverArt": {
+        "sources": [
+         {
+          "height": 300,
+          "url": "https://i.scdn.co/image/ab67616d00001e0279dfd32b320420234388b94b",
+          "width": 300
+         },
+         {
+          "height": 64,
+          "url": "https://i.scdn.co/image/ab67616d0000485179dfd32b320420234388b94b",
+          "width": 64
+         },
+         {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab67616d0000b27379dfd32b320420234388b94b",
+          "width": 640
+         }
+        ]
+       },
+       "date": {
+        "day": 5,
+        "month": 2,
+        "precision": "DAY",
+        "year": 2021
+       },
+       "id": "2fGJPma2WpiuA9vXF2XZQi",
+       "label": "David Andrew",
+       "name": "Modern Hymns",
+       "playability": {
+        "playable": true,
+        "reason": "PLAYABLE"
+       },
+       "sharingInfo": {
+        "shareId": "BP1ECweHT-e3THRJ6vuSeA",
+        "shareUrl": "https://open.spotify.com/album/2fGJPma2WpiuA9vXF2XZQi?si=BP1ECweHT-e3THRJ6vuSeA"
+       },
+       "tracks": {
+        "totalCount": 12
+       },
+       "type": "ALBUM",
+       "uri": "spotify:album:2fGJPma2WpiuA9vXF2XZQi"
+      },
+      {
+       "copyright": {
+        "items": [
+         {
+          "text": "2015 Hillsong Music and Resources LLC",
+          "type": "C"
+         },
+         {
+          "text": "2015 Hillsong Music and Resources LLC",
+          "type": "P"
+         }
+        ]
+       },
+       "coverArt": {
+        "sources": [
+         {
+          "height": 300,
+          "url": "https://i.scdn.co/image/ab67616d00001e0273f9bb0933953e9f645ec4b7",
+          "width": 300
+         },
+         {
+          "height": 64,
+          "url": "https://i.scdn.co/image/ab67616d0000485173f9bb0933953e9f645ec4b7",
+          "width": 64
+         },
+         {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab67616d0000b27373f9bb0933953e9f645ec4b7",
+          "width": 640
+         }
+        ]
+       },
+       "date": {
+        "day": 13,
+        "month": 3,
+        "precision": "DAY",
+        "year": 2015
+       },
+       "id": "2yvNFcpAiLFboKkuCfUKr0",
+       "label": "Hillsong Music",
+       "name": "Piano Reflections Vol. 2",
+       "playability": {
+        "playable": true,
+        "reason": "PLAYABLE"
+       },
+       "sharingInfo": {
+        "shareId": "zGQqxmLDRd2sKqgtjGYA7w",
+        "shareUrl": "https://open.spotify.com/album/2yvNFcpAiLFboKkuCfUKr0?si=zGQqxmLDRd2sKqgtjGYA7w"
+       },
+       "tracks": {
+        "totalCount": 13
+       },
+       "type": "ALBUM",
+       "uri": "spotify:album:2yvNFcpAiLFboKkuCfUKr0"
+      },
+      {
+       "copyright": {
+        "items": [
+         {
+          "text": "2020 Hillsong Music and Resources LLC",
+          "type": "C"
+         },
+         {
+          "text": "2020 Hillsong Music and Resources LLC",
+          "type": "P"
+         }
+        ]
+       },
+       "coverArt": {
+        "sources": [
+         {
+          "height": 300,
+          "url": "https://i.scdn.co/image/ab67616d00001e023c851d1ed717f5cc49662af4",
+          "width": 300
+         },
+         {
+          "height": 64,
+          "url": "https://i.scdn.co/image/ab67616d000048513c851d1ed717f5cc49662af4",
+          "width": 64
+         },
+         {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab67616d0000b2733c851d1ed717f5cc49662af4",
+          "width": 640
+         }
+        ]
+       },
+       "date": {
+        "day": 2,
+        "month": 10,
+        "precision": "DAY",
+        "year": 2020
+       },
+       "id": "1sPcAIk4mZNCZaSVILPCsC",
+       "label": "Hillsong Music",
+       "name": "Piano Reflections Vol. 5",
+       "playability": {
+        "playable": true,
+        "reason": "PLAYABLE"
+       },
+       "sharingInfo": {
+        "shareId": "xUXkH-sORpCEmxHDiZPJdg",
+        "shareUrl": "https://open.spotify.com/album/1sPcAIk4mZNCZaSVILPCsC?si=xUXkH-sORpCEmxHDiZPJdg"
+       },
+       "tracks": {
+        "totalCount": 13
+       },
+       "type": "ALBUM",
+       "uri": "spotify:album:1sPcAIk4mZNCZaSVILPCsC"
+      },
+      {
+       "copyright": {
+        "items": [
+         {
+          "text": "2020 David Andrew Music",
+          "type": "C"
+         },
+         {
+          "text": "2020 David Andrew Music",
+          "type": "P"
+         }
+        ]
+       },
+       "coverArt": {
+        "sources": [
+         {
+          "height": 300,
+          "url": "https://i.scdn.co/image/ab67616d00001e0208c8470894966ce4724c041f",
+          "width": 300
+         },
+         {
+          "height": 64,
+          "url": "https://i.scdn.co/image/ab67616d0000485108c8470894966ce4724c041f",
+          "width": 64
+         },
+         {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab67616d0000b27308c8470894966ce4724c041f",
+          "width": 640
+         }
+        ]
+       },
+       "date": {
+        "day": 26,
+        "month": 3,
+        "precision": "DAY",
+        "year": 2020
+       },
+       "id": "7h6OVZnXZ0yVJLf2Ou96lK",
+       "label": "David Andrew Music",
+       "name": "Hymns",
+       "playability": {
+        "playable": true,
+        "reason": "PLAYABLE"
+       },
+       "sharingInfo": {
+        "shareId": "SlUXrqH1Qqa6632F8cL6rg",
+        "shareUrl": "https://open.spotify.com/album/7h6OVZnXZ0yVJLf2Ou96lK?si=SlUXrqH1Qqa6632F8cL6rg"
+       },
+       "tracks": {
+        "totalCount": 11
+       },
+       "type": "ALBUM",
+       "uri": "spotify:album:7h6OVZnXZ0yVJLf2Ou96lK"
+      },
+      {
+       "copyright": {
+        "items": [
+         {
+          "text": "2020 Hillsong Music and Resources LLC",
+          "type": "C"
+         },
+         {
+          "text": "2020 Hillsong Music and Resources LLC",
+          "type": "P"
+         }
+        ]
+       },
+       "coverArt": {
+        "sources": [
+         {
+          "height": 300,
+          "url": "https://i.scdn.co/image/ab67616d00001e02d02561629009fdcba0f0606b",
+          "width": 300
+         },
+         {
+          "height": 64,
+          "url": "https://i.scdn.co/image/ab67616d00004851d02561629009fdcba0f0606b",
+          "width": 64
+         },
+         {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab67616d0000b273d02561629009fdcba0f0606b",
+          "width": 640
+         }
+        ]
+       },
+       "date": {
+        "day": 23,
+        "month": 10,
+        "precision": "DAY",
+        "year": 2020
+       },
+       "id": "4MHa12NtfYZLKGAfZ2hTBn",
+       "label": "Hillsong Music",
+       "name": "Piano Reflections Vol. 6",
+       "playability": {
+        "playable": true,
+        "reason": "PLAYABLE"
+       },
+       "sharingInfo": {
+        "shareId": "L5zb_LJTTa68PzqyQRBkmA",
+        "shareUrl": "https://open.spotify.com/album/4MHa12NtfYZLKGAfZ2hTBn?si=L5zb_LJTTa68PzqyQRBkmA"
+       },
+       "tracks": {
+        "totalCount": 12
+       },
+       "type": "ALBUM",
+       "uri": "spotify:album:4MHa12NtfYZLKGAfZ2hTBn"
+      },
+      {
+       "copyright": {
+        "items": [
+         {
+          "text": "2024 David Andrew",
+          "type": "C"
+         },
+         {
+          "text": "2024 David Andrew",
+          "type": "P"
+         }
+        ]
+       },
+       "coverArt": {
+        "sources": [
+         {
+          "height": 300,
+          "url": "https://i.scdn.co/image/ab67616d00001e0265aa17fd94d5c33bba9e94c0",
+          "width": 300
+         },
+         {
+          "height": 64,
+          "url": "https://i.scdn.co/image/ab67616d0000485165aa17fd94d5c33bba9e94c0",
+          "width": 64
+         },
+         {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab67616d0000b27365aa17fd94d5c33bba9e94c0",
+          "width": 640
+         }
+        ]
+       },
+       "date": {
+        "day": 30,
+        "month": 8,
+        "precision": "DAY",
+        "year": 2024
+       },
+       "id": "2AjOe51uc89wcbRezYiIH0",
+       "label": "David Andrew",
+       "name": "Piano Piece of Mind, Vol. 1 (Piano Version)",
+       "playability": {
+        "playable": true,
+        "reason": "PLAYABLE"
+       },
+       "sharingInfo": {
+        "shareId": "ByWbpDcKTZyrhmpHDwuLWg",
+        "shareUrl": "https://open.spotify.com/album/2AjOe51uc89wcbRezYiIH0?si=ByWbpDcKTZyrhmpHDwuLWg"
+       },
+       "tracks": {
+        "totalCount": 12
+       },
+       "type": "ALBUM",
+       "uri": "spotify:album:2AjOe51uc89wcbRezYiIH0"
+      },
+      {
+       "copyright": {
+        "items": [
+         {
+          "text": "2023 Hillsong Music and Resources LLC",
+          "type": "C"
+         },
+         {
+          "text": "2023 Hillsong Music and Resources LLC",
+          "type": "P"
+         }
+        ]
+       },
+       "coverArt": {
+        "sources": [
+         {
+          "height": 300,
+          "url": "https://i.scdn.co/image/ab67616d00001e0280aeed4a6d7a5a4cf102f7c0",
+          "width": 300
+         },
+         {
+          "height": 64,
+          "url": "https://i.scdn.co/image/ab67616d0000485180aeed4a6d7a5a4cf102f7c0",
+          "width": 64
+         },
+         {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab67616d0000b27380aeed4a6d7a5a4cf102f7c0",
+          "width": 640
+         }
+        ]
+       },
+       "date": {
+        "day": 24,
+        "month": 2,
+        "precision": "DAY",
+        "year": 2023
+       },
+       "id": "2nBh2jImD7TJubbuUmI8Ty",
+       "label": "Hillsong Music",
+       "name": "Piano Reflections Vol. 8 (Upright Piano)",
+       "playability": {
+        "playable": true,
+        "reason": "PLAYABLE"
+       },
+       "sharingInfo": {
+        "shareId": "3CBHxNj1TgiN0RbY8PsMlw",
+        "shareUrl": "https://open.spotify.com/album/2nBh2jImD7TJubbuUmI8Ty?si=3CBHxNj1TgiN0RbY8PsMlw"
+       },
+       "tracks": {
+        "totalCount": 45
+       },
+       "type": "ALBUM",
+       "uri": "spotify:album:2nBh2jImD7TJubbuUmI8Ty"
+      },
+      {
+       "copyright": {
+        "items": [
+         {
+          "text": "2022 David Andrew",
+          "type": "C"
+         },
+         {
+          "text": "2022 David Andrew",
+          "type": "P"
+         }
+        ]
+       },
+       "coverArt": {
+        "sources": [
+         {
+          "height": 300,
+          "url": "https://i.scdn.co/image/ab67616d00001e02108dfdf01bed5e20cd1fd9d2",
+          "width": 300
+         },
+         {
+          "height": 64,
+          "url": "https://i.scdn.co/image/ab67616d00004851108dfdf01bed5e20cd1fd9d2",
+          "width": 64
+         },
+         {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab67616d0000b273108dfdf01bed5e20cd1fd9d2",
+          "width": 640
+         }
+        ]
+       },
+       "date": {
+        "day": 19,
+        "month": 8,
+        "precision": "DAY",
+        "year": 2022
+       },
+       "id": "0aG8g4w1dH2mL4e3Zk4qzo",
+       "label": "David Andrew",
+       "name": "Piano Hymns",
+       "playability": {
+        "playable": true,
+        "reason": "PLAYABLE"
+       },
+       "sharingInfo": {
+        "shareId": "u63oDCh2QxeD-8naknRr7A",
+        "shareUrl": "https://open.spotify.com/album/0aG8g4w1dH2mL4e3Zk4qzo?si=u63oDCh2QxeD-8naknRr7A"
+       },
+       "tracks": {
+        "totalCount": 13
+       },
+       "type": "ALBUM",
+       "uri": "spotify:album:0aG8g4w1dH2mL4e3Zk4qzo"
+      },
+      {
+       "copyright": {
+        "items": [
+         {
+          "text": "(C) 2026 David Andrew, exclusively distributed by Wings Music Group",
+          "type": "C"
+         },
+         {
+          "text": "(P) 2026 David Andrew, exclusively distributed by Wings Music Group",
+          "type": "P"
+         }
+        ]
+       },
+       "coverArt": {
+        "sources": [
+         {
+          "height": 300,
+          "url": "https://i.scdn.co/image/ab67616d00001e020fcffce265bfd7ff8072520c",
+          "width": 300
+         },
+         {
+          "height": 64,
+          "url": "https://i.scdn.co/image/ab67616d000048510fcffce265bfd7ff8072520c",
+          "width": 64
+         },
+         {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab67616d0000b2730fcffce265bfd7ff8072520c",
+          "width": 640
+         }
+        ]
+       },
+       "date": {
+        "day": 12,
+        "month": 6,
+        "precision": "DAY",
+        "year": 2026
+       },
+       "id": "58jbB5biKaLhxTlIIFgkNp",
+       "label": "Wings Music Group",
+       "name": "Modern Hymns: He Reigns",
+       "playability": {
+        "playable": true,
+        "reason": "PLAYABLE"
+       },
+       "sharingInfo": {
+        "shareId": "q7sJto25Tf6yeftPAYHJGw",
+        "shareUrl": "https://open.spotify.com/album/58jbB5biKaLhxTlIIFgkNp?si=q7sJto25Tf6yeftPAYHJGw"
+       },
+       "tracks": {
+        "totalCount": 13
+       },
+       "type": "ALBUM",
+       "uri": "spotify:album:58jbB5biKaLhxTlIIFgkNp"
+      }
+     ],
+     "totalCount": 20
+    },
+    "singles": {
+     "items": [
+      {
+       "releases": {
+        "items": [
+         {
+          "copyright": {
+           "items": [
+            {
+             "text": "(C) 2026 David Andrew, exclusively distributed by Wings Music Group",
+             "type": "C"
+            },
+            {
+             "text": "(P) 2026 David Andrew, exclusively distributed by Wings Music Group",
+             "type": "P"
+            }
+           ]
+          },
+          "coverArt": {
+           "sources": [
+            {
+             "height": 300,
+             "url": "https://i.scdn.co/image/ab67616d00001e02f17704a9e91613cc96f67db4",
+             "width": 300
+            },
+            {
+             "height": 64,
+             "url": "https://i.scdn.co/image/ab67616d00004851f17704a9e91613cc96f67db4",
+             "width": 64
+            },
+            {
+             "height": 640,
+             "url": "https://i.scdn.co/image/ab67616d0000b273f17704a9e91613cc96f67db4",
+             "width": 640
+            }
+           ]
+          },
+          "date": {
+           "day": 14,
+           "month": 8,
+           "precision": "DAY",
+           "year": 2026
+          },
+          "id": "1sBdHk9PiLcsXHbeZPeCrr",
+          "label": "Wings Music Group",
+          "name": "Wonderwall (Piano Version - Instrumental)",
+          "playability": {
+           "playable": true,
+           "reason": "PLAYABLE"
+          },
+          "sharingInfo": {
+           "shareId": "uhSlgiq0STKmsHZuzYVDIQ",
+           "shareUrl": "https://open.spotify.com/album/1sBdHk9PiLcsXHbeZPeCrr?si=uhSlgiq0STKmsHZuzYVDIQ"
+          },
+          "tracks": {
+           "totalCount": 1
+          },
+          "type": "SINGLE",
+          "uri": "spotify:album:1sBdHk9PiLcsXHbeZPeCrr"
+         }
+        ]
+       }
+      },
+      {
+       "releases": {
+        "items": [
+         {
+          "copyright": {
+           "items": [
+            {
+             "text": "(C) 2026 David Andrew, exclusively distributed by Wings Music Group",
+             "type": "C"
+            },
+            {
+             "text": "(P) 2026 David Andrew, exclusively distributed by Wings Music Group",
+             "type": "P"
+            }
+           ]
+          },
+          "coverArt": {
+           "sources": [
+            {
+             "height": 300,
+             "url": "https://i.scdn.co/image/ab67616d00001e02ecd8fbc206b6e80ec23458a7",
+             "width": 300
+            },
+            {
+             "height": 64,
+             "url": "https://i.scdn.co/image/ab67616d00004851ecd8fbc206b6e80ec23458a7",
+             "width": 64
+            },
+            {
+             "height": 640,
+             "url": "https://i.scdn.co/image/ab67616d0000b273ecd8fbc206b6e80ec23458a7",
+             "width": 640
+            }
+           ]
+          },
+          "date": {
+           "day": 7,
+           "month": 8,
+           "precision": "DAY",
+           "year": 2026
+          },
+          "id": "4h1ODmL9fQN8pPS4z8V63K",
+          "label": "Wings Music Group",
+          "name": "Sweet Caroline (Piano Version - Instrumental)",
+          "playability": {
+           "playable": true,
+           "reason": "PLAYABLE"
+          },
+          "sharingInfo": {
+           "shareId": "VKoom0LqRyOrGUPDIRBp-A",
+           "shareUrl": "https://open.spotify.com/album/4h1ODmL9fQN8pPS4z8V63K?si=VKoom0LqRyOrGUPDIRBp-A"
+          },
+          "tracks": {
+           "totalCount": 1
+          },
+          "type": "SINGLE",
+          "uri": "spotify:album:4h1ODmL9fQN8pPS4z8V63K"
+         }
+        ]
+       }
+      },
+      {
+       "releases": {
+        "items": [
+         {
+          "copyright": {
+           "items": [
+            {
+             "text": "(C) 2026 David Andrew, exclusively distributed by Wings Music Group",
+             "type": "C"
+            },
+            {
+             "text": "(P) 2026 David Andrew, exclusively distributed by Wings Music Group",
+             "type": "P"
+            }
+           ]
+          },
+          "coverArt": {
+           "sources": [
+            {
+             "height": 300,
+             "url": "https://i.scdn.co/image/ab67616d00001e02f2cecb97b53ac8bf7ae2d19d",
+             "width": 300
+            },
+            {
+             "height": 64,
+             "url": "https://i.scdn.co/image/ab67616d00004851f2cecb97b53ac8bf7ae2d19d",
+             "width": 64
+            },
+            {
+             "height": 640,
+             "url": "https://i.scdn.co/image/ab67616d0000b273f2cecb97b53ac8bf7ae2d19d",
+             "width": 640
+            }
+           ]
+          },
+          "date": {
+           "day": 31,
+           "month": 7,
+           "precision": "DAY",
+           "year": 2026
+          },
+          "id": "6iRPqmpy9ybtWCG6Lk636B",
+          "label": "Wings Music Group",
+          "name": "Dancing Queen (Piano Version)",
+          "playability": {
+           "playable": true,
+           "reason": "PLAYABLE"
+          },
+          "sharingInfo": {
+           "shareId": "YOep9Z-rRU274Jw_xvsEkg",
+           "shareUrl": "https://open.spotify.com/album/6iRPqmpy9ybtWCG6Lk636B?si=YOep9Z-rRU274Jw_xvsEkg"
+          },
+          "tracks": {
+           "totalCount": 1
+          },
+          "type": "SINGLE",
+          "uri": "spotify:album:6iRPqmpy9ybtWCG6Lk636B"
+         }
+        ]
+       }
+      },
+      {
+       "releases": {
+        "items": [
+         {
+          "copyright": {
+           "items": [
+            {
+             "text": "(C) 2026 David Andrew, exclusively distributed by Wings Music Group",
+             "type": "C"
+            },
+            {
+             "text": "(P) 2026 David Andrew, exclusively distributed by Wings Music Group",
+             "type": "P"
+            }
+           ]
+          },
+          "coverArt": {
+           "sources": [
+            {
+             "height": 300,
+             "url": "https://i.scdn.co/image/ab67616d00001e022739332f22a5a1007461b807",
+             "width": 300
+            },
+            {
+             "height": 64,
+             "url": "https://i.scdn.co/image/ab67616d000048512739332f22a5a1007461b807",
+             "width": 64
+            },
+            {
+             "height": 640,
+             "url": "https://i.scdn.co/image/ab67616d0000b2732739332f22a5a1007461b807",
+             "width": 640
+            }
+           ]
+          },
+          "date": {
+           "day": 24,
+           "month": 7,
+           "precision": "DAY",
+           "year": 2026
+          },
+          "id": "5vwER6ON1Gq0U3sAo5zB5x",
+          "label": "Wings Music Group",
+          "name": "Man! I Feel Like a Woman!",
+          "playability": {
+           "playable": true,
+           "reason": "PLAYABLE"
+          },
+          "sharingInfo": {
+           "shareId": "7ut-GGhoSHaMEfY1O-fOmg",
+           "shareUrl": "https://open.spotify.com/album/5vwER6ON1Gq0U3sAo5zB5x?si=7ut-GGhoSHaMEfY1O-fOmg"
+          },
+          "tracks": {
+           "totalCount": 1
+          },
+          "type": "SINGLE",
+          "uri": "spotify:album:5vwER6ON1Gq0U3sAo5zB5x"
+         }
+        ]
+       }
+      },
+      {
+       "releases": {
+        "items": [
+         {
+          "copyright": {
+           "items": [
+            {
+             "text": "(C) 2026 David Andrew, exclusively distributed by Wings Music Group",
+             "type": "C"
+            },
+            {
+             "text": "(P) 2026 David Andrew, exclusively distributed by Wings Music Group",
+             "type": "P"
+            }
+           ]
+          },
+          "coverArt": {
+           "sources": [
+            {
+             "height": 300,
+             "url": "https://i.scdn.co/image/ab67616d00001e025a07bd7df03e824f6f5d77af",
+             "width": 300
+            },
+            {
+             "height": 64,
+             "url": "https://i.scdn.co/image/ab67616d000048515a07bd7df03e824f6f5d77af",
+             "width": 64
+            },
+            {
+             "height": 640,
+             "url": "https://i.scdn.co/image/ab67616d0000b2735a07bd7df03e824f6f5d77af",
+             "width": 640
+            }
+           ]
+          },
+          "date": {
+           "day": 17,
+           "month": 7,
+           "precision": "DAY",
+           "year": 2026
+          },
+          "id": "3BJbKTGVfWyqP0OE4dmkMP",
+          "label": "Wings Music Group",
+          "name": "Aperture",
+          "playability": {
+           "playable": true,
+           "reason": "PLAYABLE"
+          },
+          "sharingInfo": {
+           "shareId": "3ShY_0A3Qna_ucKLyKAJ_w",
+           "shareUrl": "https://open.spotify.com/album/3BJbKTGVfWyqP0OE4dmkMP?si=3ShY_0A3Qna_ucKLyKAJ_w"
+          },
+          "tracks": {
+           "totalCount": 1
+          },
+          "type": "SINGLE",
+          "uri": "spotify:album:3BJbKTGVfWyqP0OE4dmkMP"
+         }
+        ]
+       }
+      },
+      {
+       "releases": {
+        "items": [
+         {
+          "copyright": {
+           "items": [
+            {
+             "text": "(C) 2026 David Andrew, exclusively distributed by Wings Music Group",
+             "type": "C"
+            },
+            {
+             "text": "(P) 2026 David Andrew, exclusively distributed by Wings Music Group",
+             "type": "P"
+            }
+           ]
+          },
+          "coverArt": {
+           "sources": [
+            {
+             "height": 300,
+             "url": "https://i.scdn.co/image/ab67616d00001e02bb651d6a1381a9c1bfb4b108",
+             "width": 300
+            },
+            {
+             "height": 64,
+             "url": "https://i.scdn.co/image/ab67616d00004851bb651d6a1381a9c1bfb4b108",
+             "width": 64
+            },
+            {
+             "height": 640,
+             "url": "https://i.scdn.co/image/ab67616d0000b273bb651d6a1381a9c1bfb4b108",
+             "width": 640
+            }
+           ]
+          },
+          "date": {
+           "day": 10,
+           "month": 7,
+           "precision": "DAY",
+           "year": 2026
+          },
+          "id": "6xld9F4MSzmG6iARRljeZW",
+          "label": "Wings Music Group",
+          "name": "Risk It All",
+          "playability": {
+           "playable": true,
+           "reason": "PLAYABLE"
+          },
+          "sharingInfo": {
+           "shareId": "_1SFF4-uT2yROEcXsA2eag",
+           "shareUrl": "https://open.spotify.com/album/6xld9F4MSzmG6iARRljeZW?si=_1SFF4-uT2yROEcXsA2eag"
+          },
+          "tracks": {
+           "totalCount": 1
+          },
+          "type": "SINGLE",
+          "uri": "spotify:album:6xld9F4MSzmG6iARRljeZW"
+         }
+        ]
+       }
+      },
+      {
+       "releases": {
+        "items": [
+         {
+          "copyright": {
+           "items": [
+            {
+             "text": "(C) 2026 David Andrew, exclusively distributed by Wings Music Group",
+             "type": "C"
+            },
+            {
+             "text": "(P) 2026 David Andrew, exclusively distributed by Wings Music Group",
+             "type": "P"
+            }
+           ]
+          },
+          "coverArt": {
+           "sources": [
+            {
+             "height": 300,
+             "url": "https://i.scdn.co/image/ab67616d00001e024b7adc700d83b8e29e0cff71",
+             "width": 300
+            },
+            {
+             "height": 64,
+             "url": "https://i.scdn.co/image/ab67616d000048514b7adc700d83b8e29e0cff71",
+             "width": 64
+            },
+            {
+             "height": 640,
+             "url": "https://i.scdn.co/image/ab67616d0000b2734b7adc700d83b8e29e0cff71",
+             "width": 640
+            }
+           ]
+          },
+          "date": {
+           "day": 3,
+           "month": 7,
+           "precision": "DAY",
+           "year": 2026
+          },
+          "id": "6Qjqtuh0j6dJzAf4KPnWEZ",
+          "label": "Wings Music Group",
+          "name": "Stateside",
+          "playability": {
+           "playable": true,
+           "reason": "PLAYABLE"
+          },
+          "sharingInfo": {
+           "shareId": "IOgWb8cATzusn-YPHoJ5BA",
+           "shareUrl": "https://open.spotify.com/album/6Qjqtuh0j6dJzAf4KPnWEZ?si=IOgWb8cATzusn-YPHoJ5BA"
+          },
+          "tracks": {
+           "totalCount": 1
+          },
+          "type": "SINGLE",
+          "uri": "spotify:album:6Qjqtuh0j6dJzAf4KPnWEZ"
+         }
+        ]
+       }
+      },
+      {
+       "releases": {
+        "items": [
+         {
+          "copyright": {
+           "items": [
+            {
+             "text": "(C) 2026 David Andrew, exclusively distributed by Wings Music Group",
+             "type": "C"
+            },
+            {
+             "text": "(P) 2026 David Andrew, exclusively distributed by Wings Music Group",
+             "type": "P"
+            }
+           ]
+          },
+          "coverArt": {
+           "sources": [
+            {
+             "height": 300,
+             "url": "https://i.scdn.co/image/ab67616d00001e02d645004285610558e1794bf5",
+             "width": 300
+            },
+            {
+             "height": 64,
+             "url": "https://i.scdn.co/image/ab67616d00004851d645004285610558e1794bf5",
+             "width": 64
+            },
+            {
+             "height": 640,
+             "url": "https://i.scdn.co/image/ab67616d0000b273d645004285610558e1794bf5",
+             "width": 640
+            }
+           ]
+          },
+          "date": {
+           "day": 26,
+           "month": 6,
+           "precision": "DAY",
+           "year": 2026
+          },
+          "id": "1ELt7pTKIwG2MQN2eUQ3YZ",
+          "label": "Wings Music Group",
+          "name": "Reputation",
+          "playability": {
+           "playable": true,
+           "reason": "PLAYABLE"
+          },
+          "sharingInfo": {
+           "shareId": "mdtkIiO7QV60x_kUrzr3Ug",
+           "shareUrl": "https://open.spotify.com/album/1ELt7pTKIwG2MQN2eUQ3YZ?si=mdtkIiO7QV60x_kUrzr3Ug"
+          },
+          "tracks": {
+           "totalCount": 1
+          },
+          "type": "SINGLE",
+          "uri": "spotify:album:1ELt7pTKIwG2MQN2eUQ3YZ"
+         }
+        ]
+       }
+      },
+      {
+       "releases": {
+        "items": [
+         {
+          "copyright": {
+           "items": [
+            {
+             "text": "(C) 2026 David Andrew, exclusively distributed by Wings Music Group",
+             "type": "C"
+            },
+            {
+             "text": "(P) 2026 David Andrew, exclusively distributed by Wings Music Group",
+             "type": "P"
+            }
+           ]
+          },
+          "coverArt": {
+           "sources": [
+            {
+             "height": 300,
+             "url": "https://i.scdn.co/image/ab67616d00001e02558ab795e51f07e8ba200e0a",
+             "width": 300
+            },
+            {
+             "height": 64,
+             "url": "https://i.scdn.co/image/ab67616d00004851558ab795e51f07e8ba200e0a",
+             "width": 64
+            },
+            {
+             "height": 640,
+             "url": "https://i.scdn.co/image/ab67616d0000b273558ab795e51f07e8ba200e0a",
+             "width": 640
+            }
+           ]
+          },
+          "date": {
+           "day": 19,
+           "month": 6,
+           "precision": "DAY",
+           "year": 2026
+          },
+          "id": "5ObAN5vuKsnyFJXlDwlsMu",
+          "label": "Wings Music Group",
+          "name": "Lush Life",
+          "playability": {
+           "playable": true,
+           "reason": "PLAYABLE"
+          },
+          "sharingInfo": {
+           "shareId": "CKf5MommSZyDvvaZWYNLzg",
+           "shareUrl": "https://open.spotify.com/album/5ObAN5vuKsnyFJXlDwlsMu?si=CKf5MommSZyDvvaZWYNLzg"
+          },
+          "tracks": {
+           "totalCount": 1
+          },
+          "type": "SINGLE",
+          "uri": "spotify:album:5ObAN5vuKsnyFJXlDwlsMu"
+         }
+        ]
+       }
+      },
+      {
+       "releases": {
+        "items": [
+         {
+          "copyright": {
+           "items": [
+            {
+             "text": "(C) 2026 David Andrew, exclusively distributed by Wings Music Group",
+             "type": "C"
+            },
+            {
+             "text": "(P) 2026 David Andrew, exclusively distributed by Wings Music Group",
+             "type": "P"
+            }
+           ]
+          },
+          "coverArt": {
+           "sources": [
+            {
+             "height": 300,
+             "url": "https://i.scdn.co/image/ab67616d00001e02d07114e6fd4664cc67d857c3",
+             "width": 300
+            },
+            {
+             "height": 64,
+             "url": "https://i.scdn.co/image/ab67616d00004851d07114e6fd4664cc67d857c3",
+             "width": 64
+            },
+            {
+             "height": 640,
+             "url": "https://i.scdn.co/image/ab67616d0000b273d07114e6fd4664cc67d857c3",
+             "width": 640
+            }
+           ]
+          },
+          "date": {
+           "day": 12,
+           "month": 6,
+           "precision": "DAY",
+           "year": 2026
+          },
+          "id": "2L1ztNgeroXavAbYGZ3UCa",
+          "label": "Wings Music Group",
+          "name": "Sign of the Times",
+          "playability": {
+           "playable": true,
+           "reason": "PLAYABLE"
+          },
+          "sharingInfo": {
+           "shareId": "OoWLmq9DTZ-7i7XJIVCE5w",
+           "shareUrl": "https://open.spotify.com/album/2L1ztNgeroXavAbYGZ3UCa?si=OoWLmq9DTZ-7i7XJIVCE5w"
+          },
+          "tracks": {
+           "totalCount": 1
+          },
+          "type": "SINGLE",
+          "uri": "spotify:album:2L1ztNgeroXavAbYGZ3UCa"
+         }
+        ]
+       }
+      }
+     ],
+     "totalCount": 29
+    },
+    "topTracks": {
+     "items": [
+      {
+       "track": {
+        "albumOfTrack": {
+         "coverArt": {
+          "sources": [
+           {
+            "url": "https://i.scdn.co/image/ab67616d00001e02db38d7c1dae2ab572c0b26e5"
+           },
+           {
+            "url": "https://i.scdn.co/image/ab67616d00004851db38d7c1dae2ab572c0b26e5"
+           },
+           {
+            "url": "https://i.scdn.co/image/ab67616d0000b273db38d7c1dae2ab572c0b26e5"
+           }
+          ]
+         },
+         "uri": "spotify:album:0GNTTpbax8oLbef8g2OwAy"
+        },
+        "artists": {
+         "items": [
+          {
+           "profile": {
+            "name": "Hillsong Instrumentals"
+           },
+           "uri": "spotify:artist:4d8bnn80rmLCwHU08DjGPS"
+          },
+          {
+           "profile": {
+            "name": "David Andrew"
+           },
+           "uri": "spotify:artist:44nxpJ4QALHoSoUFpWiIQc"
+          }
+         ]
+        },
+        "associationsV2": {
+         "totalCount": 0
+        },
+        "contentRating": {
+         "label": "NONE"
+        },
+        "discNumber": 1,
+        "duration": {
+         "totalMilliseconds": 358253
+        },
+        "id": "2cFTkx42FZd2ZrdmeEMesH",
+        "name": "Oceans (Where Feet May Fail)",
+        "playability": {
+         "playable": true,
+         "reason": "PLAYABLE"
+        },
+        "playcount": "20980247",
+        "uri": "spotify:track:2cFTkx42FZd2ZrdmeEMesH"
+       },
+       "uid": "07380eb16423a4f328cc"
+      },
+      {
+       "track": {
+        "albumOfTrack": {
+         "coverArt": {
+          "sources": [
+           {
+            "url": "https://i.scdn.co/image/ab67616d00001e023c851d1ed717f5cc49662af4"
+           },
+           {
+            "url": "https://i.scdn.co/image/ab67616d000048513c851d1ed717f5cc49662af4"
+           },
+           {
+            "url": "https://i.scdn.co/image/ab67616d0000b2733c851d1ed717f5cc49662af4"
+           }
+          ]
+         },
+         "uri": "spotify:album:1sPcAIk4mZNCZaSVILPCsC"
+        },
+        "artists": {
+         "items": [
+          {
+           "profile": {
+            "name": "Hillsong Instrumentals"
+           },
+           "uri": "spotify:artist:4d8bnn80rmLCwHU08DjGPS"
+          },
+          {
+           "profile": {
+            "name": "David Andrew"
+           },
+           "uri": "spotify:artist:44nxpJ4QALHoSoUFpWiIQc"
+          }
+         ]
+        },
+        "associationsV2": {
+         "totalCount": 0
+        },
+        "contentRating": {
+         "label": "NONE"
+        },
+        "discNumber": 1,
+        "duration": {
+         "totalMilliseconds": 229598
+        },
+        "id": "6VMu6afp2ren85DwON6xxt",
+        "name": "Who You Say I Am",
+        "playability": {
+         "playable": true,
+         "reason": "PLAYABLE"
+        },
+        "playcount": "6812731",
+        "uri": "spotify:track:6VMu6afp2ren85DwON6xxt"
+       },
+       "uid": "8d943b651c3d43862b54"
+      },
+      {
+       "track": {
+        "albumOfTrack": {
+         "coverArt": {
+          "sources": [
+           {
+            "url": "https://i.scdn.co/image/ab67616d00001e0273f9bb0933953e9f645ec4b7"
+           },
+           {
+            "url": "https://i.scdn.co/image/ab67616d0000485173f9bb0933953e9f645ec4b7"
+           },
+           {
+            "url": "https://i.scdn.co/image/ab67616d0000b27373f9bb0933953e9f645ec4b7"
+           }
+          ]
+         },
+         "uri": "spotify:album:2yvNFcpAiLFboKkuCfUKr0"
+        },
+        "artists": {
+         "items": [
+          {
+           "profile": {
+            "name": "Hillsong Instrumentals"
+           },
+           "uri": "spotify:artist:4d8bnn80rmLCwHU08DjGPS"
+          },
+          {
+           "profile": {
+            "name": "David Andrew"
+           },
+           "uri": "spotify:artist:44nxpJ4QALHoSoUFpWiIQc"
+          }
+         ]
+        },
+        "associationsV2": {
+         "totalCount": 0
+        },
+        "contentRating": {
+         "label": "NONE"
+        },
+        "discNumber": 1,
+        "duration": {
+         "totalMilliseconds": 308626
+        },
+        "id": "6uV4dBjHZGzDzsGpBYMESI",
+        "name": "Broken Vessels (Amazing Grace)",
+        "playability": {
+         "playable": true,
+         "reason": "PLAYABLE"
+        },
+        "playcount": "16111840",
+        "uri": "spotify:track:6uV4dBjHZGzDzsGpBYMESI"
+       },
+       "uid": "200e4845e6000e50f0c4"
+      },
+      {
+       "track": {
+        "albumOfTrack": {
+         "coverArt": {
+          "sources": [
+           {
+            "url": "https://i.scdn.co/image/ab67616d00001e02db38d7c1dae2ab572c0b26e5"
+           },
+           {
+            "url": "https://i.scdn.co/image/ab67616d00004851db38d7c1dae2ab572c0b26e5"
+           },
+           {
+            "url": "https://i.scdn.co/image/ab67616d0000b273db38d7c1dae2ab572c0b26e5"
+           }
+          ]
+         },
+         "uri": "spotify:album:0GNTTpbax8oLbef8g2OwAy"
+        },
+        "artists": {
+         "items": [
+          {
+           "profile": {
+            "name": "Hillsong Instrumentals"
+           },
+           "uri": "spotify:artist:4d8bnn80rmLCwHU08DjGPS"
+          },
+          {
+           "profile": {
+            "name": "David Andrew"
+           },
+           "uri": "spotify:artist:44nxpJ4QALHoSoUFpWiIQc"
+          }
+         ]
+        },
+        "associationsV2": {
+         "totalCount": 0
+        },
+        "contentRating": {
+         "label": "NONE"
+        },
+        "discNumber": 1,
+        "duration": {
+         "totalMilliseconds": 287320
+        },
+        "id": "4koKk08EQRI31mYmT3pFLa",
+        "name": "God is Able",
+        "playability": {
+         "playable": true,
+         "reason": "PLAYABLE"
+        },
+        "playcount": "17246557",
+        "uri": "spotify:track:4koKk08EQRI31mYmT3pFLa"
+       },
+       "uid": "c207385dc52409e4b653"
+      },
+      {
+       "track": {
+        "albumOfTrack": {
+         "coverArt": {
+          "sources": [
+           {
+            "url": "https://i.scdn.co/image/ab67616d00001e0265aa17fd94d5c33bba9e94c0"
+           },
+           {
+            "url": "https://i.scdn.co/image/ab67616d0000485165aa17fd94d5c33bba9e94c0"
+           },
+           {
+            "url": "https://i.scdn.co/image/ab67616d0000b27365aa17fd94d5c33bba9e94c0"
+           }
+          ]
+         },
+         "uri": "spotify:album:2AjOe51uc89wcbRezYiIH0"
+        },
+        "artists": {
+         "items": [
+          {
+           "profile": {
+            "name": "David Andrew"
+           },
+           "uri": "spotify:artist:44nxpJ4QALHoSoUFpWiIQc"
+          }
+         ]
+        },
+        "associationsV2": {
+         "totalCount": 0
+        },
+        "contentRating": {
+         "label": "NONE"
+        },
+        "discNumber": 1,
+        "duration": {
+         "totalMilliseconds": 170395
+        },
+        "id": "2uDHWI4FtmH75wXb3az2gV",
+        "name": "Isn't She Lovely - Piano Version",
+        "playability": {
+         "playable": true,
+         "reason": "PLAYABLE"
+        },
+        "playcount": "10025563",
+        "uri": "spotify:track:2uDHWI4FtmH75wXb3az2gV"
+       },
+       "uid": "03f2d14e670dcd178419"
+      },
+      {
+       "track": {
+        "albumOfTrack": {
+         "coverArt": {
+          "sources": [
+           {
+            "url": "https://i.scdn.co/image/ab67616d00001e02db38d7c1dae2ab572c0b26e5"
+           },
+           {
+            "url": "https://i.scdn.co/image/ab67616d00004851db38d7c1dae2ab572c0b26e5"
+           },
+           {
+            "url": "https://i.scdn.co/image/ab67616d0000b273db38d7c1dae2ab572c0b26e5"
+           }
+          ]
+         },
+         "uri": "spotify:album:0GNTTpbax8oLbef8g2OwAy"
+        },
+        "artists": {
+         "items": [
+          {
+           "profile": {
+            "name": "Hillsong Instrumentals"
+           },
+           "uri": "spotify:artist:4d8bnn80rmLCwHU08DjGPS"
+          },
+          {
+           "profile": {
+            "name": "David Andrew"
+           },
+           "uri": "spotify:artist:44nxpJ4QALHoSoUFpWiIQc"
+          }
+         ]
+        },
+        "associationsV2": {
+         "totalCount": 0
+        },
+        "contentRating": {
+         "label": "NONE"
+        },
+        "discNumber": 1,
+        "duration": {
+         "totalMilliseconds": 336640
+        },
+        "id": "1zV7wp9YIk93iPBt5H8p9q",
+        "name": "Mighty To Save",
+        "playability": {
+         "playable": true,
+         "reason": "PLAYABLE"
+        },
+        "playcount": "10963960",
+        "uri": "spotify:track:1zV7wp9YIk93iPBt5H8p9q"
+       },
+       "uid": "ea5cb1011da6dd2bad3f"
+      },
+      {
+       "track": {
+        "albumOfTrack": {
+         "coverArt": {
+          "sources": [
+           {
+            "url": "https://i.scdn.co/image/ab67616d00001e0279dfd32b320420234388b94b"
+           },
+           {
+            "url": "https://i.scdn.co/image/ab67616d0000485179dfd32b320420234388b94b"
+           },
+           {
+            "url": "https://i.scdn.co/image/ab67616d0000b27379dfd32b320420234388b94b"
+           }
+          ]
+         },
+         "uri": "spotify:album:2fGJPma2WpiuA9vXF2XZQi"
+        },
+        "artists": {
+         "items": [
+          {
+           "profile": {
+            "name": "David Andrew"
+           },
+           "uri": "spotify:artist:44nxpJ4QALHoSoUFpWiIQc"
+          }
+         ]
+        },
+        "associationsV2": {
+         "totalCount": 0
+        },
+        "contentRating": {
+         "label": "NONE"
+        },
+        "discNumber": 1,
+        "duration": {
+         "totalMilliseconds": 244000
+        },
+        "id": "1HFdhcKsoUsschtrRgZQg0",
+        "name": "Here I Am To Worship",
+        "playability": {
+         "playable": true,
+         "reason": "PLAYABLE"
+        },
+        "playcount": "4270883",
+        "uri": "spotify:track:1HFdhcKsoUsschtrRgZQg0"
+       },
+       "uid": "9bb02d79178706e292f9"
+      },
+      {
+       "track": {
+        "albumOfTrack": {
+         "coverArt": {
+          "sources": [
+           {
+            "url": "https://i.scdn.co/image/ab67616d00001e02db38d7c1dae2ab572c0b26e5"
+           },
+           {
+            "url": "https://i.scdn.co/image/ab67616d00004851db38d7c1dae2ab572c0b26e5"
+           },
+           {
+            "url": "https://i.scdn.co/image/ab67616d0000b273db38d7c1dae2ab572c0b26e5"
+           }
+          ]
+         },
+         "uri": "spotify:album:0GNTTpbax8oLbef8g2OwAy"
+        },
+        "artists": {
+         "items": [
+          {
+           "profile": {
+            "name": "Hillsong Instrumentals"
+           },
+           "uri": "spotify:artist:4d8bnn80rmLCwHU08DjGPS"
+          },
+          {
+           "profile": {
+            "name": "David Andrew"
+           },
+           "uri": "spotify:artist:44nxpJ4QALHoSoUFpWiIQc"
+          }
+         ]
+        },
+        "associationsV2": {
+         "totalCount": 0
+        },
+        "contentRating": {
+         "label": "NONE"
+        },
+        "discNumber": 1,
+        "duration": {
+         "totalMilliseconds": 355333
+        },
+        "id": "1I7TOu1yoEKQDvUMvlRVxm",
+        "name": "Cornerstone",
+        "playability": {
+         "playable": true,
+         "reason": "PLAYABLE"
+        },
+        "playcount": "14570683",
+        "uri": "spotify:track:1I7TOu1yoEKQDvUMvlRVxm"
+       },
+       "uid": "ece387833bb784d0aff0"
+      },
+      {
+       "track": {
+        "albumOfTrack": {
+         "coverArt": {
+          "sources": [
+           {
+            "url": "https://i.scdn.co/image/ab67616d00001e02db38d7c1dae2ab572c0b26e5"
+           },
+           {
+            "url": "https://i.scdn.co/image/ab67616d00004851db38d7c1dae2ab572c0b26e5"
+           },
+           {
+            "url": "https://i.scdn.co/image/ab67616d0000b273db38d7c1dae2ab572c0b26e5"
+           }
+          ]
+         },
+         "uri": "spotify:album:0GNTTpbax8oLbef8g2OwAy"
+        },
+        "artists": {
+         "items": [
+          {
+           "profile": {
+            "name": "Hillsong Instrumentals"
+           },
+           "uri": "spotify:artist:4d8bnn80rmLCwHU08DjGPS"
+          },
+          {
+           "profile": {
+            "name": "David Andrew"
+           },
+           "uri": "spotify:artist:44nxpJ4QALHoSoUFpWiIQc"
+          }
+         ]
+        },
+        "associationsV2": {
+         "totalCount": 0
+        },
+        "contentRating": {
+         "label": "NONE"
+        },
+        "discNumber": 1,
+        "duration": {
+         "totalMilliseconds": 337066
+        },
+        "id": "6D4iyiFyofBN9tm2QIbdFs",
+        "name": "I Surrender",
+        "playability": {
+         "playable": true,
+         "reason": "PLAYABLE"
+        },
+        "playcount": "14222018",
+        "uri": "spotify:track:6D4iyiFyofBN9tm2QIbdFs"
+       },
+       "uid": "4ba944760ba74ce050fe"
+      },
+      {
+       "track": {
+        "albumOfTrack": {
+         "coverArt": {
+          "sources": [
+           {
+            "url": "https://i.scdn.co/image/ab67616d00001e0208c8470894966ce4724c041f"
+           },
+           {
+            "url": "https://i.scdn.co/image/ab67616d0000485108c8470894966ce4724c041f"
+           },
+           {
+            "url": "https://i.scdn.co/image/ab67616d0000b27308c8470894966ce4724c041f"
+           }
+          ]
+         },
+         "uri": "spotify:album:7h6OVZnXZ0yVJLf2Ou96lK"
+        },
+        "artists": {
+         "items": [
+          {
+           "profile": {
+            "name": "David Andrew"
+           },
+           "uri": "spotify:artist:44nxpJ4QALHoSoUFpWiIQc"
+          }
+         ]
+        },
+        "associationsV2": {
+         "totalCount": 0
+        },
+        "contentRating": {
+         "label": "NONE"
+        },
+        "discNumber": 1,
+        "duration": {
+         "totalMilliseconds": 190625
+        },
+        "id": "40h5N9ARRkUTtecVVOzEkj",
+        "name": "It Is Well With My Soul",
+        "playability": {
+         "playable": true,
+         "reason": "PLAYABLE"
+        },
+        "playcount": "2909183",
+        "uri": "spotify:track:40h5N9ARRkUTtecVVOzEkj"
+       },
+       "uid": "66cd40df554548cb36b4"
+      }
+     ]
+    }
+   },
+   "goods": {
+    "events": {
+     "concerts": {
+      "items": [],
+      "pagingInfo": {
+       "limit": 0
+      },
+      "totalCount": 0
+     },
+     "userLocation": {
+      "name": "Chicago"
+     }
+    },
+    "merch": {
+     "items": []
+    }
+   },
+   "id": "44nxpJ4QALHoSoUFpWiIQc",
+   "preRelease": {
+    "preReleaseContent": {
+     "coverArt": {
+      "sources": [
+       {
+        "height": 300,
+        "url": "https://i.scdn.co/image/ab67616d00001e0233bac83e6d4831e1a8c031c7",
+        "width": 300
+       },
+       {
+        "height": 64,
+        "url": "https://i.scdn.co/image/ab67616d0000485133bac83e6d4831e1a8c031c7",
+        "width": 64
+       },
+       {
+        "height": 640,
+        "url": "https://i.scdn.co/image/ab67616d0000b27333bac83e6d4831e1a8c031c7",
+        "width": 640
+       }
+      ]
+     },
+     "name": "Holy Forever",
+     "type": "ALBUM"
+    },
+    "releaseDate": {
+     "isoString": "2026-08-28T04:00:00Z"
+    },
+    "uri": "spotify:prerelease:1RkuvFxetdl4E1VEKdN22y"
+   },
+   "profile": {
+    "biography": {
+     "text": "Accomplished musician, David Andrew has already worked with the likes of Tones and I, and Gang of Youths, played in stadiums around the world with Hillsong United. He started his solo recording career after responding to his mother\u2019s request for a Piano album of Hymns, this unlikely success has David now turning his eye to taking familiar pop tunes and rearranging them in a style that is both creative and functional, and will help people find peace.",
+     "type": "AUTOBIOGRAPHY"
+    },
+    "externalLinks": {
+     "items": [
+      {
+       "name": "FACEBOOK",
+       "url": "https://facebook.com/davidandrewmusician/"
+      },
+      {
+       "name": "INSTAGRAM",
+       "url": "https://instagram.com/davidjandrew"
+      },
+      {
+       "name": "TWITTER",
+       "url": "https://twitter.com/davidjandrew"
+      }
+     ]
+    },
+    "name": "David Andrew",
+    "pinnedItem": {
+     "backgroundImageV2": null,
+     "comment": "",
+     "itemV2": {
+      "__typename": "AlbumResponseWrapper",
+      "data": {
+       "__typename": "Album",
+       "coverArt": {
+        "sources": [
+         {
+          "height": 300,
+          "url": "https://i.scdn.co/image/ab67616d00001e02f2e94c2563e27db41751f178",
+          "width": 300
+         },
+         {
+          "height": 64,
+          "url": "https://i.scdn.co/image/ab67616d00004851f2e94c2563e27db41751f178",
+          "width": 64
+         },
+         {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab67616d0000b273f2e94c2563e27db41751f178",
+          "width": 640
+         }
+        ]
+       },
+       "name": "You Are Holy / Falling In Love With Jesus",
+       "type": "SINGLE",
+       "uri": "spotify:album:391izZ6H98ZIMQ6WGZT9o4"
+      }
+     },
+     "subtitle": "Single",
+     "thumbnailImage": {
+      "data": {
+       "sources": [
+        {
+         "url": "https://image-cdn-fa.spotifycdn.com/image/ab67616d000075a0f2e94c2563e27db41751f178"
+        },
+        {
+         "url": "https://image-cdn-fa.spotifycdn.com/image/ab67616d000090d5f2e94c2563e27db41751f178"
+        },
+        {
+         "url": "https://image-cdn-fa.spotifycdn.com/image/ab67616d0000ab87f2e94c2563e27db41751f178"
+        }
+       ]
+      }
+     },
+     "title": "You Are Holy / Falling In Love With Jesus",
+     "type": "ALBUM",
+     "uri": "spotify:album:391izZ6H98ZIMQ6WGZT9o4"
+    },
+    "playlistsV2": {
+     "items": [
+      {
+       "data": {
+        "__typename": "Playlist",
+        "description": "",
+        "images": {
+         "items": [
+          {
+           "sources": [
+            {
+             "height": null,
+             "url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000d72cfa1696ab8fe790bc85b3888d",
+             "width": null
+            }
+           ]
+          }
+         ]
+        },
+        "name": "Piano Piece of Mind Complete Collection",
+        "ownerV2": {
+         "data": {
+          "__typename": "User",
+          "name": "David Andrew"
+         }
+        },
+        "uri": "spotify:playlist:5FYD38EXddTPmOCVMcGjfg"
+       }
+      },
+      {
+       "data": {
+        "__typename": "Playlist",
+        "description": "Music to help you worship and center yourself away from the chaos, anxiety and stress, and into his presence where you can soak with this playlist of Christian Worship Instrumentals",
+        "images": {
+         "items": [
+          {
+           "sources": [
+            {
+             "height": null,
+             "url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000d72ce1871dc7e18b105f5503e69f",
+             "width": null
+            }
+           ]
+          }
+         ]
+        },
+        "name": "Worship Piano Instrumentals | Peaceful Prayer & Calm",
+        "ownerV2": {
+         "data": {
+          "__typename": "User",
+          "name": "David Andrew"
+         }
+        },
+        "uri": "spotify:playlist:7jCK3znlIIZCPFMunw07HL"
+       }
+      },
+      {
+       "data": {
+        "__typename": "Playlist",
+        "description": "Some of my favourite tunes to fall asleep to. No drums, no giant differences in dynamics, just clouds of music to help you sleep.",
+        "images": {
+         "items": [
+          {
+           "sources": [
+            {
+             "height": null,
+             "url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000d72cd9a90f31cea1d8d7ab5fd715",
+             "width": null
+            }
+           ]
+          }
+         ]
+        },
+        "name": "Sleep Piano 2026 | Deep Sleep & Calm Instrumentals",
+        "ownerV2": {
+         "data": {
+          "__typename": "User",
+          "name": "David Andrew"
+         }
+        },
+        "uri": "spotify:playlist:3rPjTCkBiuntIHTglOxEkK"
+       }
+      },
+      {
+       "data": {
+        "__typename": "Playlist",
+        "description": "",
+        "images": {
+         "items": [
+          {
+           "sources": [
+            {
+             "height": null,
+             "url": "https://i.scdn.co/image/ab67616d00001e026e1e8ca4cbde2c55866120bc",
+             "width": null
+            }
+           ]
+          }
+         ]
+        },
+        "name": "The Complete Sleep Project Phase 2",
+        "ownerV2": {
+         "data": {
+          "__typename": "User",
+          "name": "David Andrew"
+         }
+        },
+        "uri": "spotify:playlist:4qtk8U8vdghSgADGj1RJzX"
+       }
+      },
+      {
+       "data": {
+        "__typename": "Playlist",
+        "description": "Peaceful Piano Instrumentals to help you find rest, help you study, mediate, work from home, and help you sleep. By David Andrew from Hillsong Church.",
+        "images": {
+         "items": [
+          {
+           "sources": [
+            {
+             "height": null,
+             "url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000d72c5f3d87feea4b74c49b29252d",
+             "width": null
+            }
+           ]
+          }
+         ]
+        },
+        "name": "PIANO INSTRUMENTALS - David Andrew",
+        "ownerV2": {
+         "data": {
+          "__typename": "User",
+          "name": "David Andrew"
+         }
+        },
+        "uri": "spotify:playlist:7Gl5ZtkSBNgLO6xIIEQseV"
+       }
+      }
+     ],
+     "totalCount": 5
+    },
+    "verified": true
+   },
+   "relatedContent": {
+    "appearsOn": {
+     "items": [],
+     "totalCount": 0
+    },
+    "discoveredOnV2": {
+     "items": [
+      {
+       "data": {
+        "__typename": "GenericError"
+       }
+      },
+      {
+       "data": {
+        "__typename": "Playlist",
+        "description": "",
+        "id": "1Vdl80IXVVdLkKs085c5vr",
+        "images": {
+         "items": [
+          {
+           "sources": [
+            {
+             "height": null,
+             "url": "https://i.scdn.co/image/ab67616d00001e02be282bb371c6dabd5ea12cb8",
+             "width": null
+            }
+           ]
+          }
+         ],
+         "totalCount": 1
+        },
+        "name": "Hillsong Instrumentals",
+        "ownerV2": {
+         "data": {
+          "__typename": "User",
+          "name": "mhigashi"
+         }
+        },
+        "uri": "spotify:playlist:1Vdl80IXVVdLkKs085c5vr"
+       }
+      },
+      {
+       "data": {
+        "__typename": "Playlist",
+        "description": "Instrumental worship music that is great for sleeping, studying, or for everyday background music. You can sing along to instrumental versions of your favourite worship songs or just listen knowing that these songs were created to worship God!",
+        "id": "3Rk0ZBAszRLe8tdh8zKh9s",
+        "images": {
+         "items": [
+          {
+           "sources": [
+            {
+             "height": null,
+             "url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da84a8a67f66f2958f226d7498bc",
+             "width": null
+            }
+           ]
+          }
+         ],
+         "totalCount": 1
+        },
+        "name": "Calm Christian For Sleep",
+        "ownerV2": {
+         "data": {
+          "__typename": "User",
+          "name": "WaterLily12"
+         }
+        },
+        "uri": "spotify:playlist:3Rk0ZBAszRLe8tdh8zKh9s"
+       }
+      },
+      {
+       "data": {
+        "__typename": "Playlist",
+        "description": "This is Hillsong Instrumentals. The essential tracks, all in one playlist.",
+        "id": "37i9dQZF1DZ06evO2sE6Yw",
+        "images": {
+         "items": [
+          {
+           "sources": [
+            {
+             "height": null,
+             "url": "https://pickasso.spotifycdn.com/image/ab67c0de0000deef/dt/v1/img/thisisv3/4d8bnn80rmLCwHU08DjGPS/en",
+             "width": null
+            }
+           ]
+          }
+         ],
+         "totalCount": 1
+        },
+        "name": "This Is Hillsong Instrumentals",
+        "ownerV2": {
+         "data": {
+          "__typename": "User",
+          "name": "Spotify"
+         }
+        },
+        "uri": "spotify:playlist:37i9dQZF1DZ06evO2sE6Yw"
+       }
+      },
+      {
+       "data": {
+        "__typename": "GenericError"
+       }
+      },
+      {
+       "data": {
+        "__typename": "Playlist",
+        "description": "",
+        "id": "1RlZBKYzbh91cqPhqc7ygM",
+        "images": {
+         "items": [
+          {
+           "sources": [
+            {
+             "height": null,
+             "url": "https://i.scdn.co/image/ab67616d00001e022cebc4a9c7082c8cccd3e25a",
+             "width": null
+            }
+           ]
+          }
+         ],
+         "totalCount": 1
+        },
+        "name": "Hillsong Lullabies",
+        "ownerV2": {
+         "data": {
+          "__typename": "User",
+          "name": "annzbo"
+         }
+        },
+        "uri": "spotify:playlist:1RlZBKYzbh91cqPhqc7ygM"
+       }
+      },
+      {
+       "data": {
+        "__typename": "Playlist",
+        "description": "Instrumental Worship 2026 | Soft Piano Worship | Christian Piano | Worship Piano | Hillsong Instrumentals | Calming Christian | Bethel Instrumentals | Elevation Instrumentals | Maverick City Music Instrumentals | Calming Christian Piano | Calm Christian Instrumentals | Calm piano | Bible Study",
+        "id": "2rzz5YfYyxlbWiFzAxapcI",
+        "images": {
+         "items": [
+          {
+           "sources": [
+            {
+             "height": null,
+             "url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000d72cfcaea537fe932ff1fe74007d",
+             "width": null
+            }
+           ]
+          }
+         ],
+         "totalCount": 1
+        },
+        "name": "Peaceful Worship Piano - for Prayer, Study, and Sleep",
+        "ownerV2": {
+         "data": {
+          "__typename": "User",
+          "name": "P E A C E playlists"
+         }
+        },
+        "uri": "spotify:playlist:2rzz5YfYyxlbWiFzAxapcI"
+       }
+      },
+      {
+       "data": {
+        "__typename": "Playlist",
+        "description": "",
+        "id": "6ekBGsOaabgeMFrZMkifnW",
+        "images": {
+         "items": [
+          {
+           "sources": [
+            {
+             "height": null,
+             "url": "https://i.scdn.co/image/ab67616d00001e023f26cc482bdcf2a57dc6805f",
+             "width": null
+            }
+           ]
+          }
+         ],
+         "totalCount": 1
+        },
+        "name": "Christian Lullabies",
+        "ownerV2": {
+         "data": {
+          "__typename": "User",
+          "name": "andreathayer"
+         }
+        },
+        "uri": "spotify:playlist:6ekBGsOaabgeMFrZMkifnW"
+       }
+      },
+      {
+       "data": {
+        "__typename": "Playlist",
+        "description": "A playlist of piano-only arrangements of worship songs. Updated June 2026",
+        "id": "2tqmGcxzNzLRceBVeg7uE3",
+        "images": {
+         "items": [
+          {
+           "sources": [
+            {
+             "height": null,
+             "url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000d72c6a5255f046bf9bb1e7e3f074",
+             "width": null
+            }
+           ]
+          }
+         ],
+         "totalCount": 1
+        },
+        "name": "Worship - Piano",
+        "ownerV2": {
+         "data": {
+          "__typename": "User",
+          "name": "Riley Nadwodny"
+         }
+        },
+        "uri": "spotify:playlist:2tqmGcxzNzLRceBVeg7uE3"
+       }
+      },
+      {
+       "data": {
+        "__typename": "Playlist",
+        "description": "Instrumental praise and worship music to sleep, pray, ponder and meditate to\u2026 ",
+        "id": "2l2uMQFsOY61y9e0rD5mNg",
+        "images": {
+         "items": [
+          {
+           "sources": [
+            {
+             "height": 640,
+             "url": "https://mosaic.scdn.co/640/ab67616d00001e0256ee340de3e156b664b90221ab67616d00001e026bfc1ae7f38ef292c3669777ab67616d00001e02b5e7ad9a0abb79728ea84d1fab67616d00001e02c814ffea314e26873896190d",
+             "width": 640
+            },
+            {
+             "height": 300,
+             "url": "https://mosaic.scdn.co/300/ab67616d00001e0256ee340de3e156b664b90221ab67616d00001e026bfc1ae7f38ef292c3669777ab67616d00001e02b5e7ad9a0abb79728ea84d1fab67616d00001e02c814ffea314e26873896190d",
+             "width": 300
+            },
+            {
+             "height": 60,
+             "url": "https://mosaic.scdn.co/60/ab67616d00001e0256ee340de3e156b664b90221ab67616d00001e026bfc1ae7f38ef292c3669777ab67616d00001e02b5e7ad9a0abb79728ea84d1fab67616d00001e02c814ffea314e26873896190d",
+             "width": 60
+            }
+           ]
+          }
+         ],
+         "totalCount": 1
+        },
+        "name": "Hillsong Piano Instrumentals Christian Gospel Worship Chill Sleep Music",
+        "ownerV2": {
+         "data": {
+          "__typename": "User",
+          "name": "Israel Hobson"
+         }
+        },
+        "uri": "spotify:playlist:2l2uMQFsOY61y9e0rD5mNg"
+       }
+      },
+      {
+       "data": {
+        "__typename": "Playlist",
+        "description": "Gentle Instrumental Worship Music | Peaceful, Healing and Calming | Christian music for praying",
+        "id": "6fmx8xeSAH0IFPbFO8XpVp",
+        "images": {
+         "items": [
+          {
+           "sources": [
+            {
+             "height": null,
+             "url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da8436593144d5d457c1f871eb78",
+             "width": null
+            }
+           ]
+          }
+         ],
+         "totalCount": 1
+        },
+        "name": "Gentle Worship Instrumental \u2728",
+        "ownerV2": {
+         "data": {
+          "__typename": "User",
+          "name": "Mapache G."
+         }
+        },
+        "uri": "spotify:playlist:6fmx8xeSAH0IFPbFO8XpVp"
+       }
+      },
+      {
+       "data": {
+        "__typename": "Playlist",
+        "description": "You will love this collection of beautifully recorded and arranged Hillsong songs for personal times of prayer and reflection. <a href=\"https://open.spotify.com/user/jy1lzj9a7rz7o74co93wtpsdc?si=zLbTUADLSx\">Click here</a> for more of our playlists.",
+        "id": "6cYr3gIBmHvgbYjJy80xjr",
+        "images": {
+         "items": [
+          {
+           "sources": [
+            {
+             "height": null,
+             "url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000d72ce75437029dfdb07a61002c69",
+             "width": null
+            }
+           ]
+          }
+         ],
+         "totalCount": 1
+        },
+        "name": "Hillsong Instrumentals",
+        "ownerV2": {
+         "data": {
+          "__typename": "User",
+          "name": "Hillsong"
+         }
+        },
+        "uri": "spotify:playlist:6cYr3gIBmHvgbYjJy80xjr"
+       }
+      },
+      {
+       "data": {
+        "__typename": "Playlist",
+        "description": "",
+        "id": "2OrWos5X07SZuMJPLoExiY",
+        "images": {
+         "items": [
+          {
+           "sources": [
+            {
+             "height": null,
+             "url": "https://i.scdn.co/image/ab67616d00001e0250e0630e6a8f741e855b3422",
+             "width": null
+            }
+           ]
+          }
+         ],
+         "totalCount": 1
+        },
+        "name": "Hillsong Baby Lullabies",
+        "ownerV2": {
+         "data": {
+          "__typename": "User",
+          "name": "Carina Rahardjo"
+         }
+        },
+        "uri": "spotify:playlist:2OrWos5X07SZuMJPLoExiY"
+       }
+      },
+      {
+       "data": {
+        "__typename": "Playlist",
+        "description": "",
+        "id": "5mfoe0J94HSY7QA7kPpEws",
+        "images": {
+         "items": [
+          {
+           "sources": [
+            {
+             "height": null,
+             "url": "https://i.scdn.co/image/ab67616d00001e023f26cc482bdcf2a57dc6805f",
+             "width": null
+            }
+           ]
+          }
+         ],
+         "totalCount": 1
+        },
+        "name": "Hillsong Piano Worship",
+        "ownerV2": {
+         "data": {
+          "__typename": "User",
+          "name": "Rebekah Amy Reysen"
+         }
+        },
+        "uri": "spotify:playlist:5mfoe0J94HSY7QA7kPpEws"
+       }
+      },
+      {
+       "data": {
+        "__typename": "Playlist",
+        "description": "",
+        "id": "7bpD4dzd7VULE1XbNz1JNN",
+        "images": {
+         "items": [
+          {
+           "sources": [
+            {
+             "height": 640,
+             "url": "https://mosaic.scdn.co/640/ab67616d00001e023f26cc482bdcf2a57dc6805fab67616d00001e023f3ca272a0d95e5f2efb5184ab67616d00001e0279dfd32b320420234388b94bab67616d00001e02a94fabeec9e3298d35b6cba2",
+             "width": 640
+            },
+            {
+             "height": 300,
+             "url": "https://mosaic.scdn.co/300/ab67616d00001e023f26cc482bdcf2a57dc6805fab67616d00001e023f3ca272a0d95e5f2efb5184ab67616d00001e0279dfd32b320420234388b94bab67616d00001e02a94fabeec9e3298d35b6cba2",
+             "width": 300
+            },
+            {
+             "height": 60,
+             "url": "https://mosaic.scdn.co/60/ab67616d00001e023f26cc482bdcf2a57dc6805fab67616d00001e023f3ca272a0d95e5f2efb5184ab67616d00001e0279dfd32b320420234388b94bab67616d00001e02a94fabeec9e3298d35b6cba2",
+             "width": 60
+            }
+           ]
+          }
+         ],
+         "totalCount": 1
+        },
+        "name": "Hillsong Lullaby",
+        "ownerV2": {
+         "data": {
+          "__typename": "User",
+          "name": "katiebbeeman"
+         }
+        },
+        "uri": "spotify:playlist:7bpD4dzd7VULE1XbNz1JNN"
+       }
+      },
+      {
+       "data": {
+        "__typename": "Playlist",
+        "description": "",
+        "id": "4WuofAlWwdNyWCRKnJTlqr",
+        "images": {
+         "items": [
+          {
+           "sources": [
+            {
+             "height": 640,
+             "url": "https://mosaic.scdn.co/640/ab67616d00001e0201db99579104dafb7c17945eab67616d00001e0276278871d888428e89c00690ab67616d00001e0289e3b7c8fb025129573a176fab67616d00001e02a02a3f62fde3fa7cd0d2e718",
+             "width": 640
+            },
+            {
+             "height": 300,
+             "url": "https://mosaic.scdn.co/300/ab67616d00001e0201db99579104dafb7c17945eab67616d00001e0276278871d888428e89c00690ab67616d00001e0289e3b7c8fb025129573a176fab67616d00001e02a02a3f62fde3fa7cd0d2e718",
+             "width": 300
+            },
+            {
+             "height": 60,
+             "url": "https://mosaic.scdn.co/60/ab67616d00001e0201db99579104dafb7c17945eab67616d00001e0276278871d888428e89c00690ab67616d00001e0289e3b7c8fb025129573a176fab67616d00001e02a02a3f62fde3fa7cd0d2e718",
+             "width": 60
+            }
+           ]
+          }
+         ],
+         "totalCount": 1
+        },
+        "name": "Hillsong Instrumentals \u2013 For Sleep",
+        "ownerV2": {
+         "data": {
+          "__typename": "User",
+          "name": "For the Soul"
+         }
+        },
+        "uri": "spotify:playlist:4WuofAlWwdNyWCRKnJTlqr"
+       }
+      },
+      {
+       "data": {
+        "__typename": "Playlist",
+        "description": "",
+        "id": "1zmUfH6OowaLtDeYHrqMmD",
+        "images": {
+         "items": [
+          {
+           "sources": [
+            {
+             "height": null,
+             "url": "https://i.scdn.co/image/ab67616d00001e023f3ca272a0d95e5f2efb5184",
+             "width": null
+            }
+           ]
+          }
+         ],
+         "totalCount": 1
+        },
+        "name": "Hillsong baby sleep slongs",
+        "ownerV2": {
+         "data": {
+          "__typename": "User",
+          "name": "Brian David Stanart"
+         }
+        },
+        "uri": "spotify:playlist:1zmUfH6OowaLtDeYHrqMmD"
+       }
+      },
+      {
+       "data": {
+        "__typename": "Playlist",
+        "description": "music for studying, working, concentration and focus memory. Worship song",
+        "id": "7ujac9xesQj01z68W2W1TB",
+        "images": {
+         "items": [
+          {
+           "sources": [
+            {
+             "height": null,
+             "url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000d72cd860c40eb63eb87a0e5be1ec",
+             "width": null
+            }
+           ]
+          }
+         ],
+         "totalCount": 1
+        },
+        "name": "Hillsong Instrumental",
+        "ownerV2": {
+         "data": {
+          "__typename": "User",
+          "name": "Carmela B. Jimenez"
+         }
+        },
+        "uri": "spotify:playlist:7ujac9xesQj01z68W2W1TB"
+       }
+      },
+      {
+       "data": {
+        "__typename": "Playlist",
+        "description": "",
+        "id": "59ZOC8A3TlISTGksos0NS9",
+        "images": {
+         "items": [
+          {
+           "sources": [
+            {
+             "height": null,
+             "url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000d72cdf832f2ce364c5771b01a1eb",
+             "width": null
+            }
+           ]
+          }
+         ],
+         "totalCount": 1
+        },
+        "name": "\u92fc\u7434\u7d14\u97f3\u6a02\u8a69\u6b4c",
+        "ownerV2": {
+         "data": {
+          "__typename": "User",
+          "name": "Nancy Hsu"
+         }
+        },
+        "uri": "spotify:playlist:59ZOC8A3TlISTGksos0NS9"
+       }
+      },
+      {
+       "data": {
+        "__typename": "Playlist",
+        "description": "",
+        "id": "70qR8kgHQLtDbjRQDqpaOb",
+        "images": {
+         "items": [
+          {
+           "sources": [
+            {
+             "height": null,
+             "url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000d72c5179538a1f955e220b75cfb3",
+             "width": null
+            }
+           ]
+          }
+         ],
+         "totalCount": 1
+        },
+        "name": "Saat Teduh (Worship Instrumental)",
+        "ownerV2": {
+         "data": {
+          "__typename": "User",
+          "name": "Riko Adithama"
+         }
+        },
+        "uri": "spotify:playlist:70qR8kgHQLtDbjRQDqpaOb"
+       }
+      }
+     ],
+     "totalCount": 100
+    },
+    "featuringV2": {
+     "items": [
+      {
+       "data": {
+        "__typename": "Playlist",
+        "description": "This is David Andrew. The essential tracks, all in one playlist.",
+        "id": "37i9dQZF1DZ06evO2nnHVe",
+        "images": {
+         "items": [
+          {
+           "sources": [
+            {
+             "height": null,
+             "url": "https://pickasso.spotifycdn.com/image/ab67c0de0000deef/dt/v1/img/thisisv3/44nxpJ4QALHoSoUFpWiIQc/en",
+             "width": null
+            }
+           ]
+          }
+         ],
+         "totalCount": 1
+        },
+        "name": "This Is David Andrew",
+        "ownerV2": {
+         "data": {
+          "__typename": "User",
+          "name": "Spotify"
+         }
+        },
+        "uri": "spotify:playlist:37i9dQZF1DZ06evO2nnHVe"
+       }
+      },
+      {
+       "data": {
+        "__typename": "Playlist",
+        "description": "Let go and let God.",
+        "id": "37i9dQZF1DXbhg05xUNqBY",
+        "images": {
+         "items": [
+          {
+           "sources": [
+            {
+             "height": null,
+             "url": "https://i.scdn.co/image/ab67706f00000002c21464734e1b35f5988eae50",
+             "width": null
+            }
+           ]
+          }
+         ],
+         "totalCount": 1
+        },
+        "name": "Be Still",
+        "ownerV2": {
+         "data": {
+          "__typename": "User",
+          "name": "Spotify"
+         }
+        },
+        "uri": "spotify:playlist:37i9dQZF1DXbhg05xUNqBY"
+       }
+      },
+      {
+       "data": {
+        "__typename": "Playlist",
+        "description": "it's 2016 and you\u2019ve grabbed your usual table at your favourite caf\u00e9, headphones on, the world on mute \u2615\ufe0f piano covers of pop throwbacks for focus or chill \ud83c\udfb6",
+        "id": "37i9dQZF1DX8A4xZeXvZif",
+        "images": {
+         "items": [
+          {
+           "sources": [
+            {
+             "height": null,
+             "url": "https://i.scdn.co/image/ab67706f000000024067c9484ccf381909885eaf",
+             "width": null
+            }
+           ]
+          }
+         ],
+         "totalCount": 1
+        },
+        "name": "2016 caf\u00e9 vibes (no lyrics)",
+        "ownerV2": {
+         "data": {
+          "__typename": "User",
+          "name": "Spotify"
+         }
+        },
+        "uri": "spotify:playlist:37i9dQZF1DX8A4xZeXvZif"
+       }
+      }
+     ],
+     "totalCount": 3
+    },
+    "relatedArtists": {
+     "items": [
+      {
+       "id": "4d8bnn80rmLCwHU08DjGPS",
+       "profile": {
+        "name": "Hillsong Instrumentals"
+       },
+       "uri": "spotify:artist:4d8bnn80rmLCwHU08DjGPS",
+       "visuals": {
+        "avatarImage": {
+         "sources": [
+          {
+           "height": 640,
+           "url": "https://i.scdn.co/image/ab6761610000e5eb8cb629d678b54627c82f66f0",
+           "width": 640
+          },
+          {
+           "height": 160,
+           "url": "https://i.scdn.co/image/ab6761610000f1788cb629d678b54627c82f66f0",
+           "width": 160
+          },
+          {
+           "height": 320,
+           "url": "https://i.scdn.co/image/ab676161000051748cb629d678b54627c82f66f0",
+           "width": 320
+          }
+         ]
+        }
+       }
+      },
+      {
+       "id": "4PSu1SQggtYR5cLPHddoOJ",
+       "profile": {
+        "name": "Piano Prayer"
+       },
+       "uri": "spotify:artist:4PSu1SQggtYR5cLPHddoOJ",
+       "visuals": {
+        "avatarImage": {
+         "sources": [
+          {
+           "height": 640,
+           "url": "https://i.scdn.co/image/ab6761610000e5ebf3e1ef01c38267291dbfc07e",
+           "width": 640
+          },
+          {
+           "height": 160,
+           "url": "https://i.scdn.co/image/ab6761610000f178f3e1ef01c38267291dbfc07e",
+           "width": 160
+          },
+          {
+           "height": 320,
+           "url": "https://i.scdn.co/image/ab67616100005174f3e1ef01c38267291dbfc07e",
+           "width": 320
+          }
+         ]
+        }
+       }
+      },
+      {
+       "id": "6WDGUfuIyLCmTVyXiQdJ1Y",
+       "profile": {
+        "name": "Pathway Piano"
+       },
+       "uri": "spotify:artist:6WDGUfuIyLCmTVyXiQdJ1Y",
+       "visuals": {
+        "avatarImage": {
+         "sources": [
+          {
+           "height": 640,
+           "url": "https://i.scdn.co/image/ab6761610000e5ebf229d002ffb65883212154f0",
+           "width": 640
+          },
+          {
+           "height": 160,
+           "url": "https://i.scdn.co/image/ab6761610000f178f229d002ffb65883212154f0",
+           "width": 160
+          },
+          {
+           "height": 320,
+           "url": "https://i.scdn.co/image/ab67616100005174f229d002ffb65883212154f0",
+           "width": 320
+          }
+         ]
+        }
+       }
+      },
+      {
+       "id": "7e4xD2CTQeYKxWxKNG6XVn",
+       "profile": {
+        "name": "Piano Praises"
+       },
+       "uri": "spotify:artist:7e4xD2CTQeYKxWxKNG6XVn",
+       "visuals": {
+        "avatarImage": {
+         "sources": [
+          {
+           "height": 640,
+           "url": "https://i.scdn.co/image/ab6761610000e5eb4b142f494a633e510eb0a8d1",
+           "width": 640
+          },
+          {
+           "height": 160,
+           "url": "https://i.scdn.co/image/ab6761610000f1784b142f494a633e510eb0a8d1",
+           "width": 160
+          },
+          {
+           "height": 320,
+           "url": "https://i.scdn.co/image/ab676161000051744b142f494a633e510eb0a8d1",
+           "width": 320
+          }
+         ]
+        }
+       }
+      },
+      {
+       "id": "1nyQHkkyMOYUGxWDy9x3LK",
+       "profile": {
+        "name": "Lighthouse Piano"
+       },
+       "uri": "spotify:artist:1nyQHkkyMOYUGxWDy9x3LK",
+       "visuals": {
+        "avatarImage": {
+         "sources": [
+          {
+           "height": 640,
+           "url": "https://i.scdn.co/image/ab6761610000e5eb1157430ed8d11da200ed230d",
+           "width": 640
+          },
+          {
+           "height": 160,
+           "url": "https://i.scdn.co/image/ab6761610000f1781157430ed8d11da200ed230d",
+           "width": 160
+          },
+          {
+           "height": 320,
+           "url": "https://i.scdn.co/image/ab676161000051741157430ed8d11da200ed230d",
+           "width": 320
+          }
+         ]
+        }
+       }
+      },
+      {
+       "id": "5DD8fdenQJ9zgVLaQVYdPQ",
+       "profile": {
+        "name": "Mezzo Piano"
+       },
+       "uri": "spotify:artist:5DD8fdenQJ9zgVLaQVYdPQ",
+       "visuals": {
+        "avatarImage": {
+         "sources": [
+          {
+           "height": 640,
+           "url": "https://i.scdn.co/image/ab6761610000e5eb975f3f20217263a3adc2085f",
+           "width": 640
+          },
+          {
+           "height": 160,
+           "url": "https://i.scdn.co/image/ab6761610000f178975f3f20217263a3adc2085f",
+           "width": 160
+          },
+          {
+           "height": 320,
+           "url": "https://i.scdn.co/image/ab67616100005174975f3f20217263a3adc2085f",
+           "width": 320
+          }
+         ]
+        }
+       }
+      },
+      {
+       "id": "6blPZ9JXBdD82P19uSi1lC",
+       "profile": {
+        "name": "Abundant Life Piano"
+       },
+       "uri": "spotify:artist:6blPZ9JXBdD82P19uSi1lC",
+       "visuals": {
+        "avatarImage": {
+         "sources": [
+          {
+           "height": 640,
+           "url": "https://i.scdn.co/image/ab6761610000e5eb8e1df38331ea66dfc58ec5bf",
+           "width": 640
+          },
+          {
+           "height": 160,
+           "url": "https://i.scdn.co/image/ab6761610000f1788e1df38331ea66dfc58ec5bf",
+           "width": 160
+          },
+          {
+           "height": 320,
+           "url": "https://i.scdn.co/image/ab676161000051748e1df38331ea66dfc58ec5bf",
+           "width": 320
+          }
+         ]
+        }
+       }
+      },
+      {
+       "id": "6MVj3DhruXo4DDagJbp0fw",
+       "profile": {
+        "name": "David Lindner"
+       },
+       "uri": "spotify:artist:6MVj3DhruXo4DDagJbp0fw",
+       "visuals": {
+        "avatarImage": {
+         "sources": [
+          {
+           "height": 640,
+           "url": "https://i.scdn.co/image/ab6761610000e5eb434ca673fd6a14c427524cc5",
+           "width": 640
+          },
+          {
+           "height": 160,
+           "url": "https://i.scdn.co/image/ab6761610000f178434ca673fd6a14c427524cc5",
+           "width": 160
+          },
+          {
+           "height": 320,
+           "url": "https://i.scdn.co/image/ab67616100005174434ca673fd6a14c427524cc5",
+           "width": 320
+          }
+         ]
+        }
+       }
+      },
+      {
+       "id": "7kuyOw0FKwn0BwTHegjJ4g",
+       "profile": {
+        "name": "Dan Musselman"
+       },
+       "uri": "spotify:artist:7kuyOw0FKwn0BwTHegjJ4g",
+       "visuals": {
+        "avatarImage": {
+         "sources": [
+          {
+           "height": 640,
+           "url": "https://i.scdn.co/image/ab6761610000e5eb8ddb65e350d9f6fe00abc79f",
+           "width": 640
+          },
+          {
+           "height": 160,
+           "url": "https://i.scdn.co/image/ab6761610000f1788ddb65e350d9f6fe00abc79f",
+           "width": 160
+          },
+          {
+           "height": 320,
+           "url": "https://i.scdn.co/image/ab676161000051748ddb65e350d9f6fe00abc79f",
+           "width": 320
+          }
+         ]
+        }
+       }
+      },
+      {
+       "id": "7Mty3wH6kNeNNgWqHJDd7r",
+       "profile": {
+        "name": "Cathy Swan"
+       },
+       "uri": "spotify:artist:7Mty3wH6kNeNNgWqHJDd7r",
+       "visuals": {
+        "avatarImage": {
+         "sources": [
+          {
+           "height": 640,
+           "url": "https://i.scdn.co/image/ab6761610000e5ebe75312316056abcb5f3a4d80",
+           "width": 640
+          },
+          {
+           "height": 160,
+           "url": "https://i.scdn.co/image/ab6761610000f178e75312316056abcb5f3a4d80",
+           "width": 160
+          },
+          {
+           "height": 320,
+           "url": "https://i.scdn.co/image/ab67616100005174e75312316056abcb5f3a4d80",
+           "width": 320
+          }
+         ]
+        }
+       }
+      },
+      {
+       "id": "1nPNRKPsOUhKvkLmXmrTuU",
+       "profile": {
+        "name": "Rick Austin Evans"
+       },
+       "uri": "spotify:artist:1nPNRKPsOUhKvkLmXmrTuU",
+       "visuals": {
+        "avatarImage": {
+         "sources": [
+          {
+           "height": 640,
+           "url": "https://i.scdn.co/image/ab6761610000e5eb6126781a51aa83b9bf57925b",
+           "width": 640
+          },
+          {
+           "height": 160,
+           "url": "https://i.scdn.co/image/ab6761610000f1786126781a51aa83b9bf57925b",
+           "width": 160
+          },
+          {
+           "height": 320,
+           "url": "https://i.scdn.co/image/ab676161000051746126781a51aa83b9bf57925b",
+           "width": 320
+          }
+         ]
+        }
+       }
+      },
+      {
+       "id": "6lQTc8ch7seamP33kWxxqT",
+       "profile": {
+        "name": "draw close"
+       },
+       "uri": "spotify:artist:6lQTc8ch7seamP33kWxxqT",
+       "visuals": {
+        "avatarImage": {
+         "sources": [
+          {
+           "height": 640,
+           "url": "https://i.scdn.co/image/ab6761610000e5ebc671c8b50a8442eb474ad95f",
+           "width": 640
+          },
+          {
+           "height": 160,
+           "url": "https://i.scdn.co/image/ab6761610000f178c671c8b50a8442eb474ad95f",
+           "width": 160
+          },
+          {
+           "height": 320,
+           "url": "https://i.scdn.co/image/ab67616100005174c671c8b50a8442eb474ad95f",
+           "width": 320
+          }
+         ]
+        }
+       }
+      },
+      {
+       "id": "5Y3gi3rCDYdCMydzXcG7AO",
+       "profile": {
+        "name": "A Safe Place"
+       },
+       "uri": "spotify:artist:5Y3gi3rCDYdCMydzXcG7AO",
+       "visuals": {
+        "avatarImage": {
+         "sources": [
+          {
+           "height": 640,
+           "url": "https://i.scdn.co/image/ab6761610000e5eb4a3b067ee182fa27bdd40e45",
+           "width": 640
+          },
+          {
+           "height": 160,
+           "url": "https://i.scdn.co/image/ab6761610000f1784a3b067ee182fa27bdd40e45",
+           "width": 160
+          },
+          {
+           "height": 320,
+           "url": "https://i.scdn.co/image/ab676161000051744a3b067ee182fa27bdd40e45",
+           "width": 320
+          }
+         ]
+        }
+       }
+      },
+      {
+       "id": "31CNSjG7i0piX1pwKjMjmp",
+       "profile": {
+        "name": "Wade McNutt"
+       },
+       "uri": "spotify:artist:31CNSjG7i0piX1pwKjMjmp",
+       "visuals": {
+        "avatarImage": {
+         "sources": [
+          {
+           "height": 640,
+           "url": "https://i.scdn.co/image/ab6761610000e5eb3831c415c3ac2ad86b3e28d9",
+           "width": 640
+          },
+          {
+           "height": 160,
+           "url": "https://i.scdn.co/image/ab6761610000f1783831c415c3ac2ad86b3e28d9",
+           "width": 160
+          },
+          {
+           "height": 320,
+           "url": "https://i.scdn.co/image/ab676161000051743831c415c3ac2ad86b3e28d9",
+           "width": 320
+          }
+         ]
+        }
+       }
+      },
+      {
+       "id": "3uFpS7kttgSpsRWFNzKZ2k",
+       "profile": {
+        "name": "Joshua David Harris"
+       },
+       "uri": "spotify:artist:3uFpS7kttgSpsRWFNzKZ2k",
+       "visuals": {
+        "avatarImage": {
+         "sources": [
+          {
+           "height": 640,
+           "url": "https://i.scdn.co/image/ab6761610000e5eba6422a980938bfce632b401b",
+           "width": 640
+          },
+          {
+           "height": 160,
+           "url": "https://i.scdn.co/image/ab6761610000f178a6422a980938bfce632b401b",
+           "width": 160
+          },
+          {
+           "height": 320,
+           "url": "https://i.scdn.co/image/ab67616100005174a6422a980938bfce632b401b",
+           "width": 320
+          }
+         ]
+        }
+       }
+      },
+      {
+       "id": "5wKWCZRVBErveTfC1y1vLJ",
+       "profile": {
+        "name": "Jimmy's"
+       },
+       "uri": "spotify:artist:5wKWCZRVBErveTfC1y1vLJ",
+       "visuals": {
+        "avatarImage": {
+         "sources": [
+          {
+           "height": 640,
+           "url": "https://i.scdn.co/image/ab6761610000e5ebc31071e6bb7bb95877de409c",
+           "width": 640
+          },
+          {
+           "height": 160,
+           "url": "https://i.scdn.co/image/ab6761610000f178c31071e6bb7bb95877de409c",
+           "width": 160
+          },
+          {
+           "height": 320,
+           "url": "https://i.scdn.co/image/ab67616100005174c31071e6bb7bb95877de409c",
+           "width": 320
+          }
+         ]
+        }
+       }
+      },
+      {
+       "id": "34VjmhQP0q93vBQ8eganjB",
+       "profile": {
+        "name": "Will Morrison"
+       },
+       "uri": "spotify:artist:34VjmhQP0q93vBQ8eganjB",
+       "visuals": {
+        "avatarImage": {
+         "sources": [
+          {
+           "height": 640,
+           "url": "https://i.scdn.co/image/ab6761610000e5ebd2fc3c8925747b21038d687f",
+           "width": 640
+          },
+          {
+           "height": 160,
+           "url": "https://i.scdn.co/image/ab6761610000f178d2fc3c8925747b21038d687f",
+           "width": 160
+          },
+          {
+           "height": 320,
+           "url": "https://i.scdn.co/image/ab67616100005174d2fc3c8925747b21038d687f",
+           "width": 320
+          }
+         ]
+        }
+       }
+      },
+      {
+       "id": "1sz6Bax1SkchADSoQgsRRk",
+       "profile": {
+        "name": "StarGlow Piano"
+       },
+       "uri": "spotify:artist:1sz6Bax1SkchADSoQgsRRk",
+       "visuals": {
+        "avatarImage": {
+         "sources": [
+          {
+           "height": 640,
+           "url": "https://i.scdn.co/image/ab6761610000e5ebed99546aca1a17614a6e6f6b",
+           "width": 640
+          },
+          {
+           "height": 160,
+           "url": "https://i.scdn.co/image/ab6761610000f178ed99546aca1a17614a6e6f6b",
+           "width": 160
+          },
+          {
+           "height": 320,
+           "url": "https://i.scdn.co/image/ab67616100005174ed99546aca1a17614a6e6f6b",
+           "width": 320
+          }
+         ]
+        }
+       }
+      },
+      {
+       "id": "267WItkey8J7qnGjc6bF2D",
+       "profile": {
+        "name": "WorshiPiano"
+       },
+       "uri": "spotify:artist:267WItkey8J7qnGjc6bF2D",
+       "visuals": {
+        "avatarImage": {
+         "sources": [
+          {
+           "height": 640,
+           "url": "https://i.scdn.co/image/ab6761610000e5ebd2b69cf7c98e60cf95e237cc",
+           "width": 640
+          },
+          {
+           "height": 160,
+           "url": "https://i.scdn.co/image/ab6761610000f178d2b69cf7c98e60cf95e237cc",
+           "width": 160
+          },
+          {
+           "height": 320,
+           "url": "https://i.scdn.co/image/ab67616100005174d2b69cf7c98e60cf95e237cc",
+           "width": 320
+          }
+         ]
+        }
+       }
+      },
+      {
+       "id": "0ENu33X1eUZVXI2blXEnRW",
+       "profile": {
+        "name": "IvoryWorship"
+       },
+       "uri": "spotify:artist:0ENu33X1eUZVXI2blXEnRW",
+       "visuals": {
+        "avatarImage": {
+         "sources": [
+          {
+           "height": 640,
+           "url": "https://i.scdn.co/image/ab6761610000e5ebaa7f21a9b0aaf86de89b9dd1",
+           "width": 640
+          },
+          {
+           "height": 160,
+           "url": "https://i.scdn.co/image/ab6761610000f178aa7f21a9b0aaf86de89b9dd1",
+           "width": 160
+          },
+          {
+           "height": 320,
+           "url": "https://i.scdn.co/image/ab67616100005174aa7f21a9b0aaf86de89b9dd1",
+           "width": 320
+          }
+         ]
+        }
+       }
+      }
+     ],
+     "totalCount": 40
+    }
+   },
+   "relatedVideos": {
+    "__typename": "RelatedVideoPage",
+    "items": [],
+    "totalCount": 0
+   },
+   "saved": false,
+   "sharingInfo": {
+    "shareId": "-DKf-bgdQGq3N68MJWoaOQ",
+    "shareUrl": "https://open.spotify.com/artist/44nxpJ4QALHoSoUFpWiIQc?si=-DKf-bgdQGq3N68MJWoaOQ"
+   },
+   "stats": {
+    "followers": 5685,
+    "monthlyListeners": 294095,
+    "topCities": {
+     "items": [
+      {
+       "city": "Singapore",
+       "country": "SG",
+       "numberOfListeners": 5868,
+       "region": ""
+      },
+      {
+       "city": "Sydney",
+       "country": "AU",
+       "numberOfListeners": 3564,
+       "region": "NSW"
+      },
+      {
+       "city": "S\u00e3o Paulo",
+       "country": "BR",
+       "numberOfListeners": 3152,
+       "region": "SP"
+      },
+      {
+       "city": "Quezon City",
+       "country": "PH",
+       "numberOfListeners": 3075,
+       "region": "00"
+      },
+      {
+       "city": "Melbourne",
+       "country": "AU",
+       "numberOfListeners": 2614,
+       "region": "VIC"
+      }
+     ]
+    },
+    "worldRank": 0
+   },
+   "uri": "spotify:artist:44nxpJ4QALHoSoUFpWiIQc",
+   "visuals": {
+    "avatarImage": {
+     "extractedColors": {
+      "colorRaw": {
+       "hex": "#D8D8D8"
+      }
+     },
+     "sources": [
+      {
+       "height": 640,
+       "url": "https://i.scdn.co/image/ab6761610000e5ebccb9e048786136e97de961dc",
+       "width": 640
+      },
+      {
+       "height": 160,
+       "url": "https://i.scdn.co/image/ab6761610000f178ccb9e048786136e97de961dc",
+       "width": 160
+      },
+      {
+       "height": 320,
+       "url": "https://i.scdn.co/image/ab67616100005174ccb9e048786136e97de961dc",
+       "width": 320
+      }
+     ]
+    },
+    "gallery": {
+     "items": []
+    },
+    "headerImage": {
+     "extractedColors": {
+      "colorRaw": {
+       "hex": "#535353"
+      }
+     },
+     "sources": [
+      {
+       "height": 1140,
+       "url": "https://i.scdn.co/image/ab676186000010160622fb8638f3ac3fdb739ede",
+       "width": 2660
+      }
+     ]
+    }
+   },
+   "watchFeedEntrypoint": null
+  }
+ }
+}

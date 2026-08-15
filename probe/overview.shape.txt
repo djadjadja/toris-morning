@@ -1,0 +1,241 @@
+__typename = Artist
+discography:
+  albums:
+    items: [10]
+      releases:
+        items: [1]
+          copyright:
+            items: [2]
+              text = (C) 2026 David Andrew, exclusively distributed by Wings Music Group
+              type = C
+          coverArt: <skipped media>
+          date:
+            day = 12
+            month = 6
+            precision = DAY
+            year = 2026
+          id = 58jbB5biKaLhxTlIIFgkNp
+          label = Wings Music Group
+          name = Modern Hymns: He Reigns
+          playability:
+            playable = True
+            reason = PLAYABLE
+          sharingInfo: <skipped media>
+          tracks:
+            totalCount = 13
+          type = ALBUM
+          uri = spotify:album:58jbB5biKaLhxTlIIFgkNp
+    totalCount = 40
+  compilations:
+    items: [0]
+    totalCount = 0
+  latest:
+    copyright:
+      items: [2]
+        text = (C) 2026 David Andrew, exclusively distributed by Wings Music Group
+        type = C
+    coverArt: <skipped media>
+    date:
+      day = 14
+      month = 8
+      precision = DAY
+      year = 2026
+    id = 1sBdHk9PiLcsXHbeZPeCrr
+    label = Wings Music Group
+    name = Wonderwall (Piano Version - Instrumental)
+    playability:
+      playable = True
+      reason = PLAYABLE
+    sharingInfo: <skipped media>
+    tracks:
+      totalCount = 1
+    type = SINGLE
+    uri = spotify:album:1sBdHk9PiLcsXHbeZPeCrr
+  popularReleasesAlbums:
+    items: [10]
+      copyright:
+        items: [2]
+          text = 2015 Hillsong Music and Resources LLC
+          type = C
+      coverArt: <skipped media>
+      date:
+        day = 13
+        month = 3
+        precision = DAY
+        year = 2015
+      id = 0GNTTpbax8oLbef8g2OwAy
+      label = Hillsong Music
+      name = Piano Reflections Vol. 1
+      playability:
+        playable = True
+        reason = PLAYABLE
+      sharingInfo: <skipped media>
+      tracks:
+        totalCount = 11
+      type = ALBUM
+      uri = spotify:album:0GNTTpbax8oLbef8g2OwAy
+    totalCount = 20
+  singles:
+    items: [10]
+      releases:
+        items: [1]
+          copyright:
+            items: [2]
+              text = (C) 2026 David Andrew, exclusively distributed by Wings Music Group
+              type = C
+          coverArt: <skipped media>
+          date:
+            day = 14
+            month = 8
+            precision = DAY
+            year = 2026
+          id = 1sBdHk9PiLcsXHbeZPeCrr
+          label = Wings Music Group
+          name = Wonderwall (Piano Version - Instrumental)
+          playability:
+            playable = True
+            reason = PLAYABLE
+          sharingInfo: <skipped media>
+          tracks:
+            totalCount = 1
+          type = SINGLE
+          uri = spotify:album:1sBdHk9PiLcsXHbeZPeCrr
+    totalCount = 29
+  topTracks:
+    items: [10]
+      track:
+        albumOfTrack:
+          coverArt: <skipped media>
+          uri = spotify:album:0GNTTpbax8oLbef8g2OwAy
+        artists:
+          items: [2]
+            profile:
+              name = Hillsong Instrumentals
+            uri = spotify:artist:4d8bnn80rmLCwHU08DjGPS
+        associationsV2:
+          totalCount = 0
+        contentRating:
+          label = NONE
+        discNumber = 1
+        duration:
+          totalMilliseconds = 358253
+        id = 2cFTkx42FZd2ZrdmeEMesH
+        name = Oceans (Where Feet May Fail)
+        playability:
+          playable = True
+          reason = PLAYABLE
+        playcount = 20980247
+        uri = spotify:track:2cFTkx42FZd2ZrdmeEMesH
+      uid = 07380eb16423a4f328cc
+goods:
+  events:
+    concerts:
+      items: [0]
+      pagingInfo:
+        limit = 0
+      totalCount = 0
+    userLocation:
+      name = Chicago
+  merch:
+    items: [0]
+id = 44nxpJ4QALHoSoUFpWiIQc
+preRelease:
+  preReleaseContent:
+    coverArt: <skipped media>
+    name = Holy Forever
+    type = ALBUM
+  releaseDate:
+    isoString = 2026-08-28T04:00:00Z
+  uri = spotify:prerelease:1RkuvFxetdl4E1VEKdN22y
+profile:
+  biography:
+    text = Accomplished musician, David Andrew has already worked with the likes of Tones and I, and ...
+    type = AUTOBIOGRAPHY
+  externalLinks:
+    items: [3]
+      name = FACEBOOK
+      url = https://facebook.com/davidandrewmusician/
+  name = David Andrew
+  pinnedItem:
+    backgroundImageV2 = None
+    comment = 
+    itemV2:
+      __typename = AlbumResponseWrapper
+      data:
+        __typename = Album
+        coverArt: <skipped media>
+        name = You Are Holy / Falling In Love With Jesus
+        type = SINGLE
+        uri = spotify:album:391izZ6H98ZIMQ6WGZT9o4
+    subtitle = Single
+    thumbnailImage:
+      data:
+        sources: [3]
+          url = https://image-cdn-fa.spotifycdn.com/image/ab67616d000075a0f2e94c2563e27db41751f178
+    title = You Are Holy / Falling In Love With Jesus
+    type = ALBUM
+    uri = spotify:album:391izZ6H98ZIMQ6WGZT9o4
+  playlistsV2:
+    items: [5]
+      data:
+        __typename = Playlist
+        description = 
+        images: <skipped media>
+        name = Piano Piece of Mind Complete Collection
+        ownerV2:
+          data:
+            __typename = User
+            name = David Andrew
+        uri = spotify:playlist:5FYD38EXddTPmOCVMcGjfg
+    totalCount = 5
+  verified = True
+relatedContent:
+  appearsOn:
+    items: [0]
+    totalCount = 0
+  discoveredOnV2:
+    items: [20]
+      data:
+        __typename = GenericError
+    totalCount = 100
+  featuringV2:
+    items: [3]
+      data:
+        __typename = Playlist
+        description = This is David Andrew. The essential tracks, all in one playlist.
+        id = 37i9dQZF1DZ06evO2nnHVe
+        images: <skipped media>
+        name = This Is David Andrew
+        ownerV2:
+          data:
+            __typename = User
+            name = Spotify
+        uri = spotify:playlist:37i9dQZF1DZ06evO2nnHVe
+    totalCount = 3
+  relatedArtists:
+    items: [20]
+      id = 4d8bnn80rmLCwHU08DjGPS
+      profile:
+        name = Hillsong Instrumentals
+      uri = spotify:artist:4d8bnn80rmLCwHU08DjGPS
+      visuals: <skipped media>
+    totalCount = 40
+relatedVideos:
+  __typename = RelatedVideoPage
+  items: [0]
+  totalCount = 0
+saved = False
+sharingInfo: <skipped media>
+stats:
+  followers = 5685
+  monthlyListeners = 294095
+  topCities:
+    items: [5]
+      city = Singapore
+      country = SG
+      numberOfListeners = 5868
+      region = 
+  worldRank = 0
+uri = spotify:artist:44nxpJ4QALHoSoUFpWiIQc
+visuals: <skipped media>
+watchFeedEntrypoint = None
