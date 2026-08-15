@@ -1,0 +1,18 @@
+=== where does the channel total actually live ===
+--- candidate 2,136,274 ---
+    worship","webPageType":"WEB_PAGE_TYPE_BROWSE","rootVe":6827,"apiUrl":"/youtubei/v1/browse"}},"browseEndpoint":{"browseId":"FEhashtag","params":"6gUXChNpbnN0cnVtZW50YWx3b3JzaGlwGAE%3D"}}}]},"viewCountText":{"simpleText":"2,136,274 views"},"publishedTimeText":{"runs":[{"text":
+--- candidate 4,110,645 ---
+    t":"Biography","styleRuns":[{"startIndex":0,"length":9}]},"country":"Australia","customLinksLabel":{"content":"Links","styleRuns":[{"startIndex":0,"length":5}]},"subscriberCountText":"9.04K subscribers","viewCountText":"4,110,645 views","joinedDateText":{"content":"Joined Fe
+  viewCountText.simpleText       ['2,136,274']
+  content.simpleText near views  []
+  viewCount key                  []
+  aboutFullMetadata              []
+  channel_metadata viewCount     []
+wrote about.snippet.txt (1000 bytes)
+=== spotify web api, with backoff ===
+  offset 0 attempt 0 <HTTPError 429: 'Too Many Requests'> waiting 4
+  offset 0 attempt 1 <HTTPError 429: 'Too Many Requests'> waiting 8
+  offset 0 attempt 2 <HTTPError 429: 'Too Many Requests'> waiting 12
+  offset 0 attempt 3 <HTTPError 429: 'Too Many Requests'> waiting 16
+  offset 0 attempt 4 <HTTPError 429: 'Too Many Requests'> waiting 20
+  gave up at offset 0
