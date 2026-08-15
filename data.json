@@ -45,9 +45,9 @@
   {
    "date": "2026-08-15",
    "spotifyListeners": 294095,
-   "youtubeViews": 2135666,
+   "youtubeViews": 4110645,
    "youtubeSubs": 9040,
-   "spotifyFollowers": 5685,
+   "spotifyFollowers": 5688,
    "cities": [
     {
      "city": "Singapore",
@@ -106,5 +106,175 @@
    }
   }
  ],
- "updated": "2026-08-15T13:24+08:00"
+ "updated": "2026-08-15T15:44+08:00",
+ "releases": {
+  "58jbB5biKaLhxTlIIFgkNp": {
+   "name": "Modern Hymns: He Reigns",
+   "date": "2026-06-12",
+   "type": "Album",
+   "tracks": 13
+  },
+  "2dPmiSp1vTWKbH4PuYUlfk": {
+   "name": "Father Daughter Songs",
+   "date": "2026-05-22",
+   "type": "Album",
+   "tracks": 10
+  },
+  "3ikONvxVZ3nwP7B7VvNAMq": {
+   "name": "Modern Hymns: Here I Am To Worship",
+   "date": "2026-05-01",
+   "type": "Album",
+   "tracks": 13
+  },
+  "3iBsip1pSBw8xgzzvUgoJk": {
+   "name": "Beyond Words",
+   "date": "2026-01-16",
+   "type": "Album",
+   "tracks": 11
+  },
+  "2IBW5h6ERBEfBHWbvOuOD3": {
+   "name": "Preludes (Cello & Piano)",
+   "date": "2025-08-08",
+   "type": "Album",
+   "tracks": 11
+  },
+  "3PKtpm4iSnmHkOQ1WXd8L5": {
+   "name": "Beginning At The End",
+   "date": "2025-05-16",
+   "type": "Album",
+   "tracks": 8
+  },
+  "2u6bq7Q4JyLWnh2vlGzYUD": {
+   "name": "Piano Piece of Mind, Vol. 3",
+   "date": "2024-10-26",
+   "type": "Album",
+   "tracks": 11
+  },
+  "0OjpTPfbhElUtSP3mCtiFz": {
+   "name": "Piano Piece of Mind, Vol. 2 (Piano Version)",
+   "date": "2024-09-28",
+   "type": "Album",
+   "tracks": 12
+  },
+  "2AjOe51uc89wcbRezYiIH0": {
+   "name": "Piano Piece of Mind, Vol. 1 (Piano Version)",
+   "date": "2024-08-30",
+   "type": "Album",
+   "tracks": 12
+  },
+  "3jIE3FAYsCMqblnnH4Au7N": {
+   "name": "Piano Reflections Vol. 11 (Grand Piano)",
+   "date": "2023-09-15",
+   "type": "Album",
+   "tracks": 25
+  },
+  "1sBdHk9PiLcsXHbeZPeCrr": {
+   "name": "Wonderwall (Piano Version - Instrumental)",
+   "date": "2026-08-14",
+   "type": "Single",
+   "tracks": 1
+  },
+  "4h1ODmL9fQN8pPS4z8V63K": {
+   "name": "Sweet Caroline (Piano Version - Instrumental)",
+   "date": "2026-08-07",
+   "type": "Single",
+   "tracks": 1
+  },
+  "6iRPqmpy9ybtWCG6Lk636B": {
+   "name": "Dancing Queen (Piano Version)",
+   "date": "2026-07-31",
+   "type": "Single",
+   "tracks": 1
+  },
+  "5vwER6ON1Gq0U3sAo5zB5x": {
+   "name": "Man! I Feel Like a Woman!",
+   "date": "2026-07-24",
+   "type": "Single",
+   "tracks": 1
+  },
+  "3BJbKTGVfWyqP0OE4dmkMP": {
+   "name": "Aperture",
+   "date": "2026-07-17",
+   "type": "Single",
+   "tracks": 1
+  },
+  "6xld9F4MSzmG6iARRljeZW": {
+   "name": "Risk It All",
+   "date": "2026-07-10",
+   "type": "Single",
+   "tracks": 1
+  },
+  "6Qjqtuh0j6dJzAf4KPnWEZ": {
+   "name": "Stateside",
+   "date": "2026-07-03",
+   "type": "Single",
+   "tracks": 1
+  },
+  "1ELt7pTKIwG2MQN2eUQ3YZ": {
+   "name": "Reputation",
+   "date": "2026-06-26",
+   "type": "Single",
+   "tracks": 1
+  },
+  "5ObAN5vuKsnyFJXlDwlsMu": {
+   "name": "Lush Life",
+   "date": "2026-06-19",
+   "type": "Single",
+   "tracks": 1
+  },
+  "2L1ztNgeroXavAbYGZ3UCa": {
+   "name": "Sign of the Times",
+   "date": "2026-06-12",
+   "type": "Single",
+   "tracks": 1
+  },
+  "0GNTTpbax8oLbef8g2OwAy": {
+   "name": "Piano Reflections Vol. 1",
+   "date": "2015-03-13",
+   "type": "Album",
+   "tracks": 11
+  },
+  "2fGJPma2WpiuA9vXF2XZQi": {
+   "name": "Modern Hymns",
+   "date": "2021-02-05",
+   "type": "Album",
+   "tracks": 12
+  },
+  "2yvNFcpAiLFboKkuCfUKr0": {
+   "name": "Piano Reflections Vol. 2",
+   "date": "2015-03-13",
+   "type": "Album",
+   "tracks": 13
+  },
+  "1sPcAIk4mZNCZaSVILPCsC": {
+   "name": "Piano Reflections Vol. 5",
+   "date": "2020-10-02",
+   "type": "Album",
+   "tracks": 13
+  },
+  "7h6OVZnXZ0yVJLf2Ou96lK": {
+   "name": "Hymns",
+   "date": "2020-03-26",
+   "type": "Album",
+   "tracks": 11
+  },
+  "4MHa12NtfYZLKGAfZ2hTBn": {
+   "name": "Piano Reflections Vol. 6",
+   "date": "2020-10-23",
+   "type": "Album",
+   "tracks": 12
+  },
+  "2nBh2jImD7TJubbuUmI8Ty": {
+   "name": "Piano Reflections Vol. 8 (Upright Piano)",
+   "date": "2023-02-24",
+   "type": "Album",
+   "tracks": 45
+  },
+  "0aG8g4w1dH2mL4e3Zk4qzo": {
+   "name": "Piano Hymns",
+   "date": "2022-08-19",
+   "type": "Album",
+   "tracks": 13
+  }
+ }
 }
