@@ -1,0 +1,13 @@
+embed token: ok
+=== 1. does the embed token open the ordinary Web API ===
+  web api FAILED at offset 0 <HTTPError 429: 'Too Many Requests'>
+=== 2. wayback, retried ===
+  attempt 0 failed <HTTPError 503: 'Service Unavailable'>
+  attempt 1 -> 6 snapshots
+wrote wayback.index.json (1371 bytes)
+=== 3. which number is the real channel view total ===
+  about | subs ['9.04K', '9.04K'] | viewCountText ['2,136,259'] | any-views ['2,136,259', '69', '71', '191', '58', '242'] | big ['2,136,259', '4,110,645']
+  root | subs ['9.04K'] | viewCountText ['2,136,259'] | any-views ['2,136,259', '69', '71', '191', '58', '242'] | big ['2,136,259']
+  videos | subs ['9.04K'] | viewCountText [] | any-views ['21', '19', '159', '34', '40', '16'] | big []
+  current fetcher regex yields: 2,136,259
+wrote youtube.viewcount.context.txt (467 bytes)
