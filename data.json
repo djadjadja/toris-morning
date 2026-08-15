@@ -107,23 +107,23 @@
   },
   {
    "date": "2026-08-16",
-   "spotifyListeners": 294095,
+   "spotifyListeners": 293669,
    "spotifyFollowers": 5688,
    "cities": [
     {
      "city": "Singapore",
      "country": "SG",
-     "n": 5868
+     "n": 5887
     },
     {
      "city": "Sydney",
      "country": "AU",
-     "n": 3564
+     "n": 3554
     },
     {
      "city": "S\u00e3o Paulo",
      "country": "BR",
-     "n": 3152
+     "n": 3154
     },
     {
      "city": "Quezon City",
@@ -137,16 +137,16 @@
     }
    ],
    "tracks": {
-    "2cFTkx42FZd2ZrdmeEMesH": 20980247,
-    "6VMu6afp2ren85DwON6xxt": 6812731,
-    "6uV4dBjHZGzDzsGpBYMESI": 16111840,
-    "4koKk08EQRI31mYmT3pFLa": 17246557,
-    "2uDHWI4FtmH75wXb3az2gV": 10025563,
-    "1zV7wp9YIk93iPBt5H8p9q": 10963960,
-    "1HFdhcKsoUsschtrRgZQg0": 4270883,
-    "1I7TOu1yoEKQDvUMvlRVxm": 14570683,
-    "6D4iyiFyofBN9tm2QIbdFs": 14222018,
-    "40h5N9ARRkUTtecVVOzEkj": 2909183
+    "2cFTkx42FZd2ZrdmeEMesH": 20988217,
+    "6VMu6afp2ren85DwON6xxt": 6819838,
+    "6uV4dBjHZGzDzsGpBYMESI": 16116777,
+    "4koKk08EQRI31mYmT3pFLa": 17250720,
+    "2uDHWI4FtmH75wXb3az2gV": 10027694,
+    "1zV7wp9YIk93iPBt5H8p9q": 10967510,
+    "1HFdhcKsoUsschtrRgZQg0": 4274393,
+    "1I7TOu1yoEKQDvUMvlRVxm": 14573412,
+    "6D4iyiFyofBN9tm2QIbdFs": 14224868,
+    "40h5N9ARRkUTtecVVOzEkj": 2911944
    },
    "latest": {
     "name": "Wonderwall (Piano Version - Instrumental)",
@@ -165,11 +165,11 @@
     "featuredIn": 3,
     "relatedArtists": 40
    },
-   "youtubeViews": 4169868,
+   "youtubeViews": 4172348,
    "youtubeSubs": 9050
   }
  ],
- "updated": "2026-08-16T01:20+08:00",
+ "updated": "2026-08-16T07:17+08:00",
  "releases": {
   "58jbB5biKaLhxTlIIFgkNp": {
    "name": "Modern Hymns: He Reigns",
