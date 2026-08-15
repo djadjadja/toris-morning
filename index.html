@@ -98,7 +98,7 @@
   </div>
 
   <div class="panel" id="manual" hidden>
-    <div class="note">Apple Music has no public figure anywhere, so it only ever comes from Apple Music for Artists. Anything typed here wins over anything fetched.</div>
+    <div class="note">YouTube fills itself in each morning. Spotify, Instagram and Apple do not publish theirs to anyone but you, so those come from the emails you already get. Anything typed here wins.</div>
     <div id="manualFields"></div>
     <button class="primary" id="saveManual">Save today's numbers</button>
   </div>
@@ -111,8 +111,8 @@ var HIST_KEY = 'tori-morning-history';
 
 var METRICS = [
   { key:'spotifyListeners', label:'Spotify monthly listeners' },
-  { key:'spotifyFollowers', label:'Spotify followers' },
   { key:'youtubeSubs',      label:'YouTube subscribers' },
+  { key:'youtubeViews',     label:'YouTube views, all time' },
   { key:'instagram',        label:'Instagram followers' },
   { key:'apple',            label:'Apple Music listeners' }
 ];
@@ -151,9 +151,11 @@ function heroSentence(today, yesterday){
   var dL = num(today.spotifyListeners) - num(yesterday.spotifyListeners);
   var dS = num(today.youtubeSubs)      - num(yesterday.youtubeSubs);
   var dI = num(today.instagram)        - num(yesterday.instagram);
+  var dV = num(today.youtubeViews)    - num(yesterday.youtubeViews);
   if (dL > 0) return { line:'While you slept, ' + fmt(dL) + ' more people found his music.' };
   if (dS > 0) return { line:fmt(dS) + ' people subscribed while you were off the clock.' };
   if (dI > 0) return { line:fmt(dI) + ' new people started following overnight.' };
+  if (dV > 0) return { line:'His music was played ' + fmt(dV) + ' times since yesterday, without anyone asking you to do a thing.' };
   if (dL < 0) return { line:"The number dipped a little overnight. It does that. The catalogue is still out there working.", quiet:true };
   return { line:"Nothing moved much overnight. The work you did is still sitting there, doing its job.", quiet:true };
 }

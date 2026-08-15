@@ -82,7 +82,7 @@ def youtube():
     out = {}
     try:
         h = get("https://www.youtube.com/channel/" + YT_CHANNEL)
-        m = re.search(r'"subscriberCountText".{0,200}?"([\d.,]+[KMB]?)\s+subscribers?"', h)
+        m = re.search(r'([\d.,]+[KMB]?)\s+subscribers', h)
         if m:
             n = to_int(m.group(1))
             if n:
