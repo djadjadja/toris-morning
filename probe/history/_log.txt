@@ -1,0 +1,19 @@
+=== wayback: spotify artist page ===
+cdx artist FAILED <HTTPError 498: ''>
+=== wayback: spotify embed page ===
+cdx embed FAILED <HTTPError 498: ''>
+=== wayback: youtube channel ===
+cdx youtube FAILED <HTTPError 498: ''>
+=== social blade ===
+socialblade monthly -> 83653 bytes
+wrote socialblade.monthly.html (83653 bytes)
+socialblade rows matched: 0
+socialblade root -> 83653 bytes
+wrote socialblade.html (83653 bytes)
+socialblade rows matched: 0
+=== kworb ===
+kworb.artist FAILED <HTTPError 404: 'Not Found'>
+kworb.songs FAILED <HTTPError 404: 'Not Found'>
+=== songstats ===
+songstats -> 39182 bytes | contains 'David Andrew': False
+wrote songstats.html (39182 bytes)
