@@ -35,13 +35,20 @@ HASHES = [
 
 
 def spotify():
+    """The old /get_access_token path returns 403 URL Blocked, retired 2026-08-15.
+    The embed page still ships an anonymous token in its markup, and that token
+    is accepted by the same stats query the web player uses.
+    If this ever stops working, check the embed page for accessToken first."""
     out = {}
     try:
-        tok = json.loads(get(
-            "https://open.spotify.com/get_access_token"
-            "?reason=transport&productType=web_player"))["accessToken"]
+        page = get("https://open.spotify.com/embed/artist/" + ARTIST_ID)
+        m = re.search(r'"accessToken":"([^"]+)"', page)
+        if not m:
+            print("spotify: no token in the embed page")
+            return out
+        tok = m.group(1)
     except Exception as e:
-        print("spotify: could not get a token,", e)
+        print("spotify: embed page failed,", str(e)[:120])
         return out
 
     for h in HASHES:
