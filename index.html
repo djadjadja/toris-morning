@@ -12,212 +12,333 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,200;9..144,300;9..144,500&family=Karla:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
+  /* ------------------------------------------------------------------
+     Colour. One hue does all the data work, so identity can never be
+     confused. The ordinal ramp below passed the palette validator against
+     this surface: monotone lightness, gaps >= 0.06, hue spread 5 degrees,
+     light end 2.12:1 on surface.
+     ------------------------------------------------------------------ */
   :root{
     --ink:#241D33; --muted:#6E6482; --faint:#A39AB0;
-    --accent:#3E6B70; --hair:#E0D8E6; --card:#FCFAFD;
+    --hair:#E0D8E6; --card:#FCFAFD; --surface:#F7F3F8;
+
+    --d1:#2F5459;   /* darkest  */
+    --d2:#3E6B70;   /* primary accent, 5.40:1 on surface */
+    --d3:#5A868B;
+    --d4:#7B9DA0;
+    --d5:#95AFB1;   /* lightest that still clears the surface */
+    --wash:rgba(62,107,112,.10);
   }
   *{box-sizing:border-box}
   html,body{min-height:100%}
   body{
     margin:0; color:var(--ink);
     background:
-      radial-gradient(120% 70% at 50% -10%, #FBF3EC 0%, rgba(251,243,236,0) 60%),
+      radial-gradient(120% 60% at 50% -10%, #FBF3EC 0%, rgba(251,243,236,0) 55%),
       linear-gradient(#F7F3F8 0%, #EFE9F2 100%);
     background-attachment:fixed;
     font-family:Karla,ui-sans-serif,system-ui,sans-serif;
-    padding:calc(34px + env(safe-area-inset-top)) 20px calc(56px + env(safe-area-inset-bottom));
+    padding:calc(30px + env(safe-area-inset-top)) 20px calc(56px + env(safe-area-inset-bottom));
     display:flex; justify-content:center;
     -webkit-font-smoothing:antialiased;
   }
-  .sheet{width:100%;max-width:460px}
+  .sheet{width:100%;max-width:1180px}
 
-  .eyebrow{
-    font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;
-    color:var(--faint);font-weight:700;
-  }
-  .greet{
-    font-family:Fraunces,Georgia,serif;font-weight:200;font-style:italic;
-    font-size:19px;color:var(--muted);margin:6px 0 22px;
-  }
+  /* ---------------------------------------------------------- type */
+  .eyebrow{font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;
+           color:var(--faint);font-weight:700}
+  .greet{font-family:Fraunces,Georgia,serif;font-weight:200;font-style:italic;
+         font-size:19px;color:var(--muted);margin:6px 0 20px}
 
-  h1{
-    font-family:Fraunces,Georgia,serif;font-weight:300;
-    font-size:clamp(28px,7.6vw,37px);line-height:1.2;
-    letter-spacing:-.018em;margin:0;
-  }
-  h1.quiet{color:var(--muted);font-size:clamp(24px,6.4vw,30px)}
-  .word{display:inline-block;white-space:pre;opacity:0;animation:rise .7s cubic-bezier(.2,.7,.3,1) forwards}
+  h1{font-family:Fraunces,Georgia,serif;font-weight:300;
+     font-size:clamp(28px,4.4vw,46px);line-height:1.16;
+     letter-spacing:-.018em;margin:0;max-width:16em}
+  .word{display:inline-block;white-space:pre;opacity:0;
+        animation:rise .7s cubic-bezier(.2,.7,.3,1) forwards}
   @keyframes rise{from{opacity:0;transform:translateY(.4em)}to{opacity:1;transform:none}}
   @media (prefers-reduced-motion:reduce){.word{animation:none;opacity:1}}
 
-  .sub{
-    margin:14px 0 0;font-size:14.5px;line-height:1.6;color:var(--muted);
-  }
-  .sub strong{color:var(--accent);font-weight:700}
+  .sub{margin:16px 0 0;font-size:15px;line-height:1.6;color:var(--muted);max-width:34em}
+  .sub strong{color:var(--d2);font-weight:700}
 
-  /* the headline number */
-  .headline{margin:34px 0 4px}
-  .headline .n{
+  h2{font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;
+     color:var(--faint);font-weight:700;margin:0}
+  .blurb{font-size:12.5px;color:var(--faint);line-height:1.5;margin:5px 0 0}
+  .head{margin-bottom:16px}
+  .stackcol{display:grid;gap:20px;align-content:start}
+
+  /* ---------------------------------------------------------- layout */
+  .masthead{display:grid;gap:30px;align-items:start;margin-bottom:40px}
+  .band{margin-top:40px}
+  .grid{display:grid;gap:20px}
+
+  @media (min-width:900px){
+    body{padding-left:36px;padding-right:36px}
+    .masthead{grid-template-columns:minmax(0,1.55fr) minmax(300px,1fr);gap:44px}
+    .grid.three{grid-template-columns:1.45fr 1fr}
+    .grid.four{grid-template-columns:repeat(4,1fr)}
+    .band{margin-top:52px}
+  }
+  @media (max-width:899px){
+    .grid.four{grid-template-columns:1fr 1fr}
+  }
+
+  .card{
+    background:var(--card);border:1px solid var(--hair);border-radius:6px;
+    padding:20px 20px 18px;
+    box-shadow:0 1px 2px rgba(36,29,51,.03),0 12px 28px -22px rgba(36,29,51,.30);
+  }
+
+  /* ---------------------------------------------------------- hero */
+  .hero .n{
     font-family:Fraunces,Georgia,serif;font-weight:300;
-    font-size:clamp(52px,15vw,70px);line-height:.95;letter-spacing:-.03em;
-    font-variant-numeric:tabular-nums;display:block;
+    font-size:clamp(46px,6.4vw,68px);line-height:.94;letter-spacing:-.03em;
+    display:block;
   }
-  .headline .cap{
-    font-size:11px;letter-spacing:.15em;text-transform:uppercase;
-    color:var(--faint);font-weight:700;margin-top:12px;display:block;
-  }
-  .spark{display:block;width:100%;height:44px;margin-top:18px;overflow:visible}
-  .sparknote{font-size:11px;color:var(--faint);margin-top:8px;letter-spacing:.02em}
+  .hero .cap{font-size:11px;letter-spacing:.14em;text-transform:uppercase;
+             color:var(--faint);font-weight:700;margin-top:11px;display:block}
+  .hero .since{margin-top:14px;font-size:13px;color:var(--muted);line-height:1.5}
+  .hero .since strong{color:var(--d2);font-weight:700}
 
-  .rule{height:1px;background:var(--hair);margin:30px 0 4px}
-  .row{
-    display:flex;justify-content:space-between;align-items:baseline;
-    gap:14px;padding:14px 0;border-bottom:1px solid var(--hair);
-  }
-  .row:last-child{border-bottom:none}
-  .row .label{font-size:13.5px;color:var(--muted)}
-  .row .right{display:flex;align-items:baseline;gap:9px}
-  .row .val{font-size:17px;font-weight:600;font-variant-numeric:tabular-nums}
   .chip{
-    font-size:11px;font-weight:700;font-variant-numeric:tabular-nums;
-    color:var(--accent);background:rgba(62,107,112,.09);
-    padding:3px 7px;border-radius:999px;white-space:nowrap;
+    display:inline-block;font-size:11px;font-weight:700;
+    font-variant-numeric:tabular-nums;color:var(--d1);
+    background:var(--wash);padding:3px 7px;border-radius:999px;white-space:nowrap;
   }
 
-  .cumulative{margin-top:24px;font-size:14.5px;line-height:1.6;color:var(--muted)}
-  .cumulative strong{color:var(--accent);font-weight:700}
-
-  /* a titled block */
-  section{margin-top:38px}
-  h2{
-    font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;
-    color:var(--faint);font-weight:700;margin:0 0 4px;
+  /* ---------------------------------------------------------- charts */
+  .plot{position:relative;width:100%}
+  .plot svg{display:block;width:100%;height:auto}
+  .tip{
+    position:absolute;pointer-events:none;opacity:0;transition:opacity .1s;
+    background:var(--ink);color:#FBF8FC;border-radius:5px;padding:7px 10px;
+    font-size:12px;line-height:1.45;white-space:nowrap;z-index:4;
+    transform:translate(-50%,-124%);box-shadow:0 6px 20px -8px rgba(36,29,51,.5);
   }
-  .blurb{font-size:12.5px;color:var(--faint);line-height:1.55;margin:0 0 8px}
+  .tip b{font-weight:700;font-variant-numeric:tabular-nums}
+  .tip .t{color:#C9BFD8;font-size:11px;display:block}
+  .plot:focus-visible{outline:2px solid var(--d2);outline-offset:3px;border-radius:4px}
 
-  /* songs */
-  ol.songs{list-style:none;margin:0;padding:0}
-  ol.songs li{
-    display:grid;grid-template-columns:20px 1fr auto;gap:10px;
-    align-items:baseline;padding:11px 0;border-bottom:1px solid var(--hair);
+  .filters{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 16px}
+  .filters button{
+    font-family:inherit;font-size:11.5px;font-weight:600;letter-spacing:.02em;
+    padding:6px 11px;border-radius:999px;cursor:pointer;
+    border:1px solid var(--hair);background:transparent;color:var(--muted);
   }
-  ol.songs li:last-child{border-bottom:none}
-  .idx{font-size:11px;color:var(--faint);font-variant-numeric:tabular-nums;font-weight:700}
-  .song{font-size:14px;line-height:1.35}
-  .plays{text-align:right;font-size:13px;color:var(--muted);
-         font-variant-numeric:tabular-nums;white-space:nowrap}
-  .plays .chip{display:block;margin-top:5px}
-  .total{margin-top:14px;font-size:13px;color:var(--muted);line-height:1.55}
-  .total strong{color:var(--accent);font-weight:700}
-
-  /* the run */
-  .rel{
-    display:grid;grid-template-columns:1fr auto;gap:4px 12px;align-items:baseline;
-    padding:12px 0;border-bottom:1px solid var(--hair);
+  .filters button[aria-pressed="true"]{
+    background:var(--d2);border-color:var(--d2);color:#FBF8FC;
   }
-  .rel:last-child{border-bottom:none}
-  .rel .name{font-size:14px}
-  .rel .when{font-size:11px;letter-spacing:.05em;color:var(--faint);
-             text-align:right;white-space:nowrap;font-weight:600}
-  .rel.out .name{color:var(--muted)}
-  .rel.next .name{font-weight:700;color:var(--accent)}
-  .rel.next .when{color:var(--accent)}
-  .rel .note{grid-column:1/-1;font-size:12.5px;color:var(--muted);line-height:1.5;margin-top:2px}
+  .filters button:focus-visible{outline:2px solid var(--d2);outline-offset:2px}
 
-  /* nearly */
-  ul.nearly{list-style:none;margin:0;padding:0}
-  ul.nearly li{
-    padding:12px 0;border-bottom:1px solid var(--hair);
-    font-size:14px;line-height:1.55;color:var(--muted);
+  /* ---------------------------------------------------------- bar rows */
+  .bars{margin:0;padding:0;list-style:none}
+  .bars li{
+    display:grid;grid-template-columns:1fr auto;gap:3px 12px;
+    padding:9px 0;align-items:baseline;
   }
-  ul.nearly li:last-child{border-bottom:none}
-  ul.nearly strong{color:var(--ink);font-weight:700;font-variant-numeric:tabular-nums}
+  .bars .nm{font-size:13.5px;line-height:1.3}
+  .bars .vl{font-size:12.5px;color:var(--muted);font-variant-numeric:tabular-nums;
+            text-align:right;white-space:nowrap}
+  .bars .vl .chip{margin-left:6px}
+  .track{grid-column:1/-1;height:12px;position:relative;margin-top:3px}
+  .track i{
+    position:absolute;left:0;top:0;bottom:0;display:block;
+    background:var(--d2);border-radius:0 4px 4px 0;min-width:2px;
+  }
+  .track.small{height:9px}
 
-  /* cities */
-  .city{display:flex;justify-content:space-between;gap:14px;
-        padding:11px 0;border-bottom:1px solid var(--hair)}
-  .city:last-child{border-bottom:none}
-  .city .place{font-size:14px}
-  .city .n{font-size:13px;color:var(--muted);font-variant-numeric:tabular-nums}
+  /* ---------------------------------------------------------- catalogue */
+  .tally{margin-top:4px}
+  .tally .lab{display:flex;justify-content:space-between;align-items:baseline;
+              font-size:13px;margin:14px 0 7px}
+  .tally .lab span:last-child{color:var(--muted);font-variant-numeric:tabular-nums;
+                              font-size:12.5px}
+  .dots{display:flex;flex-wrap:wrap;gap:4px}
+  .dots i{width:7px;height:7px;border-radius:50%;background:var(--d2);display:block}
+  .dots i.pale{background:var(--d5)}
 
+  /* ---------------------------------------------------------- the run */
+  .runwrap{position:relative;padding:6px 0 0}
+  .runline{display:grid;gap:0}
+  @media (min-width:900px){
+    .runline{grid-template-columns:repeat(7,1fr);position:relative}
+    .runline:before{
+      content:"";position:absolute;left:7.14%;right:7.14%;top:9px;height:1px;
+      background:var(--hair);
+    }
+    .runline .past{position:absolute;left:7.14%;top:8px;height:3px;
+                   background:var(--d2);border-radius:2px;z-index:1}
+    .stop{text-align:center;padding:0 6px;position:relative}
+    .stop .dot{margin:0 auto 14px}
+  }
+  @media (max-width:899px){
+    .runline{position:relative;padding-left:4px}
+    .runline:before{content:"";position:absolute;left:9px;top:10px;bottom:14px;
+                    width:1px;background:var(--hair)}
+    .stop{display:grid;grid-template-columns:20px 1fr auto;gap:10px;
+          align-items:baseline;padding:10px 0}
+    .stop .dot{margin:2px 0 0}
+  }
+  .stop .dot{
+    width:11px;height:11px;border-radius:50%;background:var(--surface);
+    border:2px solid var(--d5);position:relative;z-index:2;
+    box-shadow:0 0 0 3px var(--card);
+  }
+  .stop.done .dot{background:var(--d2);border-color:var(--d2)}
+  .stop.next .dot{background:var(--card);border-color:var(--d2);
+                  box-shadow:0 0 0 3px var(--card),0 0 0 5px var(--wash)}
+  .stop .nm{font-size:13px;line-height:1.3}
+  .stop.done .nm{color:var(--muted)}
+  .stop.next .nm{font-weight:700;color:var(--d2)}
+  .stop .wh{font-size:11px;letter-spacing:.04em;color:var(--faint);
+            font-weight:600;margin-top:3px}
+  .stop.next .wh{color:var(--d2)}
+  .stop .bump{font-size:11.5px;color:var(--muted);line-height:1.4;margin-top:5px}
+
+  /* ---------------------------------------------------------- stat tiles */
+  .tile .k{font-size:11px;letter-spacing:.1em;text-transform:uppercase;
+           color:var(--faint);font-weight:700}
+  .tile .v{font-size:24px;font-weight:600;margin-top:7px;line-height:1.1}
+  .tile .r{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap}
+  .tile svg{display:block;width:100%;height:34px;margin-top:12px}
+
+  /* ---------------------------------------------------------- meters */
+  .meter{padding:14px 0}
+  .meter + .meter{border-top:1px solid var(--hair)}
+  .meter .cap{font-size:13.5px;line-height:1.5;color:var(--muted)}
+  .meter .cap strong{color:var(--ink);font-weight:700;font-variant-numeric:tabular-nums}
+  .meter .bar{height:8px;border-radius:999px;background:var(--d5);
+              margin-top:10px;overflow:hidden}
+  .meter .bar i{display:block;height:100%;background:var(--d2);border-radius:999px}
+  @media (min-width:900px){
+    .meters{display:grid;grid-template-columns:repeat(3,1fr);gap:0 28px}
+    .meter + .meter{border-top:none}
+  }
+
+  /* ---------------------------------------------------------- rest */
   .rest{
-    margin-top:38px;padding:26px 24px;background:var(--card);
-    border:1px solid var(--hair);border-radius:4px;
-    box-shadow:0 1px 2px rgba(36,29,51,.03),0 10px 26px -18px rgba(36,29,51,.28);
-    font-family:Fraunces,Georgia,serif;font-size:17.5px;line-height:1.5;font-weight:300;
-    position:relative;
+    margin-top:52px;padding:28px 26px;background:var(--card);
+    border:1px solid var(--hair);border-radius:6px;position:relative;
+    box-shadow:0 1px 2px rgba(36,29,51,.03),0 12px 28px -22px rgba(36,29,51,.3);
+    font-family:Fraunces,Georgia,serif;font-size:19px;line-height:1.5;font-weight:300;
+    max-width:44em;
   }
-  .rest:before{
-    content:"";position:absolute;left:24px;top:-1px;width:34px;height:2px;background:var(--accent);
-  }
+  .rest:before{content:"";position:absolute;left:26px;top:-1px;width:34px;height:2px;
+               background:var(--d2)}
 
-  .footer{margin-top:28px}
-  .status{font-size:12px;color:var(--faint);display:block;margin-bottom:12px;line-height:1.5}
+  /* ---------------------------------------------------------- table twin */
+  table{border-collapse:collapse;width:100%;font-size:12.5px;
+        font-variant-numeric:tabular-nums;margin-top:6px}
+  th,td{text-align:right;padding:7px 10px;border-bottom:1px solid var(--hair);
+        white-space:nowrap}
+  th:first-child,td:first-child{text-align:left}
+  th{font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;
+     color:var(--faint);font-weight:700}
+  .scroll{overflow-x:auto}
+  .tables{margin-top:18px}
+  .tables h3{font-size:11px;letter-spacing:.12em;text-transform:uppercase;
+             color:var(--faint);margin:22px 0 0;font-weight:700}
+  .tables h3:first-child{margin-top:0}
+
+  /* ---------------------------------------------------------- footer */
+  .footer{margin-top:38px;display:flex;flex-wrap:wrap;gap:16px;align-items:center}
+  .status{font-size:12px;color:var(--faint);line-height:1.5}
   button.link{
     background:none;border:none;padding:0;font-family:inherit;font-size:12.5px;
-    color:var(--accent);cursor:pointer;border-bottom:1px solid rgba(62,107,112,.3);
+    color:var(--d2);cursor:pointer;border-bottom:1px solid rgba(62,107,112,.35);
   }
-  .panel{
-    margin-top:20px;padding:20px;background:var(--card);
-    border:1px solid var(--hair);border-radius:4px;
-  }
-  .panel[hidden]{display:none}
+  button.link:focus-visible{outline:2px solid var(--d2);outline-offset:3px}
+  .panel{margin-top:18px;padding:20px;background:var(--card);
+         border:1px solid var(--hair);border-radius:6px;max-width:520px}
+  .panel[hidden],[hidden]{display:none}
   .note{font-size:12.5px;color:var(--faint);line-height:1.55;margin-bottom:18px}
   .field{margin-bottom:14px}
-  .field label{display:block;font-size:11px;letter-spacing:.06em;color:var(--muted);margin-bottom:6px;text-transform:uppercase;font-weight:600}
-  .field input{
-    width:100%;padding:11px 13px;border:1px solid var(--hair);border-radius:3px;
-    background:#fff;font-family:inherit;font-size:16px;color:var(--ink);
-  }
-  button.primary{
-    margin-top:8px;width:100%;padding:13px;background:var(--ink);color:#F7F3F8;
-    border:none;border-radius:3px;font-family:inherit;font-size:14px;font-weight:700;
-    letter-spacing:.02em;cursor:pointer;
-  }
-  .sig{margin-top:38px;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--faint)}
-  input:focus,button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+  .field label{display:block;font-size:11px;letter-spacing:.06em;color:var(--muted);
+               margin-bottom:6px;text-transform:uppercase;font-weight:600}
+  .field input{width:100%;padding:11px 13px;border:1px solid var(--hair);
+               border-radius:3px;background:#fff;font-family:inherit;font-size:16px;
+               color:var(--ink)}
+  button.primary{margin-top:8px;width:100%;padding:13px;background:var(--ink);
+                 color:#F7F3F8;border:none;border-radius:3px;font-family:inherit;
+                 font-size:14px;font-weight:700;letter-spacing:.02em;cursor:pointer}
+  .sig{margin-top:30px;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;
+       color:var(--faint)}
+  input:focus,button:focus-visible{outline:2px solid var(--d2);outline-offset:2px}
 </style>
 </head>
 <body>
 <div class="sheet">
-  <div class="eyebrow" id="date">&nbsp;</div>
-  <div class="greet" id="greet">Good morning, Tori</div>
 
-  <h1 id="hero">Opening the morning</h1>
-  <p class="sub" id="sub" hidden></p>
-
-  <div class="headline" id="headline" hidden>
-    <span class="n" id="headlineN"></span>
-    <span class="cap" id="headlineCap"></span>
-    <svg class="spark" id="spark" hidden preserveAspectRatio="none"></svg>
-    <div class="sparknote" id="sparknote"></div>
+  <div class="masthead">
+    <div>
+      <div class="eyebrow" id="date">&nbsp;</div>
+      <div class="greet" id="greet">Good morning, Tori</div>
+      <h1 id="hero">Opening the morning</h1>
+      <p class="sub" id="sub" hidden></p>
+    </div>
+    <div class="card hero" id="heroCard" hidden>
+      <span class="n" id="heroN"></span>
+      <span class="cap" id="heroCap"></span>
+      <div class="since" id="heroSince" hidden></div>
+    </div>
   </div>
 
-  <div class="rule"></div>
-  <div id="rows"></div>
-  <div class="cumulative" id="cumulative" hidden></div>
-
-  <section id="secSongs" hidden>
-    <h2>The ten most played</h2>
-    <p class="blurb">His most played tracks on Spotify, and how many times each has been pressed play.</p>
-    <ol class="songs" id="songs"></ol>
-    <div class="total" id="songsTotal"></div>
+  <section class="band" id="secTrend" hidden>
+    <div class="head">
+      <h2>The line</h2>
+      <p class="blurb" id="trendBlurb"></p>
+    </div>
+    <div class="filters" id="trendPick" role="group" aria-label="Choose what the line shows"></div>
+    <div class="card">
+      <div class="plot" id="trendPlot" tabindex="0" role="img" aria-label="Trend over time"></div>
+    </div>
   </section>
 
-  <section id="secRun" hidden>
-    <h2>The run</h2>
-    <p class="blurb">A single a week, through Wings.</p>
-    <div id="run"></div>
+  <section class="band grid four" id="secTiles" hidden></section>
+
+  <section class="band grid three">
+    <div class="card" id="secSongs" hidden>
+      <div class="head">
+        <h2>The ten most played</h2>
+        <p class="blurb">His most played tracks on Spotify, and how many times each has been pressed play.</p>
+      </div>
+      <ul class="bars" id="songs"></ul>
+      <div class="blurb" id="songsTotal" style="margin-top:12px"></div>
+    </div>
+
+    <div class="stackcol">
+    <div class="card" id="secCities" hidden>
+      <div class="head">
+        <h2>Where they are this morning</h2>
+        <p class="blurb">Listeners in the five cities Spotify counts most.</p>
+      </div>
+      <ul class="bars" id="cities"></ul>
+    </div>
+
+    <div class="card" id="secCat" hidden>
+      <div class="head">
+        <h2>What is out there</h2>
+        <p class="blurb">One dot for each one, working away without anybody watching.</p>
+      </div>
+      <div class="tally" id="tally"></div>
+    </div>
+    </div>
   </section>
 
-  <section id="secNearly" hidden>
-    <h2>Nearly</h2>
-    <ul class="nearly" id="nearly"></ul>
+  <section class="band" id="secRun" hidden>
+    <div class="head">
+      <h2>The run</h2>
+      <p class="blurb">A single a week, through Wings, and what happened in the week after each one landed.</p>
+    </div>
+    <div class="card runwrap"><div class="runline" id="run"></div></div>
   </section>
 
-  <section id="secCities" hidden>
-    <h2>Where they are this morning</h2>
-    <div id="cities"></div>
+  <section class="band" id="secNearly" hidden>
+    <div class="head">
+      <h2>Nearly</h2>
+      <p class="blurb">Round numbers coming up. Nobody set these, they are just close.</p>
+    </div>
+    <div class="meters" id="nearly"></div>
   </section>
 
   <div class="rest" id="rest"></div>
@@ -225,6 +346,7 @@
   <div class="footer">
     <span class="status" id="status"></span>
     <button class="link" id="btnManual">Type numbers in</button>
+    <button class="link" id="btnTable" aria-expanded="false">Read it as a table</button>
   </div>
 
   <div class="panel" id="manual" hidden>
@@ -232,6 +354,8 @@
     <div id="manualFields"></div>
     <button class="primary" id="saveManual">Save today's numbers</button>
   </div>
+
+  <div class="tables" id="tables" hidden></div>
 
   <div class="sig" id="sig">&nbsp;</div>
 </div>
@@ -244,15 +368,14 @@
 var HIST_KEY = 'tori-morning-history';
 
 var METRICS = [
-  { key:'spotifyListeners', label:'Spotify monthly listeners' },
-  { key:'spotifyFollowers', label:'Spotify followers' },
-  { key:'youtubeSubs',      label:'YouTube subscribers' },
-  { key:'youtubeViews',     label:'YouTube views, all time' },
-  { key:'instagram',        label:'Instagram followers' },
-  { key:'apple',            label:'Apple Music listeners' }
+  { key:'spotifyListeners', label:'Spotify monthly listeners', short:'Listeners' },
+  { key:'spotifyFollowers', label:'Spotify followers',         short:'Followers' },
+  { key:'youtubeSubs',      label:'YouTube subscribers',       short:'Subscribers' },
+  { key:'youtubeViews',     label:'YouTube views, all time',   short:'YouTube views' },
+  { key:'instagram',        label:'Instagram followers',       short:'Instagram' },
+  { key:'apple',            label:'Apple Music listeners',     short:'Apple' }
 ];
 
-/* The weekly run. Dates are the plan, Spotify confirms them as they land. */
 var CALENDAR = [
   { name:'Beat It',              date:'2026-08-21' },
   { name:'Holy Forever',         date:'2026-08-28' },
@@ -273,468 +396,771 @@ var REST_LINES = [
   "You built something that keeps moving without you. Go and enjoy that."
 ];
 
-var days = [];        /* one entry per date, oldest first */
-var catalogue = {};   /* trackId -> { name, uri } */
+var INK='#241D33', MUTED='#6E6482', HAIR='#E0D8E6', CARD='#FCFAFD';
+var D2='#3E6B70', D5='#95AFB1', WASH='rgba(62,107,112,0.10)';
+
+var days = [];
+var catalogue = {};
 var updatedAt = null;
 var draft = {};
+var trendKey = 'spotifyListeners';
+var view = null;
 
-/* ------------------------------------------------------------- little tools */
+/* ---------------------------------------------------------- little tools */
 
-function load(k){ try { var v = localStorage.getItem(k); return v ? JSON.parse(v) : null; } catch(e){ return null; } }
-function stash(k,v){ try { localStorage.setItem(k, JSON.stringify(v)); } catch(e){} }
+function load(k){ try{ var v=localStorage.getItem(k); return v?JSON.parse(v):null; }catch(e){ return null; } }
+function stash(k,v){ try{ localStorage.setItem(k, JSON.stringify(v)); }catch(e){} }
 
 function todayKey(){
-  var d = new Date();
-  return d.getFullYear() + '-' + String(d.getMonth()+1).padStart(2,'0') + '-' + String(d.getDate()).padStart(2,'0');
+  var d=new Date();
+  return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');
 }
-function n(v){ return (typeof v === 'number' && !isNaN(v)) ? v : 0; }
-function fmt(v){ return (typeof v === 'number' && !isNaN(v)) ? v.toLocaleString() : null; }
+function fmt(v){ return (typeof v==='number' && !isNaN(v)) ? v.toLocaleString('en-GB') : null; }
 function num(v){
-  if (typeof v === 'number' && !isNaN(v)) return v;
-  var p = parseInt(String(v).replace(/[^0-9]/g,''),10);
-  return isNaN(p) ? null : p;
+  if (typeof v==='number' && !isNaN(v)) return v;
+  var p=parseInt(String(v).replace(/[^0-9]/g,''),10);
+  return isNaN(p)?null:p;
+}
+function compact(v){
+  if (v>=1e6) return (v/1e6).toFixed(v>=1e7?0:1).replace(/\.0$/,'')+'M';
+  if (v>=1e3) return Math.round(v/1e3)+'k';
+  return String(Math.round(v));
 }
 /* a rise, or nothing. this page never reports a fall. */
 function rise(a,b){
-  if (typeof a !== 'number' || typeof b !== 'number') return 0;
-  return a - b > 0 ? a - b : 0;
+  if (typeof a!=='number' || typeof b!=='number') return 0;
+  return a-b>0 ? a-b : 0;
 }
 function dayNo(iso){
-  var p = String(iso||'').split('-');
-  if (p.length !== 3) return null;
-  return Date.UTC(+p[0], +p[1]-1, +p[2]) / 86400000;
+  var p=String(iso||'').split('-');
+  if (p.length!==3) return null;
+  return Date.UTC(+p[0], +p[1]-1, +p[2])/86400000;
 }
-function niceDate(iso){
-  var p = String(iso||'').split('-');
-  if (p.length !== 3) return '';
-  return new Date(Date.UTC(+p[0], +p[1]-1, +p[2]))
-    .toLocaleDateString('en-GB',{day:'numeric',month:'long',timeZone:'UTC'});
+function fromDayNo(n){ return new Date(n*86400000); }
+function shortDate(n){
+  return fromDayNo(n).toLocaleDateString('en-GB',{day:'numeric',month:'short',timeZone:'UTC'});
 }
-function people(k){ return k === 1 ? 'person' : 'people'; }
+function longDate(n){
+  return fromDayNo(n).toLocaleDateString('en-GB',{weekday:'short',day:'numeric',month:'long',timeZone:'UTC'});
+}
+function people(k){ return k===1?'person':'people'; }
 
-/* the next round number worth crossing, if it is genuinely within reach */
 function nextRound(v){
-  if (!v || v < 500) return null;
-  var steps = [1e3,5e3,1e4,5e4,1e5,5e5,1e6,5e6,1e7,5e7], best = null;
+  if (!v || v<500) return null;
+  var steps=[1e3,5e3,1e4,5e4,1e5,5e5,1e6,5e6,1e7,5e7], best=null;
   for (var i=0;i<steps.length;i++){
-    var s = steps[i], target = Math.ceil((v+1)/s)*s, gap = target - v;
-    if (gap <= v*0.12) best = { target:target, gap:gap, pct:gap/v };
+    var s=steps[i], target=Math.ceil((v+1)/s)*s, gap=target-v;
+    if (gap<=v*0.12) best={target:target,gap:gap,pct:gap/v,step:s};
   }
   return best;
 }
 
-function elt(tag, cls, text){
-  var e = document.createElement(tag);
-  if (cls) e.className = cls;
-  if (text != null) e.textContent = text;
+function elt(tag,cls,text){
+  var e=document.createElement(tag);
+  if (cls) e.className=cls;
+  if (text!=null) e.textContent=text;
+  return e;
+}
+function svgEl(tag,attrs){
+  var e=document.createElementNS('http://www.w3.org/2000/svg',tag);
+  for (var k in attrs) if (attrs[k]!=null) e.setAttribute(k,attrs[k]);
   return e;
 }
 
-/* ------------------------------------------------------------- the sentence */
-
-function heroSentence(t, y, songs, cities, counts, totals){
-  /* a release landing beats everything else that could be said */
-  if (t.latest && t.latest.name && t.latest.date && t.date){
-    var age = dayNo(t.date) - dayNo(t.latest.date);
-    if (age === 0) return { line:'"' + t.latest.name + '" went out into the world this morning.' };
-    if (age === 1) return { line:'"' + t.latest.name + '" went out into the world yesterday.' };
-    if (age > 1 && age <= 6) return { line:'"' + t.latest.name + '" has been out ' + age + ' days now.' };
-  }
-
-  if (y){
-    var best = songs.slice().sort(function(a,b){ return b.up - a.up; })[0];
-    if (best && best.up >= 50)
-      return { line:'Overnight, "' + best.name + '" was played ' + fmt(best.up) + ' more times.' };
-    if (totals.up >= 50)
-      return { line:'Overnight, his songs were played ' + fmt(totals.up) + ' more times.' };
-
-    var dL = rise(t.spotifyListeners, y.spotifyListeners);
-    if (dL > 0) return { line:'While you slept, ' + fmt(dL) + ' more ' + people(dL) + ' found his music.' };
-    var dV = rise(t.youtubeViews, y.youtubeViews);
-    if (dV > 0) return { line:'His music played ' + fmt(dV) + ' more times, without anyone asking you to do a thing.' };
-    var dS = rise(t.youtubeSubs, y.youtubeSubs);
-    if (dS > 0) return { line:fmt(dS) + ' ' + people(dS) + ' subscribed while you were off the clock.' };
-    var dF = rise(t.spotifyFollowers, y.spotifyFollowers);
-    if (dF > 0) return { line:fmt(dF) + ' ' + people(dF) + ' followed him overnight.' };
-    var dI = rise(t.instagram, y.instagram);
-    if (dI > 0) return { line:fmt(dI) + ' new ' + people(dI) + ' started following overnight.' };
-  }
-
-  /* nothing moved, or there is no yesterday yet. say something still true. */
-  return { line: standingLine(t, songs, cities, counts, totals) };
-}
-
-function standingLine(t, songs, cities, counts, totals){
-  var options = [];
-  if (cities.length)
-    options.push('Right now there are ' + fmt(cities[0].n) + ' people in ' + cities[0].city +
-                 ' with his music in their week.');
-  if (totals.plays > 0)
-    options.push('His ten most played songs have been pressed play ' + fmt(totals.plays) + ' times.');
-  if (t.spotifyListeners)
-    options.push(fmt(t.spotifyListeners) + ' people listened to him this month, and none of them had to be chased.');
-  if (counts.discoveredOn)
-    options.push('There are ' + fmt(counts.discoveredOn) + ' playlists out there that people find him on.');
-  if (counts.albums && counts.singles)
-    options.push('There are ' + fmt(counts.albums) + ' albums and ' + fmt(counts.singles) +
-                 ' singles of his out in the world, working.');
-  if (!options.length)
-    return 'The work is out there, quietly doing its job.';
-  var seed = Math.abs(dayNo(t.date) || 0);
-  return options[seed % options.length];
-}
-
-/* ------------------------------------------------------------- milestones */
-
-function milestones(t, songs, totals){
-  var out = [];
-  function add(v, tail){
-    var r = nextRound(v);
-    if (r) out.push({ pct:r.pct, gap:r.gap, target:r.target, tail:tail });
-  }
-  if (songs[0]) add(songs[0].plays, 'and "' + songs[0].name + '" crosses ');
-  add(totals.plays,          'and his ten most played cross ');
-  add(t.spotifyListeners,    'and he crosses ');
-  add(t.spotifyFollowers,    'and he crosses ');
-  add(t.youtubeSubs,         'and he crosses ');
-  add(t.youtubeViews,        'and he crosses ');
-  var suffix = [' plays.', ' plays between them.', ' people listening in a month.',
-                ' followers.', ' subscribers on YouTube.', ' views on YouTube.'];
-  out.forEach(function(m,i){ m.suffix = suffix[i] || '.'; });
-  out.sort(function(a,b){ return a.pct - b.pct; });
-  return out;
-}
-
-/* ------------------------------------------------------------- the line */
-
-function sparkline(series){
-  var svg = document.getElementById('spark');
-  var note = document.getElementById('sparknote');
-  if (!series.length){ svg.hidden = true; note.textContent = ''; return; }
-  svg.hidden = false;
-  var W = 300, H = 44;
-
-  if (series.length === 1){
-    svg.setAttribute('viewBox','0 0 '+W+' '+H);
-    svg.innerHTML =
-      '<line x1="0" y1="'+(H/2)+'" x2="'+W+'" y2="'+(H/2)+'" stroke="#3E6B70" ' +
-      'stroke-width="1" opacity=".22" vector-effect="non-scaling-stroke"/>' +
-      '<circle cx="'+(W/2)+'" cy="'+(H/2)+'" r="2.8" fill="#3E6B70"/>';
-    note.textContent = 'One morning on the record. The line starts here.';
-    return;
-  }
-
-  var lo = Math.min.apply(null, series), hi = Math.max.apply(null, series);
-  var span = (hi - lo) || 1;
-  var pts = series.map(function(v,i){
-    var x = (i/(series.length-1))*W;
-    var y = H - 4 - ((v-lo)/span)*(H-10);
-    return x.toFixed(1)+','+y.toFixed(1);
-  });
-  var last = pts[pts.length-1].split(',');
-  svg.setAttribute('viewBox','0 0 '+W+' '+H);
-  svg.innerHTML =
-    '<polyline points="'+pts.join(' ')+'" fill="none" stroke="#3E6B70" stroke-width="1.5" '+
-    'stroke-linecap="round" stroke-linejoin="round" vector-effect="non-scaling-stroke"/>' +
-    '<circle cx="'+last[0]+'" cy="'+last[1]+'" r="2.8" fill="#3E6B70"/>';
-  note.textContent = series.length + ' mornings on the record.';
-}
-
-/* ------------------------------------------------------------- render */
-
-function render(){
-  var tk = todayKey();
-  var today = days.filter(function(d){ return d.date === tk; })[0] || days[days.length-1] || {};
-  var older = days.filter(function(d){ return d.date !== today.date; });
-  var yest  = older.length ? older[older.length-1] : null;
-  var first = days.length ? days[0] : null;
-
-  /* songs, with only the rises kept */
-  var songs = [], tnow = today.tracks || {}, tprev = (yest && yest.tracks) || {};
-  for (var id in tnow){
-    if (!Object.prototype.hasOwnProperty.call(tnow, id)) continue;
-    var meta = catalogue[id] || {};
-    songs.push({ id:id, name: meta.name || 'Untitled', plays: tnow[id], up: rise(tnow[id], tprev[id]) });
-  }
-  songs.sort(function(a,b){ return b.plays - a.plays; });
-  var totals = {
-    plays: songs.reduce(function(s,x){ return s + x.plays; }, 0),
-    up:    songs.reduce(function(s,x){ return s + x.up; }, 0)
-  };
-  var cities = today.cities || [];
-  var counts = today.counts || {};
-
-  document.getElementById('date').textContent = homeParts().label;
-  document.getElementById('greet').textContent = greeting();
-
-  /* the sentence, set one word at a time */
-  var hero = heroSentence(today, yest, songs, cities, counts, totals);
-  var h1 = document.getElementById('hero');
-  h1.className = '';
-  h1.innerHTML = '';
-  hero.line.split(' ').forEach(function(w,i){
-    var s = elt('span','word', w + ' ');
-    s.style.animationDelay = (i*50) + 'ms';
-    h1.appendChild(s);
-  });
-
-  /* one supporting line: the nearest thing about to be crossed */
-  var ms = milestones(today, songs, totals);
-  var sub = document.getElementById('sub');
-  if (ms.length){
-    sub.hidden = false;
-    sub.innerHTML = '<strong>' + fmt(ms[0].gap) + '</strong> more ' + ms[0].tail +
-                    '<strong>' + fmt(ms[0].target) + '</strong>' + ms[0].suffix;
-  } else { sub.hidden = true; }
-
-  /* headline number */
-  var hv = today.spotifyListeners;
-  var box = document.getElementById('headline');
-  if (typeof hv === 'number'){
-    box.hidden = false;
-    document.getElementById('headlineN').textContent = fmt(hv);
-    document.getElementById('headlineCap').textContent = 'people listening this month';
-    sparkline(days.map(function(d){ return d.spotifyListeners; })
-                  .filter(function(v){ return typeof v === 'number'; }).slice(-45));
-  } else { box.hidden = true; }
-
-  /* the quiet rows. a metric with no number is simply not mentioned. */
-  var rows = document.getElementById('rows');
-  rows.innerHTML = '';
-  METRICS.forEach(function(m){
-    var now = today[m.key];
-    if (typeof now !== 'number') return;
-    var up = yest ? rise(now, yest[m.key]) : 0;
-    var row = elt('div','row');
-    row.appendChild(elt('div','label',m.label));
-    var right = elt('div','right');
-    right.appendChild(elt('span','val', fmt(now)));
-    if (up > 0) right.appendChild(elt('span','chip','+ ' + fmt(up)));
-    row.appendChild(right);
-    rows.appendChild(row);
-  });
-
-  var cum = document.getElementById('cumulative');
-  cum.hidden = true;
-  if (first && first.date !== today.date){
-    var gain = rise(today.spotifyListeners, first.spotifyListeners);
-    if (gain > 0){
-      cum.hidden = false;
-      cum.innerHTML = 'Since this page started keeping count, monthly listeners are up <strong>' +
-                      fmt(gain) + '</strong>.';
-    }
-  }
-
-  renderSongs(songs, totals);
-  renderRun(today);
-  renderNearly(ms);
-  renderCities(cities);
-
-  document.getElementById('rest').textContent = REST_LINES[new Date().getDate() % REST_LINES.length];
-  document.getElementById('sig').textContent =
-    days.length > 1 ? days.length + ' mornings recorded' : 'First morning';
-  if (updatedAt) document.getElementById('status').textContent =
-    'Last read ' + String(updatedAt).replace('T',' at ').slice(0,19) + '.';
-}
-
-var HOME_TZ = 'Asia/Kuala_Lumpur';
-
+var HOME_TZ='Asia/Kuala_Lumpur';
 function homeParts(){
   try{
-    var f = new Intl.DateTimeFormat('en-GB',{timeZone:HOME_TZ,hour:'numeric',hour12:false,
-             weekday:'long',day:'numeric',month:'long'}).formatToParts(new Date());
-    var o = {};
-    f.forEach(function(p){ o[p.type] = p.value; });
-    return { hour:+o.hour, label:o.weekday + ', ' + o.day + ' ' + o.month };
+    var f=new Intl.DateTimeFormat('en-GB',{timeZone:HOME_TZ,hour:'numeric',hour12:false,
+          weekday:'long',day:'numeric',month:'long'}).formatToParts(new Date());
+    var o={}; f.forEach(function(p){ o[p.type]=p.value; });
+    return { hour:+o.hour, label:o.weekday+', '+o.day+' '+o.month };
   }catch(e){
-    var d = new Date();
+    var d=new Date();
     return { hour:d.getHours(),
              label:d.toLocaleDateString('en-GB',{weekday:'long',day:'numeric',month:'long'}) };
   }
 }
-
 function greeting(){
-  var h = homeParts().hour;
-  if (h < 5)  return 'Still up, Tori';
-  if (h < 12) return 'Good morning, Tori';
-  if (h < 18) return 'Afternoon, Tori';
+  var h=homeParts().hour;
+  if (h<5)  return 'Still up, Tori';
+  if (h<12) return 'Good morning, Tori';
+  if (h<18) return 'Afternoon, Tori';
   return 'Evening, Tori';
 }
 
-function renderSongs(songs, totals){
-  var sec = document.getElementById('secSongs'), ol = document.getElementById('songs');
-  ol.innerHTML = '';
-  if (!songs.length){ sec.hidden = true; return; }
-  sec.hidden = false;
-  songs.forEach(function(t,i){
-    var li = elt('li');
-    li.appendChild(elt('span','idx', String(i+1)));
-    li.appendChild(elt('span','song', t.name));
-    var p = elt('span','plays', fmt(t.plays));
-    if (t.up > 0) p.appendChild(elt('span','chip','+ ' + fmt(t.up)));
-    li.appendChild(p);
-    ol.appendChild(li);
-  });
-  document.getElementById('songsTotal').innerHTML =
-    '<strong>' + fmt(totals.plays) + '</strong> plays between them' +
-    (totals.up > 0 ? ', <strong>' + fmt(totals.up) + '</strong> of those since yesterday' : '') + '.';
+/* clean axis ticks: 1 / 2 / 2.5 / 5 x a power of ten */
+function niceTicks(lo,hi,want){
+  var span=(hi-lo)||1, raw=span/want;
+  var mag=Math.pow(10,Math.floor(Math.log10(raw)));
+  var step=null, mults=[1,2,2.5,5,10];
+  for (var i=0;i<mults.length;i++){ if (mults[i]*mag>=raw){ step=mults[i]*mag; break; } }
+  if (!step) step=10*mag;
+  var out=[], v=Math.ceil(lo/step)*step;
+  for (; v<=hi+1e-9; v+=step) out.push(v);
+  return out;
 }
 
-function renderRun(today){
-  var sec = document.getElementById('secRun'), box = document.getElementById('run');
-  box.innerHTML = '';
-  var t = dayNo(today.date);
-  if (t == null){ sec.hidden = true; return; }
-  sec.hidden = false;
-  var markedNext = false;
+/* ---------------------------------------------------------- the shape of today */
 
+function shape(){
+  var tk=todayKey();
+  var sorted=days.slice().sort(function(a,b){ return String(a.date).localeCompare(String(b.date)); });
+  var today=sorted.filter(function(d){ return d.date===tk; })[0] || sorted[sorted.length-1] || {};
+  var older=sorted.filter(function(d){ return d.date!==today.date; });
+  var yest=older.length?older[older.length-1]:null;
+
+  var songs=[], tnow=today.tracks||{}, tprev=(yest&&yest.tracks)||{};
+  for (var id in tnow){
+    if (!Object.prototype.hasOwnProperty.call(tnow,id)) continue;
+    var meta=catalogue[id]||{};
+    songs.push({ id:id, name:meta.name||'Untitled', plays:tnow[id], up:rise(tnow[id],tprev[id]) });
+  }
+  songs.sort(function(a,b){ return b.plays-a.plays; });
+
+  return {
+    all: sorted,
+    today: today,
+    yest: yest,
+    first: sorted[0]||null,
+    songs: songs,
+    totals: {
+      plays: songs.reduce(function(s,x){ return s+x.plays; },0),
+      up:    songs.reduce(function(s,x){ return s+x.up; },0)
+    },
+    cities: today.cities||[],
+    counts: today.counts||{}
+  };
+}
+
+/* every series the line can show, including one derived from the songs */
+function seriesFor(key,v){
+  if (key==='totalPlays'){
+    return v.all.map(function(d){
+      var t=d.tracks||{}, s=0, any=false;
+      for (var k in t){ if (Object.prototype.hasOwnProperty.call(t,k)){ s+=t[k]; any=true; } }
+      return any?{x:dayNo(d.date),y:s,date:d.date}:null;
+    }).filter(function(p){ return p&&p.x!=null; });
+  }
+  return v.all.map(function(d){
+    return (typeof d[key]==='number') ? {x:dayNo(d.date),y:d[key],date:d.date} : null;
+  }).filter(function(p){ return p&&p.x!=null; });
+}
+
+var SERIES = [
+  { key:'spotifyListeners', short:'Monthly listeners', noun:'people listening this month' },
+  { key:'totalPlays',       short:'Plays',             noun:'plays across his ten most played' },
+  { key:'youtubeViews',     short:'YouTube views',     noun:'views on YouTube' },
+  { key:'spotifyFollowers', short:'Followers',         noun:'followers on Spotify' },
+  { key:'youtubeSubs',      short:'Subscribers',       noun:'subscribers on YouTube' }
+];
+
+/* ---------------------------------------------------------- the line chart */
+
+function drawTrend(){
+  var host=document.getElementById('trendPlot');
+  if (!host || !view) return;
+  var W=host.clientWidth||640;
+  if (!W) return;
+  var pts0=seriesFor(trendKey,view), pts0len=pts0.length;
+  var tall=W<560;
+  var H = tall ? (pts0len<3?150:200) : (pts0len<3?200:300);
+  var PL=W<420?46:58, PR=18, PT=18, PB=34;
+
+  var pts=pts0;
+  host.innerHTML='';
+  if (!pts.length){ return; }
+
+  var meta=SERIES.filter(function(s){ return s.key===trendKey; })[0]||SERIES[0];
+  var svg=svgEl('svg',{viewBox:'0 0 '+W+' '+H,width:W,height:H});
+  svg.style.height=H+'px';
+
+  var ys=pts.map(function(p){ return p.y; });
+  var lo=Math.min.apply(null,ys), hi=Math.max.apply(null,ys);
+  if (hi===lo){ var pad=Math.max(1,Math.abs(hi)*0.004); lo-=pad; hi+=pad; }
+  else { var m=(hi-lo)*0.18; lo-=m; hi+=m; }
+
+  var xlo=pts[0].x, xhi=pts[pts.length-1].x;
+  /* keep upcoming releases inside the frame so the run reads as a horizon */
+  var future=CALENDAR.map(function(r){ return dayNo(r.date); })
+                     .filter(function(d){ return d!=null && d>xhi && d<=xhi+21; });
+  if (future.length) xhi=Math.max(xhi,Math.max.apply(null,future));
+  if (xhi===xlo) xhi=xlo+1;
+
+  function X(v){ return PL + ((v-xlo)/(xhi-xlo))*(W-PL-PR); }
+  function Y(v){ return H-PB - ((v-lo)/(hi-lo))*(H-PT-PB); }
+
+  /* gridlines and y ticks: hairline, solid, one step off the surface */
+  var yt=niceTicks(lo,hi,tall?3:4);
+  yt.forEach(function(v){
+    svg.appendChild(svgEl('line',{x1:PL,x2:W-PR,y1:Y(v).toFixed(1),y2:Y(v).toFixed(1),
+      stroke:HAIR,'stroke-width':1}));
+    var t=svgEl('text',{x:PL-9,y:(Y(v)+4).toFixed(1),'text-anchor':'end',
+      fill:MUTED,'font-size':11});
+    t.style.fontVariantNumeric='tabular-nums';
+    t.textContent=compact(v);
+    svg.appendChild(t);
+  });
+
+  /* release markers, drawn behind the data */
   CALENDAR.forEach(function(r){
-    var d = dayNo(r.date), out = d <= t;
-    var row = elt('div','rel' + (out ? ' out' : (markedNext ? '' : ' next')));
-    if (!out) markedNext = true;
-    row.appendChild(elt('div','name', r.name));
-    var away = d - t, when;
-    if (away === 0)      when = 'today';
-    else if (away === 1) when = 'tomorrow';
-    else if (away > 1)   when = 'in ' + away + ' days';
-    else                 when = niceDate(r.date);
-    row.appendChild(elt('div','when', when));
-    var note = afterBump(r, t);
-    if (note) row.appendChild(elt('div','note', note));
-    box.appendChild(row);
+    var d=dayNo(r.date);
+    if (d==null || d<xlo || d>xhi) return;
+    var x=X(d);
+    svg.appendChild(svgEl('line',{x1:x.toFixed(1),x2:x.toFixed(1),y1:PT-6,y2:H-PB,
+      stroke:D5,'stroke-width':1}));
+    var anchor='middle', lx=x;
+    if (x > W-PR-70){ anchor='end';   lx=x-4; }
+    else if (x < PL+70){ anchor='start'; lx=x+4; }
+    var lb=svgEl('text',{x:lx.toFixed(1),y:PT-10,'text-anchor':anchor,
+      fill:MUTED,'font-size':10,'font-weight':700});
+    lb.setAttribute('letter-spacing','.04em');
+    lb.textContent=(W<680?r.name.split(' ')[0]:r.name);
+    svg.appendChild(lb);
+  });
+
+  /* x axis */
+  svg.appendChild(svgEl('line',{x1:PL,x2:W-PR,y1:H-PB,y2:H-PB,stroke:HAIR,'stroke-width':1}));
+  var xt=[xlo,xhi];
+  if (xhi-xlo>6) xt=[xlo,Math.round((xlo+xhi)/2),xhi];
+  xt.forEach(function(v,i){
+    var t=svgEl('text',{x:X(v).toFixed(1),y:H-PB+18,
+      'text-anchor':i===0?'start':(i===xt.length-1?'end':'middle'),
+      fill:MUTED,'font-size':11});
+    t.textContent=shortDate(v);
+    svg.appendChild(t);
+  });
+
+  if (pts.length===1){
+    var cx=X(pts[0].x), cy=Y(pts[0].y);
+    svg.appendChild(svgEl('circle',{cx:cx,cy:cy,r:7,fill:CARD}));
+    svg.appendChild(svgEl('circle',{cx:cx,cy:cy,r:5,fill:D2}));
+    var only=svgEl('text',{x:cx+12,y:cy+4,fill:INK,'font-size':12,'font-weight':700});
+    only.textContent=fmt(pts[0].y);
+    svg.appendChild(only);
+  } else {
+    var d='', a='';
+    pts.forEach(function(p,i){ d+=(i?' L':'M')+X(p.x).toFixed(1)+' '+Y(p.y).toFixed(1); });
+    a=d+' L'+X(pts[pts.length-1].x).toFixed(1)+' '+(H-PB)+' L'+X(pts[0].x).toFixed(1)+' '+(H-PB)+' Z';
+    /* only wash down to the baseline when the baseline is actually zero,
+       otherwise the filled area overstates how big the change is */
+    if (lo<=0) svg.appendChild(svgEl('path',{d:a,fill:WASH}));
+    svg.appendChild(svgEl('path',{d:d,fill:'none',stroke:D2,'stroke-width':2,
+      'stroke-linejoin':'round','stroke-linecap':'round'}));
+    var last=pts[pts.length-1];
+    svg.appendChild(svgEl('circle',{cx:X(last.x),cy:Y(last.y),r:7,fill:CARD}));
+    svg.appendChild(svgEl('circle',{cx:X(last.x),cy:Y(last.y),r:5,fill:D2}));
+    /* one direct label, at the end, never a number on every point */
+    var lab=svgEl('text',{x:X(last.x)-12,y:Y(last.y)-13,'text-anchor':'end',
+      fill:INK,'font-size':12,'font-weight':700});
+    lab.textContent=fmt(last.y);
+    svg.appendChild(lab);
+  }
+
+  /* the hover layer */
+  var cross=svgEl('line',{x1:0,x2:0,y1:PT-6,y2:H-PB,stroke:D2,'stroke-width':1,opacity:0});
+  var ring=svgEl('circle',{r:7,fill:CARD,opacity:0});
+  var knob=svgEl('circle',{r:5,fill:D2,opacity:0});
+  svg.appendChild(cross); svg.appendChild(ring); svg.appendChild(knob);
+  host.appendChild(svg);
+
+  var tip=elt('div','tip');
+  host.appendChild(tip);
+
+  function nearest(clientX){
+    var box=svg.getBoundingClientRect();
+    var px=(clientX-box.left)*(W/box.width);
+    var best=null,bd=Infinity;
+    pts.forEach(function(p){ var dd=Math.abs(X(p.x)-px); if (dd<bd){ bd=dd; best=p; } });
+    return best;
+  }
+  function show(p){
+    if (!p) return;
+    var x=X(p.x), y=Y(p.y);
+    cross.setAttribute('x1',x); cross.setAttribute('x2',x); cross.setAttribute('opacity','.35');
+    ring.setAttribute('cx',x); ring.setAttribute('cy',y); ring.setAttribute('opacity','1');
+    knob.setAttribute('cx',x); knob.setAttribute('cy',y); knob.setAttribute('opacity','1');
+    tip.innerHTML='<span class="t">'+longDate(p.x)+'</span><b>'+fmt(p.y)+'</b> '+meta.noun;
+    var box=svg.getBoundingClientRect(), sc=box.width/W;
+    tip.style.left=(x*sc)+'px';
+    tip.style.top=(y*sc)+'px';
+    tip.style.opacity='1';
+  }
+  function hide(){
+    cross.setAttribute('opacity','0'); ring.setAttribute('opacity','0');
+    knob.setAttribute('opacity','0'); tip.style.opacity='0';
+  }
+  host.onmousemove=function(e){ show(nearest(e.clientX)); };
+  host.onmouseleave=hide;
+  host.ontouchstart=function(e){ if (e.touches[0]) show(nearest(e.touches[0].clientX)); };
+  host.ontouchmove=function(e){ if (e.touches[0]) show(nearest(e.touches[0].clientX)); };
+  host.onfocus=function(){ show(pts[pts.length-1]); };
+  host.onblur=hide;
+
+  document.getElementById('trendBlurb').textContent =
+    pts.length===1
+      ? 'One morning on the record. The line starts here, and the marks ahead are the run.'
+      : pts.length+' mornings on the record. Hover anywhere to read a day. The upright marks are releases.';
+  host.setAttribute('aria-label', meta.short+' over '+pts.length+
+    (pts.length===1?' morning':' mornings')+', latest '+fmt(pts[pts.length-1].y));
+}
+
+/* ---------------------------------------------------------- sparkline */
+
+function spark(series){
+  var W=200,H=34;
+  var svg=svgEl('svg',{viewBox:'0 0 '+W+' '+H,preserveAspectRatio:'none'});
+  if (!series.length) return svg;
+  if (series.length===1){
+    svg.appendChild(svgEl('line',{x1:0,x2:W,y1:H/2,y2:H/2,stroke:D5,'stroke-width':1.5,
+      'vector-effect':'non-scaling-stroke'}));
+    return svg;
+  }
+  var lo=Math.min.apply(null,series), hi=Math.max.apply(null,series), sp=(hi-lo)||1;
+  var pts=series.map(function(v,i){
+    return ((i/(series.length-1))*W).toFixed(1)+','+(H-3-((v-lo)/sp)*(H-8)).toFixed(1);
+  });
+  var area='M0,'+H+' L'+pts.join(' L')+' L'+W+','+H+' Z';
+  svg.appendChild(svgEl('path',{d:area,fill:WASH}));
+  svg.appendChild(svgEl('polyline',{points:pts.join(' '),fill:'none',stroke:D2,
+    'stroke-width':2,'stroke-linecap':'round','stroke-linejoin':'round',
+    'vector-effect':'non-scaling-stroke'}));
+  return svg;
+}
+
+/* ---------------------------------------------------------- render */
+
+function render(){
+  var v = view = shape();
+  var t=v.today, y=v.yest;
+
+  document.getElementById('date').textContent=homeParts().label;
+  document.getElementById('greet').textContent=greeting();
+
+  /* the sentence */
+  var line=heroSentence(v);
+  var h1=document.getElementById('hero');
+  h1.innerHTML='';
+  line.split(' ').forEach(function(w,i){
+    var s=elt('span','word',w+' ');
+    s.style.animationDelay=(i*45)+'ms';
+    h1.appendChild(s);
+  });
+
+  var ms=milestones(v);
+  var sub=document.getElementById('sub');
+  if (ms.length){
+    sub.hidden=false;
+    sub.innerHTML='<strong>'+fmt(ms[0].gap)+'</strong> more '+ms[0].tail+
+                  '<strong>'+fmt(ms[0].target)+'</strong>'+ms[0].suffix;
+  } else sub.hidden=true;
+
+  /* hero figure */
+  var card=document.getElementById('heroCard');
+  if (typeof t.spotifyListeners==='number'){
+    card.hidden=false;
+    document.getElementById('heroN').textContent=fmt(t.spotifyListeners);
+    document.getElementById('heroCap').textContent='people listening this month';
+    var since=document.getElementById('heroSince');
+    var gain=v.first && v.first.date!==t.date ? rise(t.spotifyListeners,v.first.spotifyListeners) : 0;
+    var overnight=y?rise(t.spotifyListeners,y.spotifyListeners):0;
+    var bits=[];
+    if (overnight>0) bits.push('<strong>'+fmt(overnight)+'</strong> more than yesterday');
+    if (gain>0) bits.push('<strong>'+fmt(gain)+'</strong> more than the first morning on record');
+    if (bits.length){ since.hidden=false; since.innerHTML=bits.join('. ')+'.'; }
+    else { since.hidden=false; since.innerHTML='Counted again this morning, from '+
+           (v.cities.length?v.cities.length+' cities and everywhere else.':'everywhere'); }
+  } else card.hidden=true;
+
+  renderTrendPicker(v);
+  renderTiles(v);
+  renderSongs(v);
+  renderCities(v);
+  renderCatalogue(v);
+  renderRun(v);
+  renderNearly(ms);
+  renderTables(v);
+
+  document.getElementById('rest').textContent=REST_LINES[new Date().getDate()%REST_LINES.length];
+  document.getElementById('sig').textContent=
+    v.all.length>1 ? v.all.length+' mornings recorded' : 'First morning';
+  if (updatedAt) document.getElementById('status').textContent=
+    'Last read '+String(updatedAt).replace('T',' at ').slice(0,19)+'.';
+}
+
+function heroSentence(v){
+  var t=v.today, y=v.yest;
+  if (t.latest && t.latest.name && t.latest.date && t.date){
+    var age=dayNo(t.date)-dayNo(t.latest.date);
+    if (age===0) return '"'+t.latest.name+'" went out into the world this morning.';
+    if (age===1) return '"'+t.latest.name+'" went out into the world yesterday.';
+    if (age>1 && age<=6) return '"'+t.latest.name+'" has been out '+age+' days now.';
+  }
+  if (y){
+    var best=v.songs.slice().sort(function(a,b){ return b.up-a.up; })[0];
+    if (best && best.up>=50) return 'Overnight, "'+best.name+'" was played '+fmt(best.up)+' more times.';
+    if (v.totals.up>=50) return 'Overnight, his songs were played '+fmt(v.totals.up)+' more times.';
+    var dL=rise(t.spotifyListeners,y.spotifyListeners);
+    if (dL>0) return 'While you slept, '+fmt(dL)+' more '+people(dL)+' found his music.';
+    var dV=rise(t.youtubeViews,y.youtubeViews);
+    if (dV>0) return 'His music played '+fmt(dV)+' more times, without anyone asking you to do a thing.';
+    var dS=rise(t.youtubeSubs,y.youtubeSubs);
+    if (dS>0) return fmt(dS)+' '+people(dS)+' subscribed while you were off the clock.';
+    var dF=rise(t.spotifyFollowers,y.spotifyFollowers);
+    if (dF>0) return fmt(dF)+' '+people(dF)+' followed him overnight.';
+    var dI=rise(t.instagram,y.instagram);
+    if (dI>0) return fmt(dI)+' new '+people(dI)+' started following overnight.';
+  }
+  return standingLine(v);
+}
+
+function standingLine(v){
+  var t=v.today, o=[];
+  if (v.cities.length)
+    o.push('Right now there are '+fmt(v.cities[0].n)+' people in '+v.cities[0].city+
+           ' with his music in their week.');
+  if (v.totals.plays>0)
+    o.push('His ten most played songs have been pressed play '+fmt(v.totals.plays)+' times.');
+  if (t.spotifyListeners)
+    o.push(fmt(t.spotifyListeners)+' people listened to him this month, and none of them had to be chased.');
+  if (v.counts.discoveredOn)
+    o.push('There are '+fmt(v.counts.discoveredOn)+' playlists out there that people find him on.');
+  if (v.counts.albums && v.counts.singles)
+    o.push('There are '+fmt(v.counts.albums)+' albums and '+fmt(v.counts.singles)+
+           ' singles of his out in the world, working.');
+  if (!o.length) return 'The work is out there, quietly doing its job.';
+  return o[Math.abs(dayNo(t.date)||0)%o.length];
+}
+
+function milestones(v){
+  var t=v.today, out=[];
+  function add(val,tail,suffix){
+    var r=nextRound(val);
+    if (r) out.push({pct:r.pct,gap:r.gap,target:r.target,step:r.step,value:val,
+                     tail:tail,suffix:suffix});
+  }
+  if (v.songs[0]) add(v.songs[0].plays,'and "'+v.songs[0].name+'" crosses ',' plays.');
+  add(v.totals.plays,        'and his ten most played cross ',' plays between them.');
+  add(t.spotifyListeners,    'and he crosses ',' people listening in a month.');
+  add(t.spotifyFollowers,    'and he crosses ',' followers.');
+  add(t.youtubeSubs,         'and he crosses ',' subscribers on YouTube.');
+  add(t.youtubeViews,        'and he crosses ',' views on YouTube.');
+  out.sort(function(a,b){ return a.pct-b.pct; });
+  return out;
+}
+
+function renderTrendPicker(v){
+  var box=document.getElementById('trendPick');
+  var live=SERIES.filter(function(s){ return seriesFor(s.key,v).length>0; });
+  document.getElementById('secTrend').hidden = live.length===0;
+  if (!live.length) return;
+  if (!live.some(function(s){ return s.key===trendKey; })) trendKey=live[0].key;
+  box.innerHTML='';
+  live.forEach(function(s){
+    var b=elt('button',null,s.short);
+    b.type='button';
+    b.setAttribute('aria-pressed', s.key===trendKey ? 'true':'false');
+    b.onclick=function(){ trendKey=s.key; renderTrendPicker(view); drawTrend(); };
+    box.appendChild(b);
+  });
+  drawTrend();
+}
+
+function renderTiles(v){
+  var box=document.getElementById('secTiles');
+  box.innerHTML='';
+  var any=false;
+  METRICS.forEach(function(m){
+    var val=v.today[m.key];
+    if (typeof val!=='number') return;
+    any=true;
+    var up=v.yest?rise(val,v.yest[m.key]):0;
+    var card=elt('div','card tile');
+    card.appendChild(elt('div','k',m.label));
+    var row=elt('div','r');
+    row.appendChild(elt('div','v',fmt(val)));
+    if (up>0) row.appendChild(elt('span','chip','+ '+fmt(up)));
+    card.appendChild(row);
+    var series=v.all.map(function(d){ return d[m.key]; })
+                    .filter(function(x){ return typeof x==='number'; }).slice(-12);
+    card.appendChild(spark(series));
+    box.appendChild(card);
+  });
+  box.hidden=!any;
+}
+
+function barList(host, rows, unit){
+  host.innerHTML='';
+  if (!rows.length) return;
+  var max=Math.max.apply(null,rows.map(function(r){ return r.value; }))||1;
+  rows.forEach(function(r){
+    var li=elt('li');
+    li.appendChild(elt('span','nm',r.name));
+    var vl=elt('span','vl',fmt(r.value));
+    if (r.up>0) vl.appendChild(elt('span','chip','+ '+fmt(r.up)));
+    li.appendChild(vl);
+    var tr=elt('div','track'+(unit==='small'?' small':''));
+    var fill=elt('i');
+    fill.style.width=Math.max(1.2,(r.value/max)*100)+'%';
+    tr.appendChild(fill);
+    li.appendChild(tr);
+    host.appendChild(li);
   });
 }
 
-/* what happened to the listener count in the week after something landed */
-function afterBump(r, t){
-  var d = dayNo(r.date);
-  if (d == null || d > t) return '';
-  var before = null, after = null;
-  days.forEach(function(e){
-    var dn = dayNo(e.date);
-    if (dn == null || typeof e.spotifyListeners !== 'number') return;
-    if (dn <= d) before = e.spotifyListeners;
-    if (dn > d && dn <= d + 7) after = e.spotifyListeners;
+function renderSongs(v){
+  document.getElementById('secSongs').hidden = !v.songs.length;
+  if (!v.songs.length) return;
+  barList(document.getElementById('songs'), v.songs.map(function(s){
+    return {name:s.name, value:s.plays, up:s.up};
+  }));
+  document.getElementById('songsTotal').innerHTML=
+    fmt(v.totals.plays)+' plays between them'+
+    (v.totals.up>0 ? ', '+fmt(v.totals.up)+' of those since yesterday' : '')+'.';
+}
+
+function renderCities(v){
+  document.getElementById('secCities').hidden = !v.cities.length;
+  if (!v.cities.length) return;
+  barList(document.getElementById('cities'), v.cities.map(function(c){
+    return {name:c.city, value:c.n, up:0};
+  }), 'small');
+}
+
+function renderCatalogue(v){
+  var c=v.counts, host=document.getElementById('tally');
+  var rows=[
+    {label:'Albums out', n:c.albums},
+    {label:'Singles out', n:c.singles},
+    {label:'Playlists people find him on', n:c.discoveredOn, cap:60},
+    {label:"Playlists that feature him, including Spotify's own", n:c.featuredIn}
+  ].filter(function(r){ return r.n; });
+  document.getElementById('secCat').hidden = !rows.length;
+  if (!rows.length) return;
+  host.innerHTML='';
+  rows.forEach(function(r){
+    var lab=elt('div','lab');
+    lab.appendChild(elt('span',null,r.label));
+    lab.appendChild(elt('span',null,fmt(r.n)));
+    host.appendChild(lab);
+    var dots=elt('div','dots');
+    var cap=r.cap||r.n, shown=Math.min(r.n,cap);
+    for (var i=0;i<shown;i++) dots.appendChild(elt('i'));
+    if (r.n>cap){
+      for (var j=0;j<6;j++){ var p=elt('i','pale'); dots.appendChild(p); }
+    }
+    host.appendChild(dots);
   });
-  var g = rise(after, before);
-  return g ? 'In the week after, ' + fmt(g) + ' more ' + people(g) + ' found him.' : '';
+}
+
+function renderRun(v){
+  var host=document.getElementById('run');
+  var t=dayNo(v.today.date);
+  var doneCount=CALENDAR.filter(function(r){ var d=dayNo(r.date); return d!=null && d<=t; }).length;
+  document.getElementById('secRun').hidden = (t==null);
+  if (t==null) return;
+  host.innerHTML='';
+  var markedNext=false;
+  CALENDAR.forEach(function(r){
+    var d=dayNo(r.date), out=d<=t;
+    var stop=elt('div','stop'+(out?' done':(markedNext?'':' next')));
+    if (!out) markedNext=true;
+    stop.appendChild(elt('div','dot'));
+    var body=elt('div');
+    body.appendChild(elt('div','nm',r.name));
+    var away=d-t, when;
+    if (away===0) when='today';
+    else if (away===1) when='tomorrow';
+    else if (away>1) when='in '+away+' days';
+    else when=shortDate(d);
+    body.appendChild(elt('div','wh',when));
+    var b=afterBump(v,r,t);
+    if (b) body.appendChild(elt('div','bump',b));
+    stop.appendChild(body);
+    host.appendChild(stop);
+  });
+  if (doneCount>0 && window.matchMedia('(min-width:900px)').matches){
+    var bar=elt('div','past');
+    /* stop the accent run at the centre of the last release that landed */
+    bar.style.width=(((doneCount-0.5)/7)*100 - 7.14)+'%';
+    host.appendChild(bar);
+  }
+}
+
+function afterBump(v,r,t){
+  var d=dayNo(r.date);
+  if (d==null || d>t) return '';
+  var before=null, after=null;
+  v.all.forEach(function(e){
+    var dn=dayNo(e.date);
+    if (dn==null || typeof e.spotifyListeners!=='number') return;
+    if (dn<=d) before=e.spotifyListeners;
+    if (dn>d && dn<=d+7) after=e.spotifyListeners;
+  });
+  var g=rise(after,before);
+  return g ? 'In the week after, '+fmt(g)+' more '+people(g)+' found him.' : '';
 }
 
 function renderNearly(ms){
-  var sec = document.getElementById('secNearly'), ul = document.getElementById('nearly');
-  ul.innerHTML = '';
-  if (ms.length < 3){ sec.hidden = true; return; }
-  sec.hidden = false;
+  var host=document.getElementById('nearly');
+  document.getElementById('secNearly').hidden = ms.length<3;
+  if (ms.length<3) return;
+  host.innerHTML='';
   ms.slice(1,4).forEach(function(m){
-    var li = elt('li');
-    li.innerHTML = '<strong>' + fmt(m.gap) + '</strong> more ' + m.tail +
-                   '<strong>' + fmt(m.target) + '</strong>' + m.suffix;
-    ul.appendChild(li);
+    var box=elt('div','meter');
+    var cap=elt('div','cap');
+    cap.innerHTML='<strong>'+fmt(m.gap)+'</strong> more '+m.tail+'<strong>'+
+                  fmt(m.target)+'</strong>'+m.suffix;
+    box.appendChild(cap);
+    var bar=elt('div','bar'), fill=elt('i');
+    var floor=m.target-m.step;
+    var pct=Math.max(4,Math.min(100,((m.value-floor)/m.step)*100));
+    fill.style.width=pct.toFixed(1)+'%';
+    bar.appendChild(fill);
+    box.appendChild(bar);
+    host.appendChild(box);
   });
 }
 
-function renderCities(cities){
-  var sec = document.getElementById('secCities'), box = document.getElementById('cities');
-  box.innerHTML = '';
-  if (!cities.length){ sec.hidden = true; return; }
-  sec.hidden = false;
-  cities.forEach(function(c){
-    var row = elt('div','city');
-    row.appendChild(elt('span','place', c.city));
-    row.appendChild(elt('span','n', fmt(c.n)));
-    box.appendChild(row);
-  });
+/* every chart has a plain twin, so no value is locked behind a hover */
+function renderTables(v){
+  var host=document.getElementById('tables');
+  host.innerHTML='';
+
+  function table(title, head, rows){
+    if (!rows.length) return;
+    host.appendChild(elt('h3',null,title));
+    var wrap=elt('div','scroll'), tb=elt('table');
+    var thead=elt('thead'), tr=elt('tr');
+    head.forEach(function(h){ tr.appendChild(elt('th',null,h)); });
+    thead.appendChild(tr); tb.appendChild(thead);
+    var body=elt('tbody');
+    rows.forEach(function(r){
+      var row=elt('tr');
+      r.forEach(function(c){ row.appendChild(elt('td',null,c)); });
+      body.appendChild(row);
+    });
+    tb.appendChild(body); wrap.appendChild(tb); host.appendChild(wrap);
+  }
+
+  table('Every morning recorded',
+    ['Date','Monthly listeners','Followers','YouTube subs','YouTube views'],
+    v.all.slice().reverse().map(function(d){
+      return [d.date, fmt(d.spotifyListeners)||'', fmt(d.spotifyFollowers)||'',
+              fmt(d.youtubeSubs)||'', fmt(d.youtubeViews)||''];
+    }));
+
+  table('The ten most played', ['Song','Plays','Since yesterday'],
+    v.songs.map(function(s){ return [s.name, fmt(s.plays), s.up>0?'+ '+fmt(s.up):'']; }));
+
+  table('Cities', ['City','Listeners'],
+    v.cities.map(function(c){ return [c.city, fmt(c.n)]; }));
+
+  table('The run', ['Release','Date'],
+    CALENDAR.map(function(r){ return [r.name, r.date]; }));
 }
 
-/* ------------------------------------------------------------- manual entry */
+/* ---------------------------------------------------------- manual entry */
 
 function buildFields(){
-  var mf = document.getElementById('manualFields');
-  mf.innerHTML = '';
-  var tk = todayKey();
-  var today = days.filter(function(d){ return d.date === tk; })[0] || {};
+  var mf=document.getElementById('manualFields');
+  mf.innerHTML='';
+  var tk=todayKey();
+  var today=days.filter(function(d){ return d.date===tk; })[0]||{};
   METRICS.forEach(function(m){
-    var wrap = elt('div','field');
-    wrap.innerHTML = '<label for="f_'+m.key+'">'+m.label+'</label>' +
+    var wrap=elt('div','field');
+    wrap.innerHTML='<label for="f_'+m.key+'">'+m.label+'</label>'+
       '<input id="f_'+m.key+'" inputmode="numeric" placeholder="'+(fmt(today[m.key])||'')+'">';
     mf.appendChild(wrap);
-    wrap.querySelector('input').addEventListener('input', function(e){ draft[m.key] = e.target.value; });
+    wrap.querySelector('input').addEventListener('input',function(e){ draft[m.key]=e.target.value; });
   });
 }
 
 function record(values){
-  var tk = todayKey();
-  var prior = days.filter(function(d){ return d.date === tk; })[0] || {};
-  var merged = Object.assign({}, prior, values, { date: tk });
-  days = days.filter(function(d){ return d.date !== tk; }).concat([merged])
-             .sort(function(a,b){ return a.date < b.date ? -1 : 1; });
-  stash(HIST_KEY, { days: days, tracks: catalogue });
+  var tk=todayKey();
+  var prior=days.filter(function(d){ return d.date===tk; })[0]||{};
+  var merged=Object.assign({},prior,values,{date:tk});
+  days=days.filter(function(d){ return d.date!==tk; }).concat([merged])
+           .sort(function(a,b){ return a.date<b.date?-1:1; });
+  stash(HIST_KEY,{days:days,tracks:catalogue});
   render();
 }
 
-/* ------------------------------------------------------------- boot */
+/* ---------------------------------------------------------- boot */
 
 function unpack(raw){
-  if (Array.isArray(raw)) return { days: raw, tracks: {}, updated: null };
+  if (Array.isArray(raw)) return {days:raw,tracks:{},updated:null};
   if (raw && Array.isArray(raw.days))
-    return { days: raw.days, tracks: raw.tracks || {}, updated: raw.updated || null };
-  return { days: [], tracks: {}, updated: null };
+    return {days:raw.days,tracks:raw.tracks||{},updated:raw.updated||null};
+  return {days:[],tracks:{},updated:null};
 }
 
 function absorb(feed){
-  var byDate = {};
+  var byDate={};
   feed.days.concat(days).forEach(function(e){
     if (e && e.date){
-      var prior = byDate[e.date] || {};
-      var merged = Object.assign({}, prior, e);
-      if (prior.tracks || e.tracks) merged.tracks = Object.assign({}, prior.tracks, e.tracks);
-      byDate[e.date] = merged;
+      var prior=byDate[e.date]||{};
+      var merged=Object.assign({},prior,e);
+      if (prior.tracks||e.tracks) merged.tracks=Object.assign({},prior.tracks,e.tracks);
+      byDate[e.date]=merged;
     }
   });
-  days = Object.keys(byDate).sort().map(function(k){ return byDate[k]; });
-  catalogue = Object.assign({}, catalogue, feed.tracks);
-  if (feed.updated) updatedAt = feed.updated;
-  stash(HIST_KEY, { days: days, tracks: catalogue });
+  days=Object.keys(byDate).sort().map(function(k){ return byDate[k]; });
+  catalogue=Object.assign({},catalogue,feed.tracks);
+  if (feed.updated) updatedAt=feed.updated;
+  stash(HIST_KEY,{days:days,tracks:catalogue});
 }
 
 (function boot(){
-  var saved = unpack(load(HIST_KEY));
-  days = saved.days;
-  catalogue = saved.tracks;
+  var saved=unpack(load(HIST_KEY));
+  days=saved.days;
+  catalogue=saved.tracks;
   render();
   buildFields();
 
-  document.getElementById('btnManual').addEventListener('click', function(){
-    var p = document.getElementById('manual');
-    p.hidden = !p.hidden;
-    this.textContent = p.hidden ? 'Type numbers in' : 'Hide';
+  document.getElementById('btnManual').addEventListener('click',function(){
+    var p=document.getElementById('manual');
+    p.hidden=!p.hidden;
+    this.textContent=p.hidden?'Type numbers in':'Hide';
     if (!p.hidden) buildFields();
   });
 
-  document.getElementById('saveManual').addEventListener('click', function(){
-    var vals = {};
-    Object.keys(draft).forEach(function(k){
-      var v = num(draft[k]);
-      if (v !== null) vals[k] = v;
-    });
-    if (Object.keys(vals).length) record(vals);
-    draft = {};
-    document.getElementById('manual').hidden = true;
-    document.getElementById('btnManual').textContent = 'Type numbers in';
-    document.getElementById('status').textContent = "Saved. That's today on the record.";
+  document.getElementById('btnTable').addEventListener('click',function(){
+    var p=document.getElementById('tables');
+    p.hidden=!p.hidden;
+    this.setAttribute('aria-expanded', p.hidden?'false':'true');
+    this.textContent=p.hidden?'Read it as a table':'Hide the table';
   });
 
-  fetch('./data.json?t=' + Date.now(), { cache:'no-store' })
-    .then(function(r){ return r.ok ? r.json() : null; })
+  document.getElementById('saveManual').addEventListener('click',function(){
+    var vals={};
+    Object.keys(draft).forEach(function(k){
+      var val=num(draft[k]);
+      if (val!==null) vals[k]=val;
+    });
+    if (Object.keys(vals).length) record(vals);
+    draft={};
+    document.getElementById('manual').hidden=true;
+    document.getElementById('btnManual').textContent='Type numbers in';
+    document.getElementById('status').textContent="Saved. That's today on the record.";
+  });
+
+  var t=null;
+  window.addEventListener('resize',function(){
+    clearTimeout(t);
+    t=setTimeout(drawTrend,120);
+  });
+
+  fetch('./data.json?t='+Date.now(),{cache:'no-store'})
+    .then(function(r){ return r.ok?r.json():null; })
     .then(function(raw){
-      var feed = unpack(raw);
+      var feed=unpack(raw);
       if (!feed.days.length) return;
       absorb(feed);
       render();
       buildFields();
     })
     .catch(function(){
-      document.getElementById('status').textContent =
+      document.getElementById('status').textContent=
         "Couldn't reach this morning's numbers. Everything above is the last set that came through.";
     });
 })();
