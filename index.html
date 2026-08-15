@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="theme-color" content="#F3EFF4" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-title" content="This Morning" />
+<title>This Morning</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,500;9..144,600&family=Karla:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#F3EFF4; --surface:#FBF9FB; --ink:#241D33;
+    --muted:#6E6482; --faint:#9990A8; --accent:#3E6B70; --hair:#DED6E4;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0; background:var(--bg); color:var(--ink);
+    font-family:Karla,ui-sans-serif,system-ui,sans-serif;
+    padding:max(28px,env(safe-area-inset-top)) 18px 64px;
+    display:flex; justify-content:center;
+    -webkit-font-smoothing:antialiased;
+  }
+  .sheet{width:100%;max-width:480px}
+  .eyebrow{
+    font-size:11px;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--faint);font-weight:600;margin-bottom:26px;
+  }
+  h1{
+    font-family:Fraunces,Georgia,serif;font-weight:300;
+    font-size:clamp(27px,7.2vw,36px);line-height:1.24;
+    letter-spacing:-.015em;margin:0;
+  }
+  h1.quiet{color:var(--muted)}
+  .word{display:inline-block;opacity:0;animation:rise .6s ease forwards}
+  @keyframes rise{from{opacity:0;transform:translateY(.35em)}to{opacity:1;transform:none}}
+  @media (prefers-reduced-motion:reduce){.word{animation:none;opacity:1}}
+  .rule{height:1px;background:var(--hair);margin:32px 0 8px}
+  .row{
+    display:flex;justify-content:space-between;align-items:baseline;
+    gap:14px;padding:13px 0;border-bottom:1px solid var(--hair);
+  }
+  .row .label{font-size:14px;color:var(--muted)}
+  .row .right{display:flex;align-items:baseline;gap:10px}
+  .row .val{font-size:17px;font-weight:600;font-variant-numeric:tabular-nums}
+  .row .delta{font-size:12px;font-weight:600;font-variant-numeric:tabular-nums;color:var(--accent)}
+  .row .delta.down{color:var(--faint)}
+  .cumulative{margin-top:22px;font-size:15px;line-height:1.55;color:var(--muted)}
+  .cumulative strong{color:var(--accent);font-weight:600}
+  .rest{
+    margin-top:30px;padding:22px;background:var(--surface);
+    border:1px solid var(--hair);border-radius:3px;
+    font-family:Fraunces,Georgia,serif;font-size:17px;line-height:1.5;font-weight:300;
+  }
+  .footer{margin-top:26px}
+  .status{font-size:12.5px;color:var(--faint);display:block;margin-bottom:10px}
+  .links{display:flex;flex-wrap:wrap;gap:18px}
+  button.link{
+    background:none;border:none;padding:0;font-family:inherit;font-size:12.5px;
+    color:var(--accent);cursor:pointer;border-bottom:1px solid rgba(62,107,112,.25);
+  }
+  .panel{
+    margin-top:22px;padding:18px;background:var(--surface);
+    border:1px solid var(--hair);border-radius:3px;
+  }
+  .panel[hidden]{display:none}
+  .note{font-size:12.5px;color:var(--faint);line-height:1.5;margin-bottom:16px}
+  .field{margin-bottom:13px}
+  .field label{display:block;font-size:11.5px;color:var(--muted);margin-bottom:5px}
+  .field input{
+    width:100%;padding:10px 12px;border:1px solid var(--hair);border-radius:2px;
+    background:#fff;font-family:inherit;font-size:16px;color:var(--ink);
+  }
+  button.primary{
+    margin-top:6px;width:100%;padding:12px;background:var(--ink);color:var(--bg);
+    border:none;border-radius:2px;font-family:inherit;font-size:14px;font-weight:600;cursor:pointer;
+  }
+  .sig{margin-top:34px;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--faint)}
+  input:focus,button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+</style>
+</head>
+<body>
+<div class="sheet">
+  <div class="eyebrow" id="date"></div>
+  <h1 id="hero">Opening the morning</h1>
+  <div class="rule"></div>
+  <div id="rows"></div>
+  <div class="cumulative" id="cumulative" hidden></div>
+  <div class="rest" id="rest"></div>
+
+  <div class="footer">
+    <span class="status" id="status"></span>
+    <div class="links">
+      <button class="link" id="btnManual">Type numbers in</button>
+    </div>
+  </div>
+
+  <div class="panel" id="manual" hidden>
+    <div class="note">Apple Music has no public figure anywhere, so it only ever comes from Apple Music for Artists. Anything typed here wins over anything fetched.</div>
+    <div id="manualFields"></div>
+    <button class="primary" id="saveManual">Save today's numbers</button>
+  </div>
+
+  <div class="sig" id="sig"></div>
+</div>
+
+<script>
+var HIST_KEY = 'tori-morning-history';
+
+var METRICS = [
+  { key:'spotifyListeners', label:'Spotify monthly listeners' },
+  { key:'spotifyFollowers', label:'Spotify followers' },
+  { key:'youtubeSubs',      label:'YouTube subscribers' },
+  { key:'instagram',        label:'Instagram followers' },
+  { key:'apple',            label:'Apple Music listeners' }
+];
+
+var REST_LINES = [
+  "You've done enough today. That's not a reward, it's just true.",
+  "None of this needed you awake for it. Take the morning slow.",
+  "The catalogue works while you rest. That was the whole point of building it.",
+  "Rest isn't the thing you get after. It's part of how this keeps going.",
+  "You are allowed to close this and do nothing with the information.",
+  "Whatever you don't get to today will still be there, and it will still be fine.",
+  "You built something that keeps moving without you. Go and enjoy that."
+];
+
+var history = [];
+var draft = {};
+
+function load(key){
+  try { var v = localStorage.getItem(key); return v ? JSON.parse(v) : null; } catch(e){ return null; }
+}
+function save(key, value){
+  try { localStorage.setItem(key, JSON.stringify(value)); } catch(e){}
+}
+
+function todayKey(){
+  var d = new Date();
+  return d.getFullYear() + '-' +
+    String(d.getMonth()+1).padStart(2,'0') + '-' +
+    String(d.getDate()).padStart(2,'0');
+}
+function num(v){ return (typeof v === 'number' && !isNaN(v)) ? v : 0; }
+function fmt(n){ return (typeof n === 'number' && !isNaN(n)) ? n.toLocaleString() : '\u2014'; }
+
+function heroSentence(today, yesterday){
+  if (!yesterday) return { line:"Today is the baseline. From tomorrow, this page tells you what moved overnight.", quiet:true };
+  var dL = num(today.spotifyListeners) - num(yesterday.spotifyListeners);
+  var dS = num(today.youtubeSubs)      - num(yesterday.youtubeSubs);
+  var dI = num(today.instagram)        - num(yesterday.instagram);
+  if (dL > 0) return { line:'While you slept, ' + fmt(dL) + ' more people found his music.' };
+  if (dS > 0) return { line:fmt(dS) + ' people subscribed while you were off the clock.' };
+  if (dI > 0) return { line:fmt(dI) + ' new people started following overnight.' };
+  if (dL < 0) return { line:"The number dipped a little overnight. It does that. The catalogue is still out there working.", quiet:true };
+  return { line:"Nothing moved much overnight. The work you did is still sitting there, doing its job.", quiet:true };
+}
+
+function render(){
+  var tk = todayKey();
+  var today = history.filter(function(h){ return h.date === tk; })[0] || {};
+  var past  = history.filter(function(h){ return h.date !== tk; });
+  var yesterday = past.length ? past[past.length-1] : null;
+  var first = history.length ? history[0] : null;
+
+  document.getElementById('date').textContent =
+    new Date().toLocaleDateString(undefined,{weekday:'long',day:'numeric',month:'long'});
+
+  var hero = heroSentence(today, yesterday);
+  var h1 = document.getElementById('hero');
+  h1.className = hero.quiet ? 'quiet' : '';
+  h1.innerHTML = '';
+  hero.line.split(' ').forEach(function(w,i){
+    var s = document.createElement('span');
+    s.className = 'word';
+    s.style.animationDelay = (i*55) + 'ms';
+    s.textContent = w + ' ';
+    h1.appendChild(s);
+  });
+
+  var rows = document.getElementById('rows');
+  rows.innerHTML = '';
+  METRICS.forEach(function(m){
+    var now = today[m.key];
+    var then = yesterday ? yesterday[m.key] : undefined;
+    var delta = (typeof now === 'number' && typeof then === 'number') ? now - then : null;
+    var el = document.createElement('div');
+    el.className = 'row';
+    var right = '<span class="val">' + fmt(now) + '</span>';
+    if (delta !== null && delta !== 0){
+      right += '<span class="delta' + (delta<0?' down':'') + '">' +
+        (delta>0?'\u25B2':'\u25BC') + ' ' + fmt(Math.abs(delta)) + '</span>';
+    }
+    el.innerHTML = '<div class="label">' + m.label + '</div><div class="right">' + right + '</div>';
+    rows.appendChild(el);
+  });
+
+  var cum = document.getElementById('cumulative');
+  if (first && first.date !== tk && num(today.spotifyListeners)){
+    var diff = num(today.spotifyListeners) - num(first.spotifyListeners);
+    if (diff !== 0){
+      cum.hidden = false;
+      cum.innerHTML = 'Since this page started keeping count, monthly listeners are <strong>' +
+        (diff>0?'up':'down') + ' ' + fmt(Math.abs(diff)) + '</strong>.';
+    } else { cum.hidden = true; }
+  } else { cum.hidden = true; }
+
+  document.getElementById('rest').textContent =
+    REST_LINES[new Date().getDate() % REST_LINES.length];
+
+  document.getElementById('sig').textContent =
+    history.length > 1 ? history.length + ' mornings recorded' : 'First morning';
+}
+
+function buildFields(){
+  var mf = document.getElementById('manualFields');
+  mf.innerHTML = '';
+  var tk = todayKey();
+  var today = history.filter(function(h){ return h.date === tk; })[0] || {};
+  METRICS.forEach(function(m){
+    var wrap = document.createElement('div');
+    wrap.className = 'field';
+    wrap.innerHTML = '<label for="f_'+m.key+'">'+m.label+'</label>' +
+      '<input id="f_'+m.key+'" inputmode="numeric" placeholder="'+fmt(today[m.key])+'">';
+    mf.appendChild(wrap);
+    wrap.querySelector('input').addEventListener('input', function(e){
+      draft[m.key] = e.target.value;
+    });
+  });
+}
+
+function record(values){
+  var tk = todayKey();
+  var prior = history.filter(function(h){ return h.date === tk; })[0] || {};
+  var merged = Object.assign({}, prior, values, { date: tk });
+  history = history.filter(function(h){ return h.date !== tk; }).concat([merged])
+    .sort(function(a,b){ return a.date < b.date ? -1 : 1; });
+  save(HIST_KEY, history);
+  render();
+}
+
+(async function(){
+  history = load(HIST_KEY) || [];
+
+  try {
+    var res = await fetch('./data.json?t=' + Date.now(), { cache:'no-store' });
+    if (res.ok){
+      var feed = await res.json();
+      if (Array.isArray(feed) && feed.length){
+        var byDate = {};
+        feed.concat(history).forEach(function(e){
+          if (e && e.date) byDate[e.date] = Object.assign({}, byDate[e.date], e);
+        });
+        history = Object.keys(byDate).sort().map(function(d){ return byDate[d]; });
+        save(HIST_KEY, history);
+      }
+    }
+  } catch(e){}
+
+  render();
+  buildFields();
+
+  document.getElementById('btnManual').addEventListener('click', function(){
+    var p = document.getElementById('manual');
+    p.hidden = !p.hidden;
+    this.textContent = p.hidden ? 'Type numbers in' : 'Hide';
+    if (!p.hidden) buildFields();
+  });
+  document.getElementById('saveManual').addEventListener('click', function(){
+    var vals = {};
+    Object.keys(draft).forEach(function(k){
+      var n = parseInt(String(draft[k]).replace(/[^0-9]/g,''),10);
+      if (!isNaN(n)) vals[k] = n;
+    });
+    if (Object.keys(vals).length) record(vals);
+    draft = {};
+    document.getElementById('manual').hidden = true;
+    document.getElementById('btnManual').textContent = 'Type numbers in';
+    document.getElementById('status').textContent = "Saved. That's today on the record.";
+  });
+})();
+</script>
+</body>
+</html>
