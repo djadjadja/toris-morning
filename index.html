@@ -46,9 +46,14 @@
     letter-spacing:-.018em;margin:0;
   }
   h1.quiet{color:var(--muted);font-size:clamp(24px,6.4vw,30px)}
-  .word{display:inline-block;opacity:0;animation:rise .7s cubic-bezier(.2,.7,.3,1) forwards}
+  .word{display:inline-block;white-space:pre;opacity:0;animation:rise .7s cubic-bezier(.2,.7,.3,1) forwards}
   @keyframes rise{from{opacity:0;transform:translateY(.4em)}to{opacity:1;transform:none}}
   @media (prefers-reduced-motion:reduce){.word{animation:none;opacity:1}}
+
+  .sub{
+    margin:14px 0 0;font-size:14.5px;line-height:1.6;color:var(--muted);
+  }
+  .sub strong{color:var(--accent);font-weight:700}
 
   /* the headline number */
   .headline{margin:34px 0 4px}
@@ -62,6 +67,7 @@
     color:var(--faint);font-weight:700;margin-top:12px;display:block;
   }
   .spark{display:block;width:100%;height:44px;margin-top:18px;overflow:visible}
+  .sparknote{font-size:11px;color:var(--faint);margin-top:8px;letter-spacing:.02em}
 
   .rule{height:1px;background:var(--hair);margin:30px 0 4px}
   .row{
@@ -72,19 +78,70 @@
   .row .label{font-size:13.5px;color:var(--muted)}
   .row .right{display:flex;align-items:baseline;gap:9px}
   .row .val{font-size:17px;font-weight:600;font-variant-numeric:tabular-nums}
-  .row .val.none{color:var(--faint);font-weight:400}
   .chip{
     font-size:11px;font-weight:700;font-variant-numeric:tabular-nums;
     color:var(--accent);background:rgba(62,107,112,.09);
     padding:3px 7px;border-radius:999px;white-space:nowrap;
   }
-  .chip.down{color:var(--faint);background:rgba(110,100,130,.08)}
 
   .cumulative{margin-top:24px;font-size:14.5px;line-height:1.6;color:var(--muted)}
   .cumulative strong{color:var(--accent);font-weight:700}
 
+  /* a titled block */
+  section{margin-top:38px}
+  h2{
+    font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;
+    color:var(--faint);font-weight:700;margin:0 0 4px;
+  }
+  .blurb{font-size:12.5px;color:var(--faint);line-height:1.55;margin:0 0 8px}
+
+  /* songs */
+  ol.songs{list-style:none;margin:0;padding:0}
+  ol.songs li{
+    display:grid;grid-template-columns:20px 1fr auto;gap:10px;
+    align-items:baseline;padding:11px 0;border-bottom:1px solid var(--hair);
+  }
+  ol.songs li:last-child{border-bottom:none}
+  .idx{font-size:11px;color:var(--faint);font-variant-numeric:tabular-nums;font-weight:700}
+  .song{font-size:14px;line-height:1.35}
+  .plays{text-align:right;font-size:13px;color:var(--muted);
+         font-variant-numeric:tabular-nums;white-space:nowrap}
+  .plays .chip{display:block;margin-top:5px}
+  .total{margin-top:14px;font-size:13px;color:var(--muted);line-height:1.55}
+  .total strong{color:var(--accent);font-weight:700}
+
+  /* the run */
+  .rel{
+    display:grid;grid-template-columns:1fr auto;gap:4px 12px;align-items:baseline;
+    padding:12px 0;border-bottom:1px solid var(--hair);
+  }
+  .rel:last-child{border-bottom:none}
+  .rel .name{font-size:14px}
+  .rel .when{font-size:11px;letter-spacing:.05em;color:var(--faint);
+             text-align:right;white-space:nowrap;font-weight:600}
+  .rel.out .name{color:var(--muted)}
+  .rel.next .name{font-weight:700;color:var(--accent)}
+  .rel.next .when{color:var(--accent)}
+  .rel .note{grid-column:1/-1;font-size:12.5px;color:var(--muted);line-height:1.5;margin-top:2px}
+
+  /* nearly */
+  ul.nearly{list-style:none;margin:0;padding:0}
+  ul.nearly li{
+    padding:12px 0;border-bottom:1px solid var(--hair);
+    font-size:14px;line-height:1.55;color:var(--muted);
+  }
+  ul.nearly li:last-child{border-bottom:none}
+  ul.nearly strong{color:var(--ink);font-weight:700;font-variant-numeric:tabular-nums}
+
+  /* cities */
+  .city{display:flex;justify-content:space-between;gap:14px;
+        padding:11px 0;border-bottom:1px solid var(--hair)}
+  .city:last-child{border-bottom:none}
+  .city .place{font-size:14px}
+  .city .n{font-size:13px;color:var(--muted);font-variant-numeric:tabular-nums}
+
   .rest{
-    margin-top:32px;padding:26px 24px;background:var(--card);
+    margin-top:38px;padding:26px 24px;background:var(--card);
     border:1px solid var(--hair);border-radius:4px;
     box-shadow:0 1px 2px rgba(36,29,51,.03),0 10px 26px -18px rgba(36,29,51,.28);
     font-family:Fraunces,Georgia,serif;font-size:17.5px;line-height:1.5;font-weight:300;
@@ -127,16 +184,42 @@
   <div class="greet" id="greet">Good morning, Tori</div>
 
   <h1 id="hero">Opening the morning</h1>
+  <p class="sub" id="sub" hidden></p>
 
   <div class="headline" id="headline" hidden>
     <span class="n" id="headlineN"></span>
     <span class="cap" id="headlineCap"></span>
     <svg class="spark" id="spark" hidden preserveAspectRatio="none"></svg>
+    <div class="sparknote" id="sparknote"></div>
   </div>
 
   <div class="rule"></div>
   <div id="rows"></div>
   <div class="cumulative" id="cumulative" hidden></div>
+
+  <section id="secSongs" hidden>
+    <h2>The ten most played</h2>
+    <p class="blurb">His most played tracks on Spotify, and how many times each has been pressed play.</p>
+    <ol class="songs" id="songs"></ol>
+    <div class="total" id="songsTotal"></div>
+  </section>
+
+  <section id="secRun" hidden>
+    <h2>The run</h2>
+    <p class="blurb">A single a week, through Wings.</p>
+    <div id="run"></div>
+  </section>
+
+  <section id="secNearly" hidden>
+    <h2>Nearly</h2>
+    <ul class="nearly" id="nearly"></ul>
+  </section>
+
+  <section id="secCities" hidden>
+    <h2>Where they are this morning</h2>
+    <div id="cities"></div>
+  </section>
+
   <div class="rest" id="rest"></div>
 
   <div class="footer">
@@ -161,12 +244,23 @@
 var HIST_KEY = 'tori-morning-history';
 
 var METRICS = [
-  { key:'spotifyListeners', label:'Spotify monthly listeners', headline:true },
+  { key:'spotifyListeners', label:'Spotify monthly listeners' },
   { key:'spotifyFollowers', label:'Spotify followers' },
   { key:'youtubeSubs',      label:'YouTube subscribers' },
   { key:'youtubeViews',     label:'YouTube views, all time' },
   { key:'instagram',        label:'Instagram followers' },
   { key:'apple',            label:'Apple Music listeners' }
+];
+
+/* The weekly run. Dates are the plan, Spotify confirms them as they land. */
+var CALENDAR = [
+  { name:'Beat It',              date:'2026-08-21' },
+  { name:'Holy Forever',         date:'2026-08-28' },
+  { name:'Dreams',               date:'2026-09-04' },
+  { name:'Pink Pony Club',       date:'2026-09-11' },
+  { name:'Stargazing',           date:'2026-09-18' },
+  { name:'Mr Brightside',        date:'2026-09-25' },
+  { name:"Don't Stop Believing", date:'2026-10-02' }
 ];
 
 var REST_LINES = [
@@ -179,8 +273,12 @@ var REST_LINES = [
   "You built something that keeps moving without you. Go and enjoy that."
 ];
 
-var days = [];
+var days = [];        /* one entry per date, oldest first */
+var catalogue = {};   /* trackId -> { name, uri } */
+var updatedAt = null;
 var draft = {};
+
+/* ------------------------------------------------------------- little tools */
 
 function load(k){ try { var v = localStorage.getItem(k); return v ? JSON.parse(v) : null; } catch(e){ return null; } }
 function stash(k,v){ try { localStorage.setItem(k, JSON.stringify(v)); } catch(e){} }
@@ -191,36 +289,142 @@ function todayKey(){
 }
 function n(v){ return (typeof v === 'number' && !isNaN(v)) ? v : 0; }
 function fmt(v){ return (typeof v === 'number' && !isNaN(v)) ? v.toLocaleString() : null; }
+function num(v){
+  if (typeof v === 'number' && !isNaN(v)) return v;
+  var p = parseInt(String(v).replace(/[^0-9]/g,''),10);
+  return isNaN(p) ? null : p;
+}
+/* a rise, or nothing. this page never reports a fall. */
+function rise(a,b){
+  if (typeof a !== 'number' || typeof b !== 'number') return 0;
+  return a - b > 0 ? a - b : 0;
+}
+function dayNo(iso){
+  var p = String(iso||'').split('-');
+  if (p.length !== 3) return null;
+  return Date.UTC(+p[0], +p[1]-1, +p[2]) / 86400000;
+}
+function niceDate(iso){
+  var p = String(iso||'').split('-');
+  if (p.length !== 3) return '';
+  return new Date(Date.UTC(+p[0], +p[1]-1, +p[2]))
+    .toLocaleDateString('en-GB',{day:'numeric',month:'long',timeZone:'UTC'});
+}
+function people(k){ return k === 1 ? 'person' : 'people'; }
 
-function heroSentence(t, y){
-  if (!y) return { line:"This is the starting line. From tomorrow this page tells you what moved while you slept.", quiet:true };
-  var dL = n(t.spotifyListeners) - n(y.spotifyListeners);
-  var dF = n(t.spotifyFollowers) - n(y.spotifyFollowers);
-  var dS = n(t.youtubeSubs)      - n(y.youtubeSubs);
-  var dI = n(t.instagram)        - n(y.instagram);
-  var dV = n(t.youtubeViews)     - n(y.youtubeViews);
-  if (dL > 0) return { line:'While you slept, ' + fmt(dL) + ' more people found his music.' };
-  if (dS > 0) return { line:fmt(dS) + ' people subscribed while you were off the clock.' };
-  if (dF > 0) return { line:fmt(dF) + ' people followed him overnight.' };
-  if (dI > 0) return { line:fmt(dI) + ' new people started following overnight.' };
-  if (dV > 0) return { line:'His music played ' + fmt(dV) + ' more times, without anyone asking you to do a thing.' };
-  if (dL < 0) return { line:"The number dipped a little overnight. It does that. The catalogue is still out there working.", quiet:true };
-  return { line:"Nothing moved much overnight. What you built is still sitting there, doing its job.", quiet:true };
+/* the next round number worth crossing, if it is genuinely within reach */
+function nextRound(v){
+  if (!v || v < 500) return null;
+  var steps = [1e3,5e3,1e4,5e4,1e5,5e5,1e6,5e6,1e7,5e7], best = null;
+  for (var i=0;i<steps.length;i++){
+    var s = steps[i], target = Math.ceil((v+1)/s)*s, gap = target - v;
+    if (gap <= v*0.12) best = { target:target, gap:gap, pct:gap/v };
+  }
+  return best;
 }
 
-function greeting(){
-  var h = new Date().getHours();
-  if (h < 5)  return 'Still up, Tori';
-  if (h < 12) return 'Good morning, Tori';
-  if (h < 18) return 'Afternoon, Tori';
-  return 'Evening, Tori';
+function elt(tag, cls, text){
+  var e = document.createElement(tag);
+  if (cls) e.className = cls;
+  if (text != null) e.textContent = text;
+  return e;
 }
+
+/* ------------------------------------------------------------- the sentence */
+
+function heroSentence(t, y, songs, cities, counts, totals){
+  /* a release landing beats everything else that could be said */
+  if (t.latest && t.latest.name && t.latest.date && t.date){
+    var age = dayNo(t.date) - dayNo(t.latest.date);
+    if (age === 0) return { line:'"' + t.latest.name + '" went out into the world this morning.' };
+    if (age === 1) return { line:'"' + t.latest.name + '" went out into the world yesterday.' };
+    if (age > 1 && age <= 6) return { line:'"' + t.latest.name + '" has been out ' + age + ' days now.' };
+  }
+
+  if (y){
+    var best = songs.slice().sort(function(a,b){ return b.up - a.up; })[0];
+    if (best && best.up >= 50)
+      return { line:'Overnight, "' + best.name + '" was played ' + fmt(best.up) + ' more times.' };
+    if (totals.up >= 50)
+      return { line:'Overnight, his songs were played ' + fmt(totals.up) + ' more times.' };
+
+    var dL = rise(t.spotifyListeners, y.spotifyListeners);
+    if (dL > 0) return { line:'While you slept, ' + fmt(dL) + ' more ' + people(dL) + ' found his music.' };
+    var dV = rise(t.youtubeViews, y.youtubeViews);
+    if (dV > 0) return { line:'His music played ' + fmt(dV) + ' more times, without anyone asking you to do a thing.' };
+    var dS = rise(t.youtubeSubs, y.youtubeSubs);
+    if (dS > 0) return { line:fmt(dS) + ' ' + people(dS) + ' subscribed while you were off the clock.' };
+    var dF = rise(t.spotifyFollowers, y.spotifyFollowers);
+    if (dF > 0) return { line:fmt(dF) + ' ' + people(dF) + ' followed him overnight.' };
+    var dI = rise(t.instagram, y.instagram);
+    if (dI > 0) return { line:fmt(dI) + ' new ' + people(dI) + ' started following overnight.' };
+  }
+
+  /* nothing moved, or there is no yesterday yet. say something still true. */
+  return { line: standingLine(t, songs, cities, counts, totals) };
+}
+
+function standingLine(t, songs, cities, counts, totals){
+  var options = [];
+  if (cities.length)
+    options.push('Right now there are ' + fmt(cities[0].n) + ' people in ' + cities[0].city +
+                 ' with his music in their week.');
+  if (totals.plays > 0)
+    options.push('His ten most played songs have been pressed play ' + fmt(totals.plays) + ' times.');
+  if (t.spotifyListeners)
+    options.push(fmt(t.spotifyListeners) + ' people listened to him this month, and none of them had to be chased.');
+  if (counts.discoveredOn)
+    options.push('There are ' + fmt(counts.discoveredOn) + ' playlists out there that people find him on.');
+  if (counts.albums && counts.singles)
+    options.push('There are ' + fmt(counts.albums) + ' albums and ' + fmt(counts.singles) +
+                 ' singles of his out in the world, working.');
+  if (!options.length)
+    return 'The work is out there, quietly doing its job.';
+  var seed = Math.abs(dayNo(t.date) || 0);
+  return options[seed % options.length];
+}
+
+/* ------------------------------------------------------------- milestones */
+
+function milestones(t, songs, totals){
+  var out = [];
+  function add(v, tail){
+    var r = nextRound(v);
+    if (r) out.push({ pct:r.pct, gap:r.gap, target:r.target, tail:tail });
+  }
+  if (songs[0]) add(songs[0].plays, 'and "' + songs[0].name + '" crosses ');
+  add(totals.plays,          'and his ten most played cross ');
+  add(t.spotifyListeners,    'and he crosses ');
+  add(t.spotifyFollowers,    'and he crosses ');
+  add(t.youtubeSubs,         'and he crosses ');
+  add(t.youtubeViews,        'and he crosses ');
+  var suffix = [' plays.', ' plays between them.', ' people listening in a month.',
+                ' followers.', ' subscribers on YouTube.', ' views on YouTube.'];
+  out.forEach(function(m,i){ m.suffix = suffix[i] || '.'; });
+  out.sort(function(a,b){ return a.pct - b.pct; });
+  return out;
+}
+
+/* ------------------------------------------------------------- the line */
 
 function sparkline(series){
   var svg = document.getElementById('spark');
-  if (series.length < 3){ svg.hidden = true; return; }
+  var note = document.getElementById('sparknote');
+  if (!series.length){ svg.hidden = true; note.textContent = ''; return; }
   svg.hidden = false;
-  var W = 300, H = 44, lo = Math.min.apply(null, series), hi = Math.max.apply(null, series);
+  var W = 300, H = 44;
+
+  if (series.length === 1){
+    svg.setAttribute('viewBox','0 0 '+W+' '+H);
+    svg.innerHTML =
+      '<line x1="0" y1="'+(H/2)+'" x2="'+W+'" y2="'+(H/2)+'" stroke="#3E6B70" ' +
+      'stroke-width="1" opacity=".22" vector-effect="non-scaling-stroke"/>' +
+      '<circle cx="'+(W/2)+'" cy="'+(H/2)+'" r="2.8" fill="#3E6B70"/>';
+    note.textContent = 'One morning on the record. The line starts here.';
+    return;
+  }
+
+  var lo = Math.min.apply(null, series), hi = Math.max.apply(null, series);
   var span = (hi - lo) || 1;
   var pts = series.map(function(v,i){
     var x = (i/(series.length-1))*W;
@@ -233,78 +437,216 @@ function sparkline(series){
     '<polyline points="'+pts.join(' ')+'" fill="none" stroke="#3E6B70" stroke-width="1.5" '+
     'stroke-linecap="round" stroke-linejoin="round" vector-effect="non-scaling-stroke"/>' +
     '<circle cx="'+last[0]+'" cy="'+last[1]+'" r="2.8" fill="#3E6B70"/>';
+  note.textContent = series.length + ' mornings on the record.';
 }
+
+/* ------------------------------------------------------------- render */
 
 function render(){
   var tk = todayKey();
-  var today = days.filter(function(d){ return d.date === tk; })[0] || {};
-  var past  = days.filter(function(d){ return d.date !== tk; });
-  var yest  = past.length ? past[past.length-1] : null;
+  var today = days.filter(function(d){ return d.date === tk; })[0] || days[days.length-1] || {};
+  var older = days.filter(function(d){ return d.date !== today.date; });
+  var yest  = older.length ? older[older.length-1] : null;
   var first = days.length ? days[0] : null;
 
-  document.getElementById('date').textContent =
-    new Date().toLocaleDateString(undefined,{weekday:'long',day:'numeric',month:'long'});
+  /* songs, with only the rises kept */
+  var songs = [], tnow = today.tracks || {}, tprev = (yest && yest.tracks) || {};
+  for (var id in tnow){
+    if (!Object.prototype.hasOwnProperty.call(tnow, id)) continue;
+    var meta = catalogue[id] || {};
+    songs.push({ id:id, name: meta.name || 'Untitled', plays: tnow[id], up: rise(tnow[id], tprev[id]) });
+  }
+  songs.sort(function(a,b){ return b.plays - a.plays; });
+  var totals = {
+    plays: songs.reduce(function(s,x){ return s + x.plays; }, 0),
+    up:    songs.reduce(function(s,x){ return s + x.up; }, 0)
+  };
+  var cities = today.cities || [];
+  var counts = today.counts || {};
+
+  document.getElementById('date').textContent = homeParts().label;
   document.getElementById('greet').textContent = greeting();
 
-  var hero = heroSentence(today, yest);
+  /* the sentence, set one word at a time */
+  var hero = heroSentence(today, yest, songs, cities, counts, totals);
   var h1 = document.getElementById('hero');
-  h1.className = hero.quiet ? 'quiet' : '';
+  h1.className = '';
   h1.innerHTML = '';
   hero.line.split(' ').forEach(function(w,i){
-    var s = document.createElement('span');
-    s.className = 'word';
+    var s = elt('span','word', w + ' ');
     s.style.animationDelay = (i*50) + 'ms';
-    s.textContent = w + ' ';
     h1.appendChild(s);
   });
 
-  // headline number
+  /* one supporting line: the nearest thing about to be crossed */
+  var ms = milestones(today, songs, totals);
+  var sub = document.getElementById('sub');
+  if (ms.length){
+    sub.hidden = false;
+    sub.innerHTML = '<strong>' + fmt(ms[0].gap) + '</strong> more ' + ms[0].tail +
+                    '<strong>' + fmt(ms[0].target) + '</strong>' + ms[0].suffix;
+  } else { sub.hidden = true; }
+
+  /* headline number */
   var hv = today.spotifyListeners;
   var box = document.getElementById('headline');
   if (typeof hv === 'number'){
     box.hidden = false;
     document.getElementById('headlineN').textContent = fmt(hv);
     document.getElementById('headlineCap').textContent = 'people listening this month';
-    var series = days.map(function(d){ return d.spotifyListeners; })
-                     .filter(function(v){ return typeof v === 'number'; }).slice(-30);
-    sparkline(series);
+    sparkline(days.map(function(d){ return d.spotifyListeners; })
+                  .filter(function(v){ return typeof v === 'number'; }).slice(-45));
   } else { box.hidden = true; }
 
+  /* the quiet rows. a metric with no number is simply not mentioned. */
   var rows = document.getElementById('rows');
   rows.innerHTML = '';
   METRICS.forEach(function(m){
-    var now = today[m.key], then = yest ? yest[m.key] : undefined;
-    var d = (typeof now === 'number' && typeof then === 'number') ? now - then : null;
-    var el = document.createElement('div');
-    el.className = 'row';
-    var shown = fmt(now);
-    var right = shown
-      ? '<span class="val">' + shown + '</span>'
-      : '<span class="val none">not in yet</span>';
-    if (d !== null && d !== 0){
-      right += '<span class="chip' + (d<0?' down':'') + '">' +
-               (d>0?'+':'\u2212') + ' ' + fmt(Math.abs(d)) + '</span>';
-    }
-    el.innerHTML = '<div class="label">'+m.label+'</div><div class="right">'+right+'</div>';
-    rows.appendChild(el);
+    var now = today[m.key];
+    if (typeof now !== 'number') return;
+    var up = yest ? rise(now, yest[m.key]) : 0;
+    var row = elt('div','row');
+    row.appendChild(elt('div','label',m.label));
+    var right = elt('div','right');
+    right.appendChild(elt('span','val', fmt(now)));
+    if (up > 0) right.appendChild(elt('span','chip','+ ' + fmt(up)));
+    row.appendChild(right);
+    rows.appendChild(row);
   });
 
   var cum = document.getElementById('cumulative');
   cum.hidden = true;
-  if (first && first.date !== tk && typeof today.spotifyListeners === 'number'
-      && typeof first.spotifyListeners === 'number'){
-    var diff = today.spotifyListeners - first.spotifyListeners;
-    if (diff !== 0){
+  if (first && first.date !== today.date){
+    var gain = rise(today.spotifyListeners, first.spotifyListeners);
+    if (gain > 0){
       cum.hidden = false;
-      cum.innerHTML = 'Since this page started keeping count, monthly listeners are <strong>' +
-        (diff>0?'up ':'down ') + fmt(Math.abs(diff)) + '</strong>.';
+      cum.innerHTML = 'Since this page started keeping count, monthly listeners are up <strong>' +
+                      fmt(gain) + '</strong>.';
     }
   }
+
+  renderSongs(songs, totals);
+  renderRun(today);
+  renderNearly(ms);
+  renderCities(cities);
 
   document.getElementById('rest').textContent = REST_LINES[new Date().getDate() % REST_LINES.length];
   document.getElementById('sig').textContent =
     days.length > 1 ? days.length + ' mornings recorded' : 'First morning';
+  if (updatedAt) document.getElementById('status').textContent =
+    'Last read ' + String(updatedAt).replace('T',' at ').slice(0,19) + '.';
 }
+
+var HOME_TZ = 'Asia/Kuala_Lumpur';
+
+function homeParts(){
+  try{
+    var f = new Intl.DateTimeFormat('en-GB',{timeZone:HOME_TZ,hour:'numeric',hour12:false,
+             weekday:'long',day:'numeric',month:'long'}).formatToParts(new Date());
+    var o = {};
+    f.forEach(function(p){ o[p.type] = p.value; });
+    return { hour:+o.hour, label:o.weekday + ', ' + o.day + ' ' + o.month };
+  }catch(e){
+    var d = new Date();
+    return { hour:d.getHours(),
+             label:d.toLocaleDateString('en-GB',{weekday:'long',day:'numeric',month:'long'}) };
+  }
+}
+
+function greeting(){
+  var h = homeParts().hour;
+  if (h < 5)  return 'Still up, Tori';
+  if (h < 12) return 'Good morning, Tori';
+  if (h < 18) return 'Afternoon, Tori';
+  return 'Evening, Tori';
+}
+
+function renderSongs(songs, totals){
+  var sec = document.getElementById('secSongs'), ol = document.getElementById('songs');
+  ol.innerHTML = '';
+  if (!songs.length){ sec.hidden = true; return; }
+  sec.hidden = false;
+  songs.forEach(function(t,i){
+    var li = elt('li');
+    li.appendChild(elt('span','idx', String(i+1)));
+    li.appendChild(elt('span','song', t.name));
+    var p = elt('span','plays', fmt(t.plays));
+    if (t.up > 0) p.appendChild(elt('span','chip','+ ' + fmt(t.up)));
+    li.appendChild(p);
+    ol.appendChild(li);
+  });
+  document.getElementById('songsTotal').innerHTML =
+    '<strong>' + fmt(totals.plays) + '</strong> plays between them' +
+    (totals.up > 0 ? ', <strong>' + fmt(totals.up) + '</strong> of those since yesterday' : '') + '.';
+}
+
+function renderRun(today){
+  var sec = document.getElementById('secRun'), box = document.getElementById('run');
+  box.innerHTML = '';
+  var t = dayNo(today.date);
+  if (t == null){ sec.hidden = true; return; }
+  sec.hidden = false;
+  var markedNext = false;
+
+  CALENDAR.forEach(function(r){
+    var d = dayNo(r.date), out = d <= t;
+    var row = elt('div','rel' + (out ? ' out' : (markedNext ? '' : ' next')));
+    if (!out) markedNext = true;
+    row.appendChild(elt('div','name', r.name));
+    var away = d - t, when;
+    if (away === 0)      when = 'today';
+    else if (away === 1) when = 'tomorrow';
+    else if (away > 1)   when = 'in ' + away + ' days';
+    else                 when = niceDate(r.date);
+    row.appendChild(elt('div','when', when));
+    var note = afterBump(r, t);
+    if (note) row.appendChild(elt('div','note', note));
+    box.appendChild(row);
+  });
+}
+
+/* what happened to the listener count in the week after something landed */
+function afterBump(r, t){
+  var d = dayNo(r.date);
+  if (d == null || d > t) return '';
+  var before = null, after = null;
+  days.forEach(function(e){
+    var dn = dayNo(e.date);
+    if (dn == null || typeof e.spotifyListeners !== 'number') return;
+    if (dn <= d) before = e.spotifyListeners;
+    if (dn > d && dn <= d + 7) after = e.spotifyListeners;
+  });
+  var g = rise(after, before);
+  return g ? 'In the week after, ' + fmt(g) + ' more ' + people(g) + ' found him.' : '';
+}
+
+function renderNearly(ms){
+  var sec = document.getElementById('secNearly'), ul = document.getElementById('nearly');
+  ul.innerHTML = '';
+  if (ms.length < 3){ sec.hidden = true; return; }
+  sec.hidden = false;
+  ms.slice(1,4).forEach(function(m){
+    var li = elt('li');
+    li.innerHTML = '<strong>' + fmt(m.gap) + '</strong> more ' + m.tail +
+                   '<strong>' + fmt(m.target) + '</strong>' + m.suffix;
+    ul.appendChild(li);
+  });
+}
+
+function renderCities(cities){
+  var sec = document.getElementById('secCities'), box = document.getElementById('cities');
+  box.innerHTML = '';
+  if (!cities.length){ sec.hidden = true; return; }
+  sec.hidden = false;
+  cities.forEach(function(c){
+    var row = elt('div','city');
+    row.appendChild(elt('span','place', c.city));
+    row.appendChild(elt('span','n', fmt(c.n)));
+    box.appendChild(row);
+  });
+}
+
+/* ------------------------------------------------------------- manual entry */
 
 function buildFields(){
   var mf = document.getElementById('manualFields');
@@ -312,8 +654,7 @@ function buildFields(){
   var tk = todayKey();
   var today = days.filter(function(d){ return d.date === tk; })[0] || {};
   METRICS.forEach(function(m){
-    var wrap = document.createElement('div');
-    wrap.className = 'field';
+    var wrap = elt('div','field');
     wrap.innerHTML = '<label for="f_'+m.key+'">'+m.label+'</label>' +
       '<input id="f_'+m.key+'" inputmode="numeric" placeholder="'+(fmt(today[m.key])||'')+'">';
     mf.appendChild(wrap);
@@ -327,12 +668,39 @@ function record(values){
   var merged = Object.assign({}, prior, values, { date: tk });
   days = days.filter(function(d){ return d.date !== tk; }).concat([merged])
              .sort(function(a,b){ return a.date < b.date ? -1 : 1; });
-  stash(HIST_KEY, days);
+  stash(HIST_KEY, { days: days, tracks: catalogue });
   render();
 }
 
+/* ------------------------------------------------------------- boot */
+
+function unpack(raw){
+  if (Array.isArray(raw)) return { days: raw, tracks: {}, updated: null };
+  if (raw && Array.isArray(raw.days))
+    return { days: raw.days, tracks: raw.tracks || {}, updated: raw.updated || null };
+  return { days: [], tracks: {}, updated: null };
+}
+
+function absorb(feed){
+  var byDate = {};
+  feed.days.concat(days).forEach(function(e){
+    if (e && e.date){
+      var prior = byDate[e.date] || {};
+      var merged = Object.assign({}, prior, e);
+      if (prior.tracks || e.tracks) merged.tracks = Object.assign({}, prior.tracks, e.tracks);
+      byDate[e.date] = merged;
+    }
+  });
+  days = Object.keys(byDate).sort().map(function(k){ return byDate[k]; });
+  catalogue = Object.assign({}, catalogue, feed.tracks);
+  if (feed.updated) updatedAt = feed.updated;
+  stash(HIST_KEY, { days: days, tracks: catalogue });
+}
+
 (function boot(){
-  days = load(HIST_KEY) || [];
+  var saved = unpack(load(HIST_KEY));
+  days = saved.days;
+  catalogue = saved.tracks;
   render();
   buildFields();
 
@@ -342,11 +710,12 @@ function record(values){
     this.textContent = p.hidden ? 'Type numbers in' : 'Hide';
     if (!p.hidden) buildFields();
   });
+
   document.getElementById('saveManual').addEventListener('click', function(){
     var vals = {};
     Object.keys(draft).forEach(function(k){
-      var v = parseInt(String(draft[k]).replace(/[^0-9]/g,''),10);
-      if (!isNaN(v)) vals[k] = v;
+      var v = num(draft[k]);
+      if (v !== null) vals[k] = v;
     });
     if (Object.keys(vals).length) record(vals);
     draft = {};
@@ -357,20 +726,16 @@ function record(values){
 
   fetch('./data.json?t=' + Date.now(), { cache:'no-store' })
     .then(function(r){ return r.ok ? r.json() : null; })
-    .then(function(feed){
-      if (!Array.isArray(feed) || !feed.length) return;
-      var byDate = {};
-      feed.concat(days).forEach(function(e){
-        if (e && e.date) byDate[e.date] = Object.assign({}, byDate[e.date], e);
-      });
-      days = Object.keys(byDate).sort().map(function(k){ return byDate[k]; });
-      stash(HIST_KEY, days);
+    .then(function(raw){
+      var feed = unpack(raw);
+      if (!feed.days.length) return;
+      absorb(feed);
       render();
       buildFields();
     })
     .catch(function(){
       document.getElementById('status').textContent =
-        "Couldn't reach this morning's numbers. Everything below is the last set that came through.";
+        "Couldn't reach this morning's numbers. Everything above is the last set that came through.";
     });
 })();
 </script>
