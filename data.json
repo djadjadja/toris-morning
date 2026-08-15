@@ -1,9 +1,110 @@
-[
- {
-  "date": "2026-08-15",
-  "spotifyListeners": 294095,
-  "youtubeViews": 2134972,
-  "youtubeSubs": 9030,
-  "spotifyFollowers": 5685
- }
-]
+{
+ "tracks": {
+  "2cFTkx42FZd2ZrdmeEMesH": {
+   "name": "Oceans (Where Feet May Fail)",
+   "uri": "spotify:track:2cFTkx42FZd2ZrdmeEMesH"
+  },
+  "6VMu6afp2ren85DwON6xxt": {
+   "name": "Who You Say I Am",
+   "uri": "spotify:track:6VMu6afp2ren85DwON6xxt"
+  },
+  "6uV4dBjHZGzDzsGpBYMESI": {
+   "name": "Broken Vessels (Amazing Grace)",
+   "uri": "spotify:track:6uV4dBjHZGzDzsGpBYMESI"
+  },
+  "4koKk08EQRI31mYmT3pFLa": {
+   "name": "God is Able",
+   "uri": "spotify:track:4koKk08EQRI31mYmT3pFLa"
+  },
+  "2uDHWI4FtmH75wXb3az2gV": {
+   "name": "Isn't She Lovely - Piano Version",
+   "uri": "spotify:track:2uDHWI4FtmH75wXb3az2gV"
+  },
+  "1zV7wp9YIk93iPBt5H8p9q": {
+   "name": "Mighty To Save",
+   "uri": "spotify:track:1zV7wp9YIk93iPBt5H8p9q"
+  },
+  "1HFdhcKsoUsschtrRgZQg0": {
+   "name": "Here I Am To Worship",
+   "uri": "spotify:track:1HFdhcKsoUsschtrRgZQg0"
+  },
+  "1I7TOu1yoEKQDvUMvlRVxm": {
+   "name": "Cornerstone",
+   "uri": "spotify:track:1I7TOu1yoEKQDvUMvlRVxm"
+  },
+  "6D4iyiFyofBN9tm2QIbdFs": {
+   "name": "I Surrender",
+   "uri": "spotify:track:6D4iyiFyofBN9tm2QIbdFs"
+  },
+  "40h5N9ARRkUTtecVVOzEkj": {
+   "name": "It Is Well With My Soul",
+   "uri": "spotify:track:40h5N9ARRkUTtecVVOzEkj"
+  }
+ },
+ "days": [
+  {
+   "date": "2026-08-15",
+   "spotifyListeners": 294095,
+   "youtubeViews": 2135396,
+   "youtubeSubs": 9040,
+   "spotifyFollowers": 5685,
+   "cities": [
+    {
+     "city": "Singapore",
+     "country": "SG",
+     "n": 5868
+    },
+    {
+     "city": "Sydney",
+     "country": "AU",
+     "n": 3564
+    },
+    {
+     "city": "S\u00e3o Paulo",
+     "country": "BR",
+     "n": 3152
+    },
+    {
+     "city": "Quezon City",
+     "country": "PH",
+     "n": 3075
+    },
+    {
+     "city": "Melbourne",
+     "country": "AU",
+     "n": 2614
+    }
+   ],
+   "tracks": {
+    "2cFTkx42FZd2ZrdmeEMesH": 20980247,
+    "6VMu6afp2ren85DwON6xxt": 6812731,
+    "6uV4dBjHZGzDzsGpBYMESI": 16111840,
+    "4koKk08EQRI31mYmT3pFLa": 17246557,
+    "2uDHWI4FtmH75wXb3az2gV": 10025563,
+    "1zV7wp9YIk93iPBt5H8p9q": 10963960,
+    "1HFdhcKsoUsschtrRgZQg0": 4270883,
+    "1I7TOu1yoEKQDvUMvlRVxm": 14570683,
+    "6D4iyiFyofBN9tm2QIbdFs": 14222018,
+    "40h5N9ARRkUTtecVVOzEkj": 2909183
+   },
+   "latest": {
+    "name": "Wonderwall (Piano Version - Instrumental)",
+    "date": "2026-08-14",
+    "type": "Single"
+   },
+   "next": {
+    "name": "Holy Forever",
+    "date": "2026-08-28",
+    "type": "Album"
+   },
+   "counts": {
+    "albums": 40,
+    "singles": 29,
+    "discoveredOn": 100,
+    "featuredIn": 3,
+    "relatedArtists": 40
+   }
+  }
+ ],
+ "updated": "2026-08-15T12:31+08:00"
+}
