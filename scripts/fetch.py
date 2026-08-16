@@ -28,7 +28,7 @@ ARTIST_ID  = "44nxpJ4QALHoSoUFpWiIQc"
 YT_CHANNEL = "UC1UP7iPrw9JuMVfaqQphQDg"
 TZ         = timezone(timedelta(hours=8))
 DATA       = os.path.join(os.path.dirname(__file__), "..", "data.json")
-KEEP_DAYS  = 400
+KEEP_DAYS  = 2000   # the record now reaches back to Jan 2024, do not truncate it
 
 UA = ("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 "
       "(KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36")

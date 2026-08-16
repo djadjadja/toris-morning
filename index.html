@@ -119,7 +119,9 @@
   .tip .t{color:#C9BFD8;font-size:11px;display:block}
   .plot:focus-visible{outline:2px solid var(--d2);outline-offset:3px;border-radius:4px}
 
-  .filters{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 16px}
+  .filters{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 10px}
+  .filters:last-of-type{margin-bottom:16px}
+  .filters.range button{font-weight:500}
   .filters button{
     font-family:inherit;font-size:11.5px;font-weight:600;letter-spacing:.02em;
     padding:6px 11px;border-radius:999px;cursor:pointer;
@@ -305,6 +307,7 @@
       <p class="blurb" id="trendBlurb"></p>
     </div>
     <div class="filters" id="trendPick" role="group" aria-label="Choose what the line shows"></div>
+    <div class="filters" id="trendRange" role="group" aria-label="Choose how far back the line looks"></div>
     <div class="card">
       <div class="plot" id="trendPlot" tabindex="0" role="img" aria-label="Trend over time"></div>
     </div>
@@ -467,11 +470,22 @@ function dayNo(iso){
   return Date.UTC(+p[0], +p[1]-1, +p[2])/86400000;
 }
 function fromDayNo(n){ return new Date(n*86400000); }
-function shortDate(n){
-  return fromDayNo(n).toLocaleDateString('en-GB',{day:'numeric',month:'short',timeZone:'UTC'});
+function shortDate(n,withYear){
+  return fromDayNo(n).toLocaleDateString('en-GB',
+    withYear ? {day:'numeric',month:'short',year:'numeric',timeZone:'UTC'}
+             : {day:'numeric',month:'short',timeZone:'UTC'});
+}
+function prettyFull(iso){
+  var d=dayNo(iso);
+  return d==null ? 'the first morning on record'
+    : fromDayNo(d).toLocaleDateString('en-GB',{day:'numeric',month:'long',year:'numeric',timeZone:'UTC'});
+}
+function monthYear(n){
+  return fromDayNo(n).toLocaleDateString('en-GB',{month:'short',year:'numeric',timeZone:'UTC'});
 }
 function longDate(n){
-  return fromDayNo(n).toLocaleDateString('en-GB',{weekday:'short',day:'numeric',month:'long',timeZone:'UTC'});
+  return fromDayNo(n).toLocaleDateString('en-GB',
+    {weekday:'short',day:'numeric',month:'long',year:'numeric',timeZone:'UTC'});
 }
 function people(k){ return k===1?'person':'people'; }
 
@@ -564,6 +578,18 @@ function shape(){
 
 /* every series the line can show, including one derived from the songs */
 function seriesFor(key,v){
+  if (key==='cumPlays'){
+    /* a running total of real daily plays. it can only ever go up, which is
+       the truest single picture of work accumulating. */
+    var run=0, out=[];
+    v.all.forEach(function(d){
+      if (typeof d.dailyStreams!=='number') return;
+      run+=d.dailyStreams;
+      var x=dayNo(d.date);
+      if (x!=null) out.push({x:x,y:run,date:d.date});
+    });
+    return out;
+  }
   if (key==='totalPlays'){
     return v.all.map(function(d){
       var t=d.tracks||{}, s=0, any=false;
@@ -578,11 +604,32 @@ function seriesFor(key,v){
 
 var SERIES = [
   { key:'spotifyListeners', short:'Monthly listeners', noun:'people listening this month' },
-  { key:'totalPlays',       short:'Plays',             noun:'plays across his ten most played' },
-  { key:'youtubeViews',     short:'YouTube views',     noun:'views on YouTube' },
+  { key:'cumPlays',         short:'Plays, all time',   noun:'plays counted since the record began', sfa:true },
+  { key:'dailyStreams',     short:'Plays a day',       noun:'plays that day',            sfa:true },
+  { key:'dailyListeners',   short:'Listeners a day',   noun:'people listening that day', sfa:true },
+  { key:'superListeners',   short:'Super listeners',   noun:'super listeners',           sfa:true },
   { key:'spotifyFollowers', short:'Followers',         noun:'followers on Spotify' },
-  { key:'youtubeSubs',      short:'Subscribers',       noun:'subscribers on YouTube' }
+  { key:'saves',            short:'Saves a day',       noun:'saves that day',            sfa:true },
+  { key:'youtubeViews',     short:'YouTube views',     noun:'views on YouTube' },
+  { key:'totalPlays',       short:'Top ten plays',     noun:'plays across his ten most played' }
 ];
+
+/* how far back the line looks */
+var RANGES = [
+  { key:'30',  short:'30 days',   days:30  },
+  { key:'90',  short:'3 months',  days:90  },
+  { key:'365', short:'12 months', days:365 },
+  { key:'all', short:'Everything', days:null }
+];
+var trendRange = 'all';
+
+function windowed(pts){
+  var r=RANGES.filter(function(x){ return x.key===trendRange; })[0];
+  if (!r || !r.days || !pts.length) return pts;
+  var cut=pts[pts.length-1].x - r.days;
+  var out=pts.filter(function(p){ return p.x>=cut; });
+  return out.length>1 ? out : pts;
+}
 
 /* ---------------------------------------------------------- the line chart */
 
@@ -591,7 +638,7 @@ function drawTrend(){
   if (!host || !view) return;
   var W=host.clientWidth||640;
   if (!W) return;
-  var pts0=seriesFor(trendKey,view), pts0len=pts0.length;
+  var pts0=windowed(seriesFor(trendKey,view)), pts0len=pts0.length;
   var tall=W<560;
   var H = tall ? (pts0len<3?150:200) : (pts0len<3?200:300);
   var PL=W<420?46:58, PR=18, PT=18, PB=34;
@@ -631,8 +678,10 @@ function drawTrend(){
     svg.appendChild(t);
   });
 
-  /* release markers, drawn behind the data */
-  CALENDAR.forEach(function(r){
+  /* release markers, drawn behind the data. over a long window there would be
+     too many to read, so they only appear when the frame is short enough. */
+  var span=xhi-xlo;
+  if (span<=430) CALENDAR.forEach(function(r){
     var d=dayNo(r.date);
     if (d==null || d<xlo || d>xhi) return;
     var x=X(d);
@@ -650,13 +699,15 @@ function drawTrend(){
 
   /* x axis */
   svg.appendChild(svgEl('line',{x1:PL,x2:W-PR,y1:H-PB,y2:H-PB,stroke:HAIR,'stroke-width':1}));
-  var xt=[xlo,xhi];
-  if (xhi-xlo>6) xt=[xlo,Math.round((xlo+xhi)/2),xhi];
+  var want=W<520?2:(span>200?5:3);
+  var xt=[];
+  for (var k=0;k<want;k++) xt.push(Math.round(xlo+(span*k)/(want-1)));
+  var longRange = span>150;
   xt.forEach(function(v,i){
     var t=svgEl('text',{x:X(v).toFixed(1),y:H-PB+18,
       'text-anchor':i===0?'start':(i===xt.length-1?'end':'middle'),
       fill:MUTED,'font-size':11});
-    t.textContent=shortDate(v);
+    t.textContent = longRange ? monthYear(v) : shortDate(v);
     svg.appendChild(t);
   });
 
@@ -726,10 +777,23 @@ function drawTrend(){
   host.onfocus=function(){ show(pts[pts.length-1]); };
   host.onblur=hide;
 
-  document.getElementById('trendBlurb').textContent =
-    pts.length===1
-      ? 'One morning on the record. The line starts here, and the marks ahead are the run.'
-      : pts.length+' mornings on the record. Hover anywhere to read a day. The upright marks are releases.';
+  var blurb;
+  if (pts.length===1){
+    blurb='One morning on the record. The line starts here, and the marks ahead are the run.';
+  } else {
+    var yr = span>300;
+    blurb=fmt(pts.length)+' days shown, '+shortDate(pts[0].x,yr)+' to '+
+          shortDate(pts[pts.length-1].x,yr)+'. Hover anywhere to read a day.';
+    if (span<=430) blurb+=' The upright marks are releases.';
+    /* monthly listeners is a rolling twenty eight day count, so it moves with
+       playlists. say the mechanism rather than let the slope imply a verdict. */
+    if (trendKey==='spotifyListeners' && pts[pts.length-1].y < pts[0].y)
+      blurb+=' Monthly listeners counts the last twenty eight days, so it rises and falls '+
+             'with playlist placement rather than with the work.';
+    if (meta.sfa) blurb+=' This one comes from the Spotify for Artists export, so it stops on '+
+                         shortDate(pts[pts.length-1].x,yr)+'.';
+  }
+  document.getElementById('trendBlurb').textContent=blurb;
   host.setAttribute('aria-label', meta.short+' over '+pts.length+
     (pts.length===1?' morning':' mornings')+', latest '+fmt(pts[pts.length-1].y));
 }
@@ -795,7 +859,7 @@ function render(){
     var overnight=y?rise(t.spotifyListeners,y.spotifyListeners):0;
     var bits=[];
     if (overnight>0) bits.push('<strong>'+fmt(overnight)+'</strong> more than yesterday');
-    if (gain>0) bits.push('<strong>'+fmt(gain)+'</strong> more than the first morning on record');
+    if (gain>0) bits.push('<strong>'+fmt(gain)+'</strong> more than on '+prettyFull(v.first.date));
     if (bits.length){ since.hidden=false; since.innerHTML=bits.join('. ')+'.'; }
     else { since.hidden=false; since.innerHTML='Counted again this morning, from '+
            (v.cities.length?v.cities.length+' cities and everywhere else.':'everywhere'); }
@@ -881,18 +945,41 @@ function milestones(v){
 
 function renderTrendPicker(v){
   var box=document.getElementById('trendPick');
-  var live=SERIES.filter(function(s){ return seriesFor(s.key,v).length>0; });
+  var rangeBox=document.getElementById('trendRange');
+  /* a one point series next to a thousand point one just reads as broken */
+  var floor = v.all.length>=6 ? 3 : 1;
+  var live=SERIES.filter(function(s){ return seriesFor(s.key,v).length>=floor; });
   document.getElementById('secTrend').hidden = live.length===0;
   if (!live.length) return;
   if (!live.some(function(s){ return s.key===trendKey; })) trendKey=live[0].key;
+
   box.innerHTML='';
   live.forEach(function(s){
     var b=elt('button',null,s.short);
     b.type='button';
     b.setAttribute('aria-pressed', s.key===trendKey ? 'true':'false');
-    b.onclick=function(){ trendKey=s.key; renderTrendPicker(view); drawTrend(); };
+    b.onclick=function(){ trendKey=s.key; renderTrendPicker(view); };
     box.appendChild(b);
   });
+
+  var full=seriesFor(trendKey,v);
+  var reach=full.length>1 ? full[full.length-1].x-full[0].x : 0;
+  rangeBox.className='filters range';
+  rangeBox.innerHTML='';
+  var choices=RANGES.filter(function(r){ return !r.days || r.days<reach; });
+  if (choices.length<2){ rangeBox.hidden=true; }
+  else {
+    rangeBox.hidden=false;
+    if (!choices.some(function(r){ return r.key===trendRange; }))
+      trendRange=choices[choices.length-1].key;
+    choices.forEach(function(r){
+      var b=elt('button',null,r.short);
+      b.type='button';
+      b.setAttribute('aria-pressed', r.key===trendRange ? 'true':'false');
+      b.onclick=function(){ trendRange=r.key; renderTrendPicker(view); };
+      rangeBox.appendChild(b);
+    });
+  }
   drawTrend();
 }
 
@@ -1125,11 +1212,13 @@ function renderTables(v){
     tb.appendChild(body); wrap.appendChild(tb); host.appendChild(wrap);
   }
 
-  table('Every morning recorded',
-    ['Date','Monthly listeners','Followers','YouTube subs','YouTube views'],
-    v.all.slice().reverse().map(function(d){
+  var recent=v.all.slice(-180).reverse();
+  table('Every morning recorded'+(v.all.length>180
+          ? ', most recent 180 of '+fmt(v.all.length) : ''),
+    ['Date','Monthly listeners','Followers','Plays that day','Where from'],
+    recent.map(function(d){
       return [d.date, fmt(d.spotifyListeners)||'', fmt(d.spotifyFollowers)||'',
-              fmt(d.youtubeSubs)||'', fmt(d.youtubeViews)||''];
+              fmt(d.dailyStreams)||'', d.src==='sfa'?'Spotify for Artists':'read live'];
     }));
 
   table('The ten most played', ['Song','Plays','Since yesterday'],
