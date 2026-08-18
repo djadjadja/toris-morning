@@ -11760,9 +11760,72 @@
    },
    "youtubeViews": 4172348,
    "youtubeSubs": 9090
+  },
+  {
+   "date": "2026-08-19",
+   "spotifyListeners": 291742,
+   "spotifyFollowers": 5698,
+   "cities": [
+    {
+     "city": "Singapore",
+     "country": "SG",
+     "n": 5902
+    },
+    {
+     "city": "Sydney",
+     "country": "AU",
+     "n": 3528
+    },
+    {
+     "city": "S\u00e3o Paulo",
+     "country": "BR",
+     "n": 3137
+    },
+    {
+     "city": "Quezon City",
+     "country": "PH",
+     "n": 3088
+    },
+    {
+     "city": "Melbourne",
+     "country": "AU",
+     "n": 2607
+    }
+   ],
+   "tracks": {
+    "2cFTkx42FZd2ZrdmeEMesH": 21011875,
+    "6VMu6afp2ren85DwON6xxt": 6839301,
+    "6uV4dBjHZGzDzsGpBYMESI": 16130696,
+    "4koKk08EQRI31mYmT3pFLa": 17261841,
+    "1zV7wp9YIk93iPBt5H8p9q": 10977878,
+    "2uDHWI4FtmH75wXb3az2gV": 10034651,
+    "1HFdhcKsoUsschtrRgZQg0": 4284281,
+    "1I7TOu1yoEKQDvUMvlRVxm": 14581236,
+    "6D4iyiFyofBN9tm2QIbdFs": 14233301,
+    "40h5N9ARRkUTtecVVOzEkj": 2919305
+   },
+   "latest": {
+    "name": "Wonderwall (Piano Version - Instrumental)",
+    "date": "2026-08-14",
+    "type": "Single"
+   },
+   "next": {
+    "name": "Holy Forever",
+    "date": "2026-08-28",
+    "type": "Album"
+   },
+   "counts": {
+    "albums": 40,
+    "singles": 29,
+    "discoveredOn": 100,
+    "featuredIn": 3,
+    "relatedArtists": 40
+   },
+   "youtubeViews": 4172348,
+   "youtubeSubs": 9090
   }
  ],
- "updated": "2026-08-18T19:25+08:00",
+ "updated": "2026-08-19T01:27+08:00",
  "releases": {
   "58jbB5biKaLhxTlIIFgkNp": {
    "name": "Modern Hymns: He Reigns",
