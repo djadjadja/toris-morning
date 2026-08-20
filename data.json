@@ -11827,7 +11827,7 @@
   {
    "date": "2026-08-20",
    "spotifyListeners": 290852,
-   "spotifyFollowers": 5704,
+   "spotifyFollowers": 5705,
    "cities": [
     {
      "city": "Singapore",
@@ -11873,7 +11873,7 @@
     "type": "Single"
    },
    "counts": {
-    "albums": 40,
+    "albums": 41,
     "singles": 29,
     "discoveredOn": 100,
     "featuredIn": 3,
@@ -11883,7 +11883,7 @@
    "youtubeSubs": 9120
   }
  ],
- "updated": "2026-08-20T13:31+08:00",
+ "updated": "2026-08-20T19:27+08:00",
  "releases": {
   "58jbB5biKaLhxTlIIFgkNp": {
    "name": "Modern Hymns: He Reigns",
