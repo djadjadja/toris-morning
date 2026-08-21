@@ -11947,46 +11947,46 @@
   },
   {
    "date": "2026-08-22",
-   "spotifyListeners": 290637,
+   "spotifyListeners": 290569,
    "spotifyFollowers": 5706,
    "cities": [
     {
      "city": "Singapore",
      "country": "SG",
-     "n": 5887
+     "n": 5881
     },
     {
      "city": "Sydney",
      "country": "AU",
-     "n": 3499
+     "n": 3492
     },
     {
      "city": "S\u00e3o Paulo",
      "country": "BR",
-     "n": 3159
+     "n": 3153
     },
     {
      "city": "Quezon City",
      "country": "PH",
-     "n": 3089
+     "n": 3104
     },
     {
      "city": "Melbourne",
      "country": "AU",
-     "n": 2591
+     "n": 2597
     }
    ],
    "tracks": {
-    "2cFTkx42FZd2ZrdmeEMesH": 21029495,
-    "6VMu6afp2ren85DwON6xxt": 6854584,
-    "6uV4dBjHZGzDzsGpBYMESI": 16141374,
-    "4koKk08EQRI31mYmT3pFLa": 17270425,
-    "1zV7wp9YIk93iPBt5H8p9q": 10985736,
-    "1HFdhcKsoUsschtrRgZQg0": 4291324,
-    "2uDHWI4FtmH75wXb3az2gV": 10040215,
-    "1I7TOu1yoEKQDvUMvlRVxm": 14587160,
-    "6D4iyiFyofBN9tm2QIbdFs": 14239394,
-    "40h5N9ARRkUTtecVVOzEkj": 2924648
+    "2cFTkx42FZd2ZrdmeEMesH": 21038591,
+    "6VMu6afp2ren85DwON6xxt": 6862115,
+    "6uV4dBjHZGzDzsGpBYMESI": 16146486,
+    "4koKk08EQRI31mYmT3pFLa": 17274349,
+    "1zV7wp9YIk93iPBt5H8p9q": 10989454,
+    "1HFdhcKsoUsschtrRgZQg0": 4294601,
+    "2uDHWI4FtmH75wXb3az2gV": 10042355,
+    "1I7TOu1yoEKQDvUMvlRVxm": 14589922,
+    "6D4iyiFyofBN9tm2QIbdFs": 14242147,
+    "40h5N9ARRkUTtecVVOzEkj": 2927332
    },
    "latest": {
     "name": "Beat It (Piano Version - Instrumental)",
@@ -12005,11 +12005,11 @@
     "featuredIn": 3,
     "relatedArtists": 40
    },
-   "youtubeViews": 4231777,
-   "youtubeSubs": 9140
+   "youtubeViews": 4244855,
+   "youtubeSubs": 9150
   }
  ],
- "updated": "2026-08-22T01:29+08:00",
+ "updated": "2026-08-22T07:20+08:00",
  "releases": {
   "58jbB5biKaLhxTlIIFgkNp": {
    "name": "Modern Hymns: He Reigns",
