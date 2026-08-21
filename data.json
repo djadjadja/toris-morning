@@ -11926,22 +11926,27 @@
     "40h5N9ARRkUTtecVVOzEkj": 2924648
    },
    "latest": {
-    "name": "Wonderwall (Piano Version - Instrumental)",
-    "date": "2026-08-14",
+    "name": "Beat It (Piano Version - Instrumental)",
+    "date": "2026-08-21",
     "type": "Single"
    },
    "counts": {
     "albums": 41,
-    "singles": 29,
+    "singles": 30,
     "discoveredOn": 100,
     "featuredIn": 3,
     "relatedArtists": 40
    },
-   "youtubeViews": 4216540,
-   "youtubeSubs": 9130
+   "youtubeViews": 4231777,
+   "youtubeSubs": 9130,
+   "next": {
+    "name": "Holy Forever",
+    "date": "2026-08-28",
+    "type": "Album"
+   }
   }
  ],
- "updated": "2026-08-21T07:23+08:00",
+ "updated": "2026-08-21T13:33+08:00",
  "releases": {
   "58jbB5biKaLhxTlIIFgkNp": {
    "name": "Modern Hymns: He Reigns",
@@ -12110,6 +12115,12 @@
    "date": "2022-08-19",
    "type": "Album",
    "tracks": 13
+  },
+  "4NESclIfVN6zgfzY2bRX3p": {
+   "name": "Beat It (Piano Version - Instrumental)",
+   "date": "2026-08-21",
+   "type": "Single",
+   "tracks": 1
   }
  },
  "imported": {
