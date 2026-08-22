@@ -12007,9 +12007,72 @@
    },
    "youtubeViews": 4244855,
    "youtubeSubs": 9160
+  },
+  {
+   "date": "2026-08-23",
+   "spotifyListeners": 290434,
+   "spotifyFollowers": 5709,
+   "cities": [
+    {
+     "city": "Singapore",
+     "country": "SG",
+     "n": 5867
+    },
+    {
+     "city": "Sydney",
+     "country": "AU",
+     "n": 3497
+    },
+    {
+     "city": "S\u00e3o Paulo",
+     "country": "BR",
+     "n": 3151
+    },
+    {
+     "city": "Quezon City",
+     "country": "PH",
+     "n": 3117
+    },
+    {
+     "city": "Melbourne",
+     "country": "AU",
+     "n": 2574
+    }
+   ],
+   "tracks": {
+    "2cFTkx42FZd2ZrdmeEMesH": 21046942,
+    "6VMu6afp2ren85DwON6xxt": 6869065,
+    "6uV4dBjHZGzDzsGpBYMESI": 16151294,
+    "4koKk08EQRI31mYmT3pFLa": 17278273,
+    "1zV7wp9YIk93iPBt5H8p9q": 10993119,
+    "1HFdhcKsoUsschtrRgZQg0": 4297588,
+    "2uDHWI4FtmH75wXb3az2gV": 10044652,
+    "1I7TOu1yoEKQDvUMvlRVxm": 14592770,
+    "6D4iyiFyofBN9tm2QIbdFs": 14245012,
+    "40h5N9ARRkUTtecVVOzEkj": 2929737
+   },
+   "latest": {
+    "name": "Beat It (Piano Version - Instrumental)",
+    "date": "2026-08-21",
+    "type": "Single"
+   },
+   "next": {
+    "name": "Holy Forever",
+    "date": "2026-08-28",
+    "type": "Album"
+   },
+   "counts": {
+    "albums": 41,
+    "singles": 30,
+    "discoveredOn": 100,
+    "featuredIn": 3,
+    "relatedArtists": 40
+   },
+   "youtubeViews": 4244855,
+   "youtubeSubs": 9160
   }
  ],
- "updated": "2026-08-22T19:20+08:00",
+ "updated": "2026-08-23T01:20+08:00",
  "releases": {
   "58jbB5biKaLhxTlIIFgkNp": {
    "name": "Modern Hymns: He Reigns",
