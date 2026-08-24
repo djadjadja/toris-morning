@@ -39,6 +39,10 @@
   "40h5N9ARRkUTtecVVOzEkj": {
    "name": "It Is Well With My Soul",
    "uri": "spotify:track:40h5N9ARRkUTtecVVOzEkj"
+  },
+  "1EOqcNlpb2Kb3kkPbLgbF8": {
+   "name": "Lead Me To The Cross",
+   "uri": "spotify:track:1EOqcNlpb2Kb3kkPbLgbF8"
   }
  },
  "days": [
@@ -12074,7 +12078,7 @@
   {
    "date": "2026-08-24",
    "spotifyListeners": 290701,
-   "spotifyFollowers": 5711,
+   "spotifyFollowers": 5714,
    "cities": [
     {
      "city": "Singapore",
@@ -12112,7 +12116,8 @@
     "2uDHWI4FtmH75wXb3az2gV": 10047636,
     "1I7TOu1yoEKQDvUMvlRVxm": 14595338,
     "6D4iyiFyofBN9tm2QIbdFs": 14247609,
-    "40h5N9ARRkUTtecVVOzEkj": 2931997
+    "40h5N9ARRkUTtecVVOzEkj": 2931997,
+    "1EOqcNlpb2Kb3kkPbLgbF8": 14181380
    },
    "latest": {
     "name": "Beat It (Piano Version - Instrumental)",
@@ -12135,7 +12140,7 @@
    "youtubeSubs": 9190
   }
  ],
- "updated": "2026-08-24T13:38+08:00",
+ "updated": "2026-08-24T19:29+08:00",
  "releases": {
   "58jbB5biKaLhxTlIIFgkNp": {
    "name": "Modern Hymns: He Reigns",
