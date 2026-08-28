@@ -12331,7 +12331,7 @@
   {
    "date": "2026-08-28",
    "spotifyListeners": 291411,
-   "spotifyFollowers": 5724,
+   "spotifyFollowers": 5725,
    "cities": [
     {
      "city": "Singapore",
@@ -12372,9 +12372,9 @@
     "40h5N9ARRkUTtecVVOzEkj": 2943249
    },
    "latest": {
-    "name": "Beat It (Piano Version - Instrumental)",
-    "date": "2026-08-21",
-    "type": "Single"
+    "name": "Holy Forever",
+    "date": "2026-08-28",
+    "type": "Album"
    },
    "next": {
     "name": "Holy Forever",
@@ -12382,17 +12382,17 @@
     "type": "Album"
    },
    "counts": {
-    "albums": 41,
+    "albums": 42,
     "singles": 30,
     "discoveredOn": 100,
     "featuredIn": 3,
     "relatedArtists": 40
    },
    "youtubeViews": 4307759,
-   "youtubeSubs": 9250
+   "youtubeSubs": 9260
   }
  ],
- "updated": "2026-08-28T09:18+08:00",
+ "updated": "2026-08-28T14:45+08:00",
  "releases": {
   "58jbB5biKaLhxTlIIFgkNp": {
    "name": "Modern Hymns: He Reigns",
@@ -12567,6 +12567,12 @@
    "date": "2026-08-21",
    "type": "Single",
    "tracks": 1
+  },
+  "7h6tFGkoLuKVWAS3fAw1OJ": {
+   "name": "Holy Forever",
+   "date": "2026-08-28",
+   "type": "Album",
+   "tracks": 12
   }
  },
  "imported": {
