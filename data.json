@@ -12507,9 +12507,67 @@
    },
    "youtubeViews": 4307759,
    "youtubeSubs": 9280
+  },
+  {
+   "date": "2026-08-31",
+   "spotifyListeners": 293091,
+   "spotifyFollowers": 5730,
+   "cities": [
+    {
+     "city": "Singapore",
+     "country": "SG",
+     "n": 5890
+    },
+    {
+     "city": "Sydney",
+     "country": "AU",
+     "n": 3500
+    },
+    {
+     "city": "Quezon City",
+     "country": "PH",
+     "n": 3169
+    },
+    {
+     "city": "S\u00e3o Paulo",
+     "country": "BR",
+     "n": 3112
+    },
+    {
+     "city": "Melbourne",
+     "country": "AU",
+     "n": 2635
+    }
+   ],
+   "tracks": {
+    "2cFTkx42FZd2ZrdmeEMesH": 21112044,
+    "6VMu6afp2ren85DwON6xxt": 6924751,
+    "6uV4dBjHZGzDzsGpBYMESI": 16192153,
+    "4koKk08EQRI31mYmT3pFLa": 17309334,
+    "1zV7wp9YIk93iPBt5H8p9q": 11022904,
+    "1HFdhcKsoUsschtrRgZQg0": 4324371,
+    "2uDHWI4FtmH75wXb3az2gV": 10069707,
+    "1I7TOu1yoEKQDvUMvlRVxm": 14615681,
+    "6D4iyiFyofBN9tm2QIbdFs": 14269784,
+    "1EOqcNlpb2Kb3kkPbLgbF8": 14199961
+   },
+   "latest": {
+    "name": "Holy Forever",
+    "date": "2026-08-28",
+    "type": "Album"
+   },
+   "counts": {
+    "albums": 42,
+    "singles": 30,
+    "discoveredOn": 100,
+    "featuredIn": 3,
+    "relatedArtists": 40
+   },
+   "youtubeViews": 4307759,
+   "youtubeSubs": 9280
   }
  ],
- "updated": "2026-08-30T23:10+08:00",
+ "updated": "2026-08-31T03:39+08:00",
  "releases": {
   "58jbB5biKaLhxTlIIFgkNp": {
    "name": "Modern Hymns: He Reigns",
