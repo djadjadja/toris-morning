@@ -12743,7 +12743,7 @@
   {
    "date": "2026-09-04",
    "spotifyListeners": 292780,
-   "spotifyFollowers": 5741,
+   "spotifyFollowers": 5744,
    "cities": [
     {
      "city": "Singapore",
@@ -12784,13 +12784,13 @@
     "1EOqcNlpb2Kb3kkPbLgbF8": 14210818
    },
    "latest": {
-    "name": "Holy Forever",
-    "date": "2026-08-28",
-    "type": "Album"
+    "name": "Dreams (Piano Version - Instrumental)",
+    "date": "2026-09-04",
+    "type": "Single"
    },
    "counts": {
     "albums": 42,
-    "singles": 30,
+    "singles": 31,
     "discoveredOn": 100,
     "featuredIn": 3,
     "relatedArtists": 40
@@ -12799,7 +12799,7 @@
    "youtubeSubs": 9350
   }
  ],
- "updated": "2026-09-04T08:45+08:00",
+ "updated": "2026-09-04T17:21+08:00",
  "releases": {
   "58jbB5biKaLhxTlIIFgkNp": {
    "name": "Modern Hymns: He Reigns",
@@ -12980,6 +12980,12 @@
    "date": "2026-08-28",
    "type": "Album",
    "tracks": 12
+  },
+  "1YNlHWH57o21sKNDB3GqF4": {
+   "name": "Dreams (Piano Version - Instrumental)",
+   "date": "2026-09-04",
+   "type": "Single",
+   "tracks": 1
   }
  },
  "imported": {
