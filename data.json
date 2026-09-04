@@ -12797,9 +12797,67 @@
    },
    "youtubeViews": 4414220,
    "youtubeSubs": 9360
+  },
+  {
+   "date": "2026-09-05",
+   "spotifyListeners": 291817,
+   "spotifyFollowers": 5744,
+   "cities": [
+    {
+     "city": "Singapore",
+     "country": "SG",
+     "n": 5783
+    },
+    {
+     "city": "Sydney",
+     "country": "AU",
+     "n": 3449
+    },
+    {
+     "city": "Quezon City",
+     "country": "PH",
+     "n": 3148
+    },
+    {
+     "city": "S\u00e3o Paulo",
+     "country": "BR",
+     "n": 3067
+    },
+    {
+     "city": "Melbourne",
+     "country": "AU",
+     "n": 2603
+    }
+   ],
+   "tracks": {
+    "2cFTkx42FZd2ZrdmeEMesH": 21156174,
+    "6VMu6afp2ren85DwON6xxt": 6962210,
+    "6uV4dBjHZGzDzsGpBYMESI": 16218301,
+    "4koKk08EQRI31mYmT3pFLa": 17329188,
+    "1zV7wp9YIk93iPBt5H8p9q": 11042139,
+    "1HFdhcKsoUsschtrRgZQg0": 4343442,
+    "2uDHWI4FtmH75wXb3az2gV": 10087659,
+    "6D4iyiFyofBN9tm2QIbdFs": 14285792,
+    "1I7TOu1yoEKQDvUMvlRVxm": 14630588,
+    "1EOqcNlpb2Kb3kkPbLgbF8": 14213338
+   },
+   "latest": {
+    "name": "Dreams (Piano Version - Instrumental)",
+    "date": "2026-09-04",
+    "type": "Single"
+   },
+   "counts": {
+    "albums": 42,
+    "singles": 31,
+    "discoveredOn": 100,
+    "featuredIn": 3,
+    "relatedArtists": 40
+   },
+   "youtubeViews": 4414220,
+   "youtubeSubs": 9360
   }
  ],
- "updated": "2026-09-04T22:50+08:00",
+ "updated": "2026-09-05T03:19+08:00",
  "releases": {
   "58jbB5biKaLhxTlIIFgkNp": {
    "name": "Modern Hymns: He Reigns",
