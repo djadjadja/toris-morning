@@ -13091,46 +13091,46 @@
   },
   {
    "date": "2026-09-10",
-   "spotifyListeners": 291741,
+   "spotifyListeners": 293038,
    "spotifyFollowers": 5765,
    "cities": [
     {
      "city": "Singapore",
      "country": "SG",
-     "n": 5820
+     "n": 5836
     },
     {
      "city": "Sydney",
      "country": "AU",
-     "n": 3426
+     "n": 3418
     },
     {
      "city": "Quezon City",
      "country": "PH",
-     "n": 3122
+     "n": 3120
     },
     {
      "city": "S\u00e3o Paulo",
      "country": "BR",
-     "n": 2977
+     "n": 2973
     },
     {
      "city": "Melbourne",
      "country": "AU",
-     "n": 2580
+     "n": 2574
     }
    ],
    "tracks": {
-    "2cFTkx42FZd2ZrdmeEMesH": 21188628,
-    "6VMu6afp2ren85DwON6xxt": 6987796,
-    "6uV4dBjHZGzDzsGpBYMESI": 16237163,
-    "4koKk08EQRI31mYmT3pFLa": 17343800,
-    "1zV7wp9YIk93iPBt5H8p9q": 11055962,
-    "1HFdhcKsoUsschtrRgZQg0": 4357588,
-    "2uDHWI4FtmH75wXb3az2gV": 10098587,
-    "6D4iyiFyofBN9tm2QIbdFs": 14297395,
-    "1I7TOu1yoEKQDvUMvlRVxm": 14641266,
-    "40h5N9ARRkUTtecVVOzEkj": 2977403
+    "2cFTkx42FZd2ZrdmeEMesH": 21197734,
+    "6VMu6afp2ren85DwON6xxt": 6995766,
+    "6uV4dBjHZGzDzsGpBYMESI": 16242752,
+    "4koKk08EQRI31mYmT3pFLa": 17347855,
+    "1zV7wp9YIk93iPBt5H8p9q": 11059932,
+    "1HFdhcKsoUsschtrRgZQg0": 4361759,
+    "2uDHWI4FtmH75wXb3az2gV": 10102374,
+    "6D4iyiFyofBN9tm2QIbdFs": 14300645,
+    "1I7TOu1yoEKQDvUMvlRVxm": 14644185,
+    "40h5N9ARRkUTtecVVOzEkj": 2981053
    },
    "latest": {
     "name": "Dreams (Piano Version - Instrumental)",
@@ -13141,14 +13141,14 @@
     "albums": 42,
     "singles": 31,
     "discoveredOn": 100,
-    "featuredIn": 3,
+    "featuredIn": 2,
     "relatedArtists": 40
    },
-   "youtubeViews": 4475685,
+   "youtubeViews": 4492662,
    "youtubeSubs": 9410
   }
  ],
- "updated": "2026-09-10T03:36+08:00",
+ "updated": "2026-09-10T08:50+08:00",
  "releases": {
   "58jbB5biKaLhxTlIIFgkNp": {
    "name": "Modern Hymns: He Reigns",
