@@ -13471,9 +13471,67 @@
    },
    "youtubeViews": 4564726,
    "youtubeSubs": 9500
+  },
+  {
+   "date": "2026-09-16",
+   "spotifyListeners": 298777,
+   "spotifyFollowers": 5776,
+   "cities": [
+    {
+     "city": "Singapore",
+     "country": "SG",
+     "n": 5872
+    },
+    {
+     "city": "Sydney",
+     "country": "AU",
+     "n": 3488
+    },
+    {
+     "city": "Quezon City",
+     "country": "PH",
+     "n": 3156
+    },
+    {
+     "city": "S\u00e3o Paulo",
+     "country": "BR",
+     "n": 3057
+    },
+    {
+     "city": "Melbourne",
+     "country": "AU",
+     "n": 2582
+    }
+   ],
+   "tracks": {
+    "2cFTkx42FZd2ZrdmeEMesH": 21238171,
+    "6VMu6afp2ren85DwON6xxt": 7031196,
+    "6uV4dBjHZGzDzsGpBYMESI": 16267986,
+    "4koKk08EQRI31mYmT3pFLa": 17367614,
+    "1zV7wp9YIk93iPBt5H8p9q": 11078774,
+    "1HFdhcKsoUsschtrRgZQg0": 4381715,
+    "2uDHWI4FtmH75wXb3az2gV": 10116235,
+    "6D4iyiFyofBN9tm2QIbdFs": 14315410,
+    "1I7TOu1yoEKQDvUMvlRVxm": 14658120,
+    "40h5N9ARRkUTtecVVOzEkj": 2994562
+   },
+   "latest": {
+    "name": "Pink Pony Club (Piano Version - Instrumental)",
+    "date": "2026-09-11",
+    "type": "Single"
+   },
+   "counts": {
+    "albums": 42,
+    "singles": 32,
+    "discoveredOn": 100,
+    "featuredIn": 2,
+    "relatedArtists": 40
+   },
+   "youtubeViews": 4564726,
+   "youtubeSubs": 9510
   }
  ],
- "updated": "2026-09-15T23:27+08:00",
+ "updated": "2026-09-16T04:02+08:00",
  "releases": {
   "58jbB5biKaLhxTlIIFgkNp": {
    "name": "Modern Hymns: He Reigns",
