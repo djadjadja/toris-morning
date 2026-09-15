@@ -43,6 +43,34 @@
   "1EOqcNlpb2Kb3kkPbLgbF8": {
    "name": "Lead Me To The Cross",
    "uri": "spotify:track:1EOqcNlpb2Kb3kkPbLgbF8"
+  },
+  "3kLPbdpMndqxs37Xg1ELJP": {
+   "name": "Oceans (Where Feet May Fail)",
+   "uri": "spotify:track:3kLPbdpMndqxs37Xg1ELJP"
+  },
+  "7jSHyllF2dvnVphFVDMobL": {
+   "name": "Who You Say I Am",
+   "uri": "spotify:track:7jSHyllF2dvnVphFVDMobL"
+  },
+  "3eo8T6HMnPXgbRvNmhVyjP": {
+   "name": "Broken Vessels (Amazing Grace)",
+   "uri": "spotify:track:3eo8T6HMnPXgbRvNmhVyjP"
+  },
+  "1UgOLsLX4zTbo94KgfrgSR": {
+   "name": "God is Able",
+   "uri": "spotify:track:1UgOLsLX4zTbo94KgfrgSR"
+  },
+  "0aGa9kflGGkOZ6uZcnlfgP": {
+   "name": "Mighty To Save",
+   "uri": "spotify:track:0aGa9kflGGkOZ6uZcnlfgP"
+  },
+  "0dRKxe2ycCYE8ddEwt86Gx": {
+   "name": "I Surrender",
+   "uri": "spotify:track:0dRKxe2ycCYE8ddEwt86Gx"
+  },
+  "4xYBZdE02UZR00nJ6VsnuL": {
+   "name": "Cornerstone",
+   "uri": "spotify:track:4xYBZdE02UZR00nJ6VsnuL"
   }
  },
  "days": [
@@ -13420,7 +13448,14 @@
     "2uDHWI4FtmH75wXb3az2gV": 10116235,
     "6D4iyiFyofBN9tm2QIbdFs": 14315410,
     "1I7TOu1yoEKQDvUMvlRVxm": 14658120,
-    "40h5N9ARRkUTtecVVOzEkj": 2994562
+    "40h5N9ARRkUTtecVVOzEkj": 2994562,
+    "3kLPbdpMndqxs37Xg1ELJP": 21238171,
+    "7jSHyllF2dvnVphFVDMobL": 7031196,
+    "3eo8T6HMnPXgbRvNmhVyjP": 16267986,
+    "1UgOLsLX4zTbo94KgfrgSR": 17367614,
+    "0aGa9kflGGkOZ6uZcnlfgP": 11078774,
+    "0dRKxe2ycCYE8ddEwt86Gx": 14315410,
+    "4xYBZdE02UZR00nJ6VsnuL": 14658120
    },
    "latest": {
     "name": "Pink Pony Club (Piano Version - Instrumental)",
@@ -13438,7 +13473,7 @@
    "youtubeSubs": 9490
   }
  ],
- "updated": "2026-09-15T04:45+08:00",
+ "updated": "2026-09-15T09:09+08:00",
  "releases": {
   "58jbB5biKaLhxTlIIFgkNp": {
    "name": "Modern Hymns: He Reigns",
@@ -13631,6 +13666,42 @@
    "date": "2026-09-11",
    "type": "Single",
    "tracks": 1
+  },
+  "67cKYnoTYc6Anf4tytuCQk": {
+   "name": "Preludes (Cello & Piano)",
+   "date": "2025-08-08",
+   "type": "Album",
+   "tracks": 11
+  },
+  "0C5V4ePX31bFN7ShzULgyb": {
+   "name": "Piano Reflections Vol. 1",
+   "date": "2015-03-13",
+   "type": "Album",
+   "tracks": 11
+  },
+  "3Vfu5QQP8xDhpRVNn73FP8": {
+   "name": "Piano Reflections Vol. 2",
+   "date": "2015-03-13",
+   "type": "Album",
+   "tracks": 13
+  },
+  "45LbqinVpvXig3lyG7exIT": {
+   "name": "Piano Reflections Vol. 5",
+   "date": "2020-10-02",
+   "type": "Album",
+   "tracks": 13
+  },
+  "4CgPFHCNWNVF5accjboNmb": {
+   "name": "Piano Reflections Vol. 6",
+   "date": "2020-10-23",
+   "type": "Album",
+   "tracks": 12
+  },
+  "72sqJebNfmAliXXI49Ayk8": {
+   "name": "Piano Reflections Vol. 8 (Upright Piano)",
+   "date": "2023-02-24",
+   "type": "Album",
+   "tracks": 45
   }
  },
  "imported": {
