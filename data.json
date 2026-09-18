@@ -13632,13 +13632,13 @@
     "40h5N9ARRkUTtecVVOzEkj": 3004148
    },
    "latest": {
-    "name": "Pink Pony Club (Piano Version - Instrumental)",
-    "date": "2026-09-11",
+    "name": "Stargazing (Piano Version - Instrumental)",
+    "date": "2026-09-18",
     "type": "Single"
    },
    "counts": {
     "albums": 42,
-    "singles": 32,
+    "singles": 33,
     "discoveredOn": 100,
     "featuredIn": 2,
     "relatedArtists": 40
@@ -13647,7 +13647,7 @@
    "youtubeSubs": 9560
   }
  ],
- "updated": "2026-09-18T09:00+08:00",
+ "updated": "2026-09-18T17:25+08:00",
  "releases": {
   "58jbB5biKaLhxTlIIFgkNp": {
    "name": "Modern Hymns: He Reigns",
@@ -13876,6 +13876,12 @@
    "date": "2023-02-24",
    "type": "Album",
    "tracks": 45
+  },
+  "2dU6j8GwaU1VEcRAAyyinu": {
+   "name": "Stargazing (Piano Version - Instrumental)",
+   "date": "2026-09-18",
+   "type": "Single",
+   "tracks": 1
   }
  },
  "imported": {
