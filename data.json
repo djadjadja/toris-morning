@@ -13703,9 +13703,67 @@
    },
    "youtubeViews": 4620240,
    "youtubeSubs": 9580
+  },
+  {
+   "date": "2026-09-20",
+   "spotifyListeners": 304579,
+   "spotifyFollowers": 5784,
+   "cities": [
+    {
+     "city": "Singapore",
+     "country": "SG",
+     "n": 5902
+    },
+    {
+     "city": "Sydney",
+     "country": "AU",
+     "n": 3532
+    },
+    {
+     "city": "Quezon City",
+     "country": "PH",
+     "n": 3151
+    },
+    {
+     "city": "S\u00e3o Paulo",
+     "country": "BR",
+     "n": 3057
+    },
+    {
+     "city": "Melbourne",
+     "country": "AU",
+     "n": 2601
+    }
+   ],
+   "tracks": {
+    "2cFTkx42FZd2ZrdmeEMesH": 21282996,
+    "6VMu6afp2ren85DwON6xxt": 7071300,
+    "6uV4dBjHZGzDzsGpBYMESI": 16295464,
+    "4koKk08EQRI31mYmT3pFLa": 17388945,
+    "1zV7wp9YIk93iPBt5H8p9q": 11099391,
+    "1HFdhcKsoUsschtrRgZQg0": 4403638,
+    "6D4iyiFyofBN9tm2QIbdFs": 14332046,
+    "2uDHWI4FtmH75wXb3az2gV": 10130127,
+    "1I7TOu1yoEKQDvUMvlRVxm": 14673469,
+    "40h5N9ARRkUTtecVVOzEkj": 3010307
+   },
+   "latest": {
+    "name": "Stargazing (Piano Version - Instrumental)",
+    "date": "2026-09-18",
+    "type": "Single"
+   },
+   "counts": {
+    "albums": 42,
+    "singles": 33,
+    "discoveredOn": 100,
+    "featuredIn": 2,
+    "relatedArtists": 40
+   },
+   "youtubeViews": 4620240,
+   "youtubeSubs": 9580
   }
  ],
- "updated": "2026-09-19T22:12+08:00",
+ "updated": "2026-09-20T03:11+08:00",
  "releases": {
   "58jbB5biKaLhxTlIIFgkNp": {
    "name": "Modern Hymns: He Reigns",
