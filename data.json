@@ -13822,46 +13822,46 @@
   },
   {
    "date": "2026-09-22",
-   "spotifyListeners": 304702,
+   "spotifyListeners": 305483,
    "spotifyFollowers": 5789,
    "cities": [
     {
      "city": "Singapore",
      "country": "SG",
-     "n": 5939
+     "n": 5960
     },
     {
      "city": "Sydney",
      "country": "AU",
-     "n": 3518
+     "n": 3515
     },
     {
      "city": "Quezon City",
      "country": "PH",
-     "n": 3154
+     "n": 3160
     },
     {
      "city": "S\u00e3o Paulo",
      "country": "BR",
-     "n": 3035
+     "n": 3036
     },
     {
      "city": "Melbourne",
      "country": "AU",
-     "n": 2587
+     "n": 2581
     }
    ],
    "tracks": {
-    "2cFTkx42FZd2ZrdmeEMesH": 21290805,
-    "6VMu6afp2ren85DwON6xxt": 7077522,
-    "6uV4dBjHZGzDzsGpBYMESI": 16300209,
-    "4koKk08EQRI31mYmT3pFLa": 17392945,
-    "1zV7wp9YIk93iPBt5H8p9q": 11102968,
-    "1HFdhcKsoUsschtrRgZQg0": 4407163,
-    "6D4iyiFyofBN9tm2QIbdFs": 14334916,
-    "2uDHWI4FtmH75wXb3az2gV": 10132402,
-    "1I7TOu1yoEKQDvUMvlRVxm": 14676166,
-    "40h5N9ARRkUTtecVVOzEkj": 3012587
+    "2cFTkx42FZd2ZrdmeEMesH": 21298724,
+    "6VMu6afp2ren85DwON6xxt": 7083612,
+    "6uV4dBjHZGzDzsGpBYMESI": 16304959,
+    "4koKk08EQRI31mYmT3pFLa": 17397000,
+    "1zV7wp9YIk93iPBt5H8p9q": 11106909,
+    "1HFdhcKsoUsschtrRgZQg0": 4410734,
+    "6D4iyiFyofBN9tm2QIbdFs": 14338031,
+    "2uDHWI4FtmH75wXb3az2gV": 10135084,
+    "1I7TOu1yoEKQDvUMvlRVxm": 14679111,
+    "40h5N9ARRkUTtecVVOzEkj": 3014970
    },
    "latest": {
     "name": "Stargazing (Piano Version - Instrumental)",
@@ -13879,7 +13879,7 @@
    "youtubeSubs": 9610
   }
  ],
- "updated": "2026-09-22T00:49+08:00",
+ "updated": "2026-09-22T04:49+08:00",
  "releases": {
   "58jbB5biKaLhxTlIIFgkNp": {
    "name": "Modern Hymns: He Reigns",
