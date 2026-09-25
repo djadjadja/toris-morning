@@ -13997,7 +13997,7 @@
   {
    "date": "2026-09-25",
    "spotifyListeners": 309287,
-   "spotifyFollowers": 5797,
+   "spotifyFollowers": 5802,
    "cities": [
     {
      "city": "Singapore",
@@ -14038,22 +14038,22 @@
     "40h5N9ARRkUTtecVVOzEkj": 3023835
    },
    "latest": {
-    "name": "Stargazing (Piano Version - Instrumental)",
-    "date": "2026-09-18",
+    "name": "Mr Brightside (Piano Version - Instrumental)",
+    "date": "2026-09-25",
     "type": "Single"
    },
    "counts": {
     "albums": 42,
-    "singles": 33,
+    "singles": 34,
     "discoveredOn": 100,
     "featuredIn": 3,
     "relatedArtists": 40
    },
-   "youtubeViews": 4678268,
-   "youtubeSubs": 9650
+   "youtubeViews": 4730779,
+   "youtubeSubs": 9660
   }
  ],
- "updated": "2026-09-25T09:08+08:00",
+ "updated": "2026-09-25T18:01+08:00",
  "releases": {
   "58jbB5biKaLhxTlIIFgkNp": {
    "name": "Modern Hymns: He Reigns",
@@ -14286,6 +14286,12 @@
   "2dU6j8GwaU1VEcRAAyyinu": {
    "name": "Stargazing (Piano Version - Instrumental)",
    "date": "2026-09-18",
+   "type": "Single",
+   "tracks": 1
+  },
+  "5qa8JBwtMia8chbFk0P2VZ": {
+   "name": "Mr Brightside (Piano Version - Instrumental)",
+   "date": "2026-09-25",
    "type": "Single",
    "tracks": 1
   }
