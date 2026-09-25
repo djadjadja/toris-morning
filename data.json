@@ -14051,9 +14051,67 @@
    },
    "youtubeViews": 4730779,
    "youtubeSubs": 9670
+  },
+  {
+   "date": "2026-09-26",
+   "spotifyListeners": 310075,
+   "spotifyFollowers": 5802,
+   "cities": [
+    {
+     "city": "Singapore",
+     "country": "SG",
+     "n": 6004
+    },
+    {
+     "city": "Sydney",
+     "country": "AU",
+     "n": 3545
+    },
+    {
+     "city": "Quezon City",
+     "country": "PH",
+     "n": 3223
+    },
+    {
+     "city": "S\u00e3o Paulo",
+     "country": "BR",
+     "n": 3027
+    },
+    {
+     "city": "Melbourne",
+     "country": "AU",
+     "n": 2575
+    }
+   ],
+   "tracks": {
+    "2cFTkx42FZd2ZrdmeEMesH": 21336605,
+    "6VMu6afp2ren85DwON6xxt": 7116050,
+    "6uV4dBjHZGzDzsGpBYMESI": 16326865,
+    "4koKk08EQRI31mYmT3pFLa": 17414844,
+    "1zV7wp9YIk93iPBt5H8p9q": 11123726,
+    "1HFdhcKsoUsschtrRgZQg0": 4428514,
+    "6D4iyiFyofBN9tm2QIbdFs": 14350995,
+    "2uDHWI4FtmH75wXb3az2gV": 10149005,
+    "1I7TOu1yoEKQDvUMvlRVxm": 14691612,
+    "40h5N9ARRkUTtecVVOzEkj": 3026546
+   },
+   "latest": {
+    "name": "Mr Brightside (Piano Version - Instrumental)",
+    "date": "2026-09-25",
+    "type": "Single"
+   },
+   "counts": {
+    "albums": 42,
+    "singles": 34,
+    "discoveredOn": 100,
+    "featuredIn": 3,
+    "relatedArtists": 40
+   },
+   "youtubeViews": 4730779,
+   "youtubeSubs": 9670
   }
  ],
- "updated": "2026-09-25T23:44+08:00",
+ "updated": "2026-09-26T04:17+08:00",
  "releases": {
   "58jbB5biKaLhxTlIIFgkNp": {
    "name": "Modern Hymns: He Reigns",
