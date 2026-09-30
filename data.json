@@ -14351,33 +14351,33 @@
   },
   {
    "date": "2026-10-01",
-   "spotifyListeners": 312876,
+   "spotifyListeners": 312574,
    "spotifyFollowers": 5810,
    "cities": [
     {
      "city": "Singapore",
      "country": "SG",
-     "n": 6019
+     "n": 6036
     },
     {
      "city": "Sydney",
      "country": "AU",
-     "n": 3597
+     "n": 3605
     },
     {
      "city": "Quezon City",
      "country": "PH",
-     "n": 3219
+     "n": 3196
     },
     {
      "city": "S\u00e3o Paulo",
      "country": "BR",
-     "n": 2957
+     "n": 2899
     },
     {
      "city": "Melbourne",
      "country": "AU",
-     "n": 2613
+     "n": 2624
     }
    ],
    "tracks": {
@@ -14408,7 +14408,7 @@
    "youtubeSubs": 9750
   }
  ],
- "updated": "2026-10-01T00:43+08:00",
+ "updated": "2026-10-01T05:15+08:00",
  "releases": {
   "58jbB5biKaLhxTlIIFgkNp": {
    "name": "Modern Hymns: He Reigns",
