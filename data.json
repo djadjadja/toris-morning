@@ -14451,22 +14451,22 @@
     "40h5N9ARRkUTtecVVOzEkj": 3039710
    },
    "latest": {
-    "name": "Mr Brightside (Piano Version - Instrumental)",
-    "date": "2026-09-25",
+    "name": "Don't Stop Believing (Piano Version - Instrumental)",
+    "date": "2026-10-02",
     "type": "Single"
    },
    "counts": {
     "albums": 42,
-    "singles": 34,
+    "singles": 35,
     "discoveredOn": 100,
     "featuredIn": 3,
     "relatedArtists": 40
    },
    "youtubeViews": 4800952,
-   "youtubeSubs": 9760
+   "youtubeSubs": 9770
   }
  ],
- "updated": "2026-10-02T10:00+08:00",
+ "updated": "2026-10-02T18:54+08:00",
  "releases": {
   "58jbB5biKaLhxTlIIFgkNp": {
    "name": "Modern Hymns: He Reigns",
@@ -14705,6 +14705,12 @@
   "5qa8JBwtMia8chbFk0P2VZ": {
    "name": "Mr Brightside (Piano Version - Instrumental)",
    "date": "2026-09-25",
+   "type": "Single",
+   "tracks": 1
+  },
+  "7tQLCsCSrdVeOjXyn9VEBO": {
+   "name": "Don't Stop Believing (Piano Version - Instrumental)",
+   "date": "2026-10-02",
    "type": "Single",
    "tracks": 1
   }
