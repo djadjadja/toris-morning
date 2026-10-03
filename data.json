@@ -14467,46 +14467,46 @@
   },
   {
    "date": "2026-10-03",
-   "spotifyListeners": 311733,
+   "spotifyListeners": 311055,
    "spotifyFollowers": 5813,
    "cities": [
     {
      "city": "Singapore",
      "country": "SG",
-     "n": 6064
+     "n": 6097
     },
     {
      "city": "Sydney",
      "country": "AU",
-     "n": 3602
+     "n": 3594
     },
     {
      "city": "Quezon City",
      "country": "PH",
-     "n": 3201
+     "n": 3197
     },
     {
      "city": "S\u00e3o Paulo",
      "country": "BR",
-     "n": 2852
+     "n": 2834
     },
     {
      "city": "Melbourne",
      "country": "AU",
-     "n": 2628
+     "n": 2613
     }
    ],
    "tracks": {
-    "2cFTkx42FZd2ZrdmeEMesH": 21396056,
-    "6VMu6afp2ren85DwON6xxt": 7159010,
-    "6uV4dBjHZGzDzsGpBYMESI": 16357353,
-    "4koKk08EQRI31mYmT3pFLa": 17439937,
-    "1HFdhcKsoUsschtrRgZQg0": 4456071,
-    "1zV7wp9YIk93iPBt5H8p9q": 11146474,
-    "2uDHWI4FtmH75wXb3az2gV": 10170712,
-    "6D4iyiFyofBN9tm2QIbdFs": 14368315,
-    "1I7TOu1yoEKQDvUMvlRVxm": 14707931,
-    "40h5N9ARRkUTtecVVOzEkj": 3043158
+    "2cFTkx42FZd2ZrdmeEMesH": 21406269,
+    "6VMu6afp2ren85DwON6xxt": 7166990,
+    "6uV4dBjHZGzDzsGpBYMESI": 16362792,
+    "4koKk08EQRI31mYmT3pFLa": 17444402,
+    "1HFdhcKsoUsschtrRgZQg0": 4460414,
+    "1zV7wp9YIk93iPBt5H8p9q": 11150424,
+    "2uDHWI4FtmH75wXb3az2gV": 10173975,
+    "6D4iyiFyofBN9tm2QIbdFs": 14371493,
+    "1I7TOu1yoEKQDvUMvlRVxm": 14711274,
+    "40h5N9ARRkUTtecVVOzEkj": 3046513
    },
    "latest": {
     "name": "Don't Stop Believing (Piano Version - Instrumental)",
@@ -14524,7 +14524,7 @@
    "youtubeSubs": 9770
   }
  ],
- "updated": "2026-10-03T05:11+08:00",
+ "updated": "2026-10-03T09:42+08:00",
  "releases": {
   "58jbB5biKaLhxTlIIFgkNp": {
    "name": "Modern Hymns: He Reigns",
