@@ -14986,9 +14986,67 @@
    },
    "youtubeViews": 4951642,
    "youtubeSubs": 9930
+  },
+  {
+   "date": "2026-10-12",
+   "spotifyListeners": 310335,
+   "spotifyFollowers": 5831,
+   "cities": [
+    {
+     "city": "Singapore",
+     "country": "SG",
+     "n": 6131
+    },
+    {
+     "city": "Sydney",
+     "country": "AU",
+     "n": 3573
+    },
+    {
+     "city": "Quezon City",
+     "country": "PH",
+     "n": 3166
+    },
+    {
+     "city": "S\u00e3o Paulo",
+     "country": "BR",
+     "n": 2679
+    },
+    {
+     "city": "Melbourne",
+     "country": "AU",
+     "n": 2656
+    }
+   ],
+   "tracks": {
+    "2cFTkx42FZd2ZrdmeEMesH": 21481976,
+    "6VMu6afp2ren85DwON6xxt": 7231334,
+    "6uV4dBjHZGzDzsGpBYMESI": 16409497,
+    "1HFdhcKsoUsschtrRgZQg0": 4497275,
+    "4koKk08EQRI31mYmT3pFLa": 17481164,
+    "1zV7wp9YIk93iPBt5H8p9q": 11184318,
+    "6D4iyiFyofBN9tm2QIbdFs": 14397841,
+    "2uDHWI4FtmH75wXb3az2gV": 10199263,
+    "1I7TOu1yoEKQDvUMvlRVxm": 14734938,
+    "40h5N9ARRkUTtecVVOzEkj": 3073091
+   },
+   "latest": {
+    "name": "Don't Stop Believing (Piano Version - Instrumental)",
+    "date": "2026-10-02",
+    "type": "Single"
+   },
+   "counts": {
+    "albums": 42,
+    "singles": 35,
+    "discoveredOn": 100,
+    "featuredIn": 3,
+    "relatedArtists": 40
+   },
+   "youtubeViews": 4961868,
+   "youtubeSubs": 9940
   }
  ],
- "updated": "2026-10-11T19:15+08:00",
+ "updated": "2026-10-12T04:48+08:00",
  "releases": {
   "58jbB5biKaLhxTlIIFgkNp": {
    "name": "Modern Hymns: He Reigns",
