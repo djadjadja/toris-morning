@@ -15276,9 +15276,67 @@
    },
    "youtubeViews": 5011810,
    "youtubeSubs": 10000
+  },
+  {
+   "date": "2026-10-17",
+   "spotifyListeners": 311989,
+   "spotifyFollowers": 5841,
+   "cities": [
+    {
+     "city": "Singapore",
+     "country": "SG",
+     "n": 6137
+    },
+    {
+     "city": "Sydney",
+     "country": "AU",
+     "n": 3612
+    },
+    {
+     "city": "Quezon City",
+     "country": "PH",
+     "n": 3140
+    },
+    {
+     "city": "Melbourne",
+     "country": "AU",
+     "n": 2704
+    },
+    {
+     "city": "S\u00e3o Paulo",
+     "country": "BR",
+     "n": 2596
+    }
+   ],
+   "tracks": {
+    "2cFTkx42FZd2ZrdmeEMesH": 21517339,
+    "6VMu6afp2ren85DwON6xxt": 7260728,
+    "6uV4dBjHZGzDzsGpBYMESI": 16431282,
+    "1HFdhcKsoUsschtrRgZQg0": 4515644,
+    "4koKk08EQRI31mYmT3pFLa": 17498558,
+    "1zV7wp9YIk93iPBt5H8p9q": 11199883,
+    "6D4iyiFyofBN9tm2QIbdFs": 14410158,
+    "2uDHWI4FtmH75wXb3az2gV": 10211759,
+    "1I7TOu1yoEKQDvUMvlRVxm": 14746116,
+    "40h5N9ARRkUTtecVVOzEkj": 3085031
+   },
+   "latest": {
+    "name": "Beautiful Things (Piano Version - Instrumental)",
+    "date": "2026-10-16",
+    "type": "Single"
+   },
+   "counts": {
+    "albums": 42,
+    "singles": 36,
+    "discoveredOn": 100,
+    "featuredIn": 3,
+    "relatedArtists": 40
+   },
+   "youtubeViews": 5011810,
+   "youtubeSubs": 10000
   }
  ],
- "updated": "2026-10-16T23:15+08:00",
+ "updated": "2026-10-17T03:48+08:00",
  "releases": {
   "58jbB5biKaLhxTlIIFgkNp": {
    "name": "Modern Hymns: He Reigns",
