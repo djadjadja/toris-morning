@@ -71,6 +71,10 @@
   "4xYBZdE02UZR00nJ6VsnuL": {
    "name": "Cornerstone",
    "uri": "spotify:track:4xYBZdE02UZR00nJ6VsnuL"
+  },
+  "7rUX6wmXFcRJDRu5nLCxrV": {
+   "name": "King Of Kings",
+   "uri": "spotify:track:7rUX6wmXFcRJDRu5nLCxrV"
   }
  },
  "days": [
@@ -15338,7 +15342,7 @@
   {
    "date": "2026-10-18",
    "spotifyListeners": 313584,
-   "spotifyFollowers": 5843,
+   "spotifyFollowers": 5847,
    "cities": [
     {
      "city": "Singapore",
@@ -15376,7 +15380,8 @@
     "6D4iyiFyofBN9tm2QIbdFs": 14416178,
     "2uDHWI4FtmH75wXb3az2gV": 10217530,
     "1I7TOu1yoEKQDvUMvlRVxm": 14751840,
-    "40h5N9ARRkUTtecVVOzEkj": 3090623
+    "40h5N9ARRkUTtecVVOzEkj": 3090623,
+    "7rUX6wmXFcRJDRu5nLCxrV": 5360226
    },
    "latest": {
     "name": "Beautiful Things (Piano Version - Instrumental)",
@@ -15394,7 +15399,7 @@
    "youtubeSubs": 10000
   }
  ],
- "updated": "2026-10-18T08:38+08:00",
+ "updated": "2026-10-18T17:21+08:00",
  "releases": {
   "58jbB5biKaLhxTlIIFgkNp": {
    "name": "Modern Hymns: He Reigns",
