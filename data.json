@@ -15632,18 +15632,18 @@
   },
   {
    "date": "2026-10-23",
-   "spotifyListeners": 316239,
+   "spotifyListeners": 316270,
    "spotifyFollowers": 5854,
    "cities": [
     {
      "city": "Singapore",
      "country": "SG",
-     "n": 6243
+     "n": 6270
     },
     {
      "city": "Sydney",
      "country": "AU",
-     "n": 3626
+     "n": 3632
     },
     {
      "city": "Quezon City",
@@ -15653,25 +15653,25 @@
     {
      "city": "Melbourne",
      "country": "AU",
-     "n": 2747
+     "n": 2742
     },
     {
      "city": "Dallas",
      "country": "US",
-     "n": 2713
+     "n": 2717
     }
    ],
    "tracks": {
-    "2cFTkx42FZd2ZrdmeEMesH": 21569501,
-    "6VMu6afp2ren85DwON6xxt": 7307617,
-    "6uV4dBjHZGzDzsGpBYMESI": 16463502,
-    "1HFdhcKsoUsschtrRgZQg0": 4542743,
-    "4koKk08EQRI31mYmT3pFLa": 17524428,
-    "1zV7wp9YIk93iPBt5H8p9q": 11223144,
-    "2uDHWI4FtmH75wXb3az2gV": 10230204,
-    "6D4iyiFyofBN9tm2QIbdFs": 14427706,
-    "7rUX6wmXFcRJDRu5nLCxrV": 5372775,
-    "1I7TOu1yoEKQDvUMvlRVxm": 14762652
+    "2cFTkx42FZd2ZrdmeEMesH": 21578346,
+    "6VMu6afp2ren85DwON6xxt": 7315556,
+    "6uV4dBjHZGzDzsGpBYMESI": 16469448,
+    "1HFdhcKsoUsschtrRgZQg0": 4546975,
+    "4koKk08EQRI31mYmT3pFLa": 17528673,
+    "1zV7wp9YIk93iPBt5H8p9q": 11227212,
+    "2uDHWI4FtmH75wXb3az2gV": 10232956,
+    "6D4iyiFyofBN9tm2QIbdFs": 14430666,
+    "7rUX6wmXFcRJDRu5nLCxrV": 5375837,
+    "1I7TOu1yoEKQDvUMvlRVxm": 14765535
    },
    "latest": {
     "name": "Beautiful Things (Piano Version - Instrumental)",
@@ -15685,11 +15685,11 @@
     "featuredIn": 3,
     "relatedArtists": 40
    },
-   "youtubeViews": 5055697,
+   "youtubeViews": 5118070,
    "youtubeSubs": 10100
   }
  ],
- "updated": "2026-10-23T04:25+08:00",
+ "updated": "2026-10-23T09:11+08:00",
  "releases": {
   "58jbB5biKaLhxTlIIFgkNp": {
    "name": "Modern Hymns: He Reigns",
