@@ -15674,13 +15674,13 @@
     "1I7TOu1yoEKQDvUMvlRVxm": 14765535
    },
    "latest": {
-    "name": "Beautiful Things (Piano Version - Instrumental)",
-    "date": "2026-10-16",
+    "name": "Messy (Piano Version - Instrumental)",
+    "date": "2026-10-23",
     "type": "Single"
    },
    "counts": {
     "albums": 42,
-    "singles": 36,
+    "singles": 37,
     "discoveredOn": 100,
     "featuredIn": 3,
     "relatedArtists": 40
@@ -15689,7 +15689,7 @@
    "youtubeSubs": 10100
   }
  ],
- "updated": "2026-10-23T09:11+08:00",
+ "updated": "2026-10-23T17:45+08:00",
  "releases": {
   "58jbB5biKaLhxTlIIFgkNp": {
    "name": "Modern Hymns: He Reigns",
@@ -15940,6 +15940,12 @@
   "5NXaymKywOJDUu239drG5f": {
    "name": "Beautiful Things (Piano Version - Instrumental)",
    "date": "2026-10-16",
+   "type": "Single",
+   "tracks": 1
+  },
+  "2gg66MDZ3T3Ws1JogfOrtP": {
+   "name": "Messy (Piano Version - Instrumental)",
+   "date": "2026-10-23",
    "type": "Single",
    "tracks": 1
   }
