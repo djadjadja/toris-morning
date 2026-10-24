@@ -15690,23 +15690,23 @@
   },
   {
    "date": "2026-10-24",
-   "spotifyListeners": 316270,
+   "spotifyListeners": 315588,
    "spotifyFollowers": 5854,
    "cities": [
     {
      "city": "Singapore",
      "country": "SG",
-     "n": 6270
+     "n": 6282
     },
     {
      "city": "Sydney",
      "country": "AU",
-     "n": 3632
+     "n": 3627
     },
     {
      "city": "Quezon City",
      "country": "PH",
-     "n": 3217
+     "n": 3196
     },
     {
      "city": "Melbourne",
@@ -15716,20 +15716,20 @@
     {
      "city": "Dallas",
      "country": "US",
-     "n": 2717
+     "n": 2734
     }
    ],
    "tracks": {
-    "2cFTkx42FZd2ZrdmeEMesH": 21578346,
-    "6VMu6afp2ren85DwON6xxt": 7315556,
-    "6uV4dBjHZGzDzsGpBYMESI": 16469448,
-    "1HFdhcKsoUsschtrRgZQg0": 4546975,
-    "4koKk08EQRI31mYmT3pFLa": 17528673,
-    "1zV7wp9YIk93iPBt5H8p9q": 11227212,
-    "2uDHWI4FtmH75wXb3az2gV": 10232956,
-    "6D4iyiFyofBN9tm2QIbdFs": 14430666,
-    "7rUX6wmXFcRJDRu5nLCxrV": 5375837,
-    "1I7TOu1yoEKQDvUMvlRVxm": 14765535
+    "2cFTkx42FZd2ZrdmeEMesH": 21587297,
+    "6VMu6afp2ren85DwON6xxt": 7323957,
+    "6uV4dBjHZGzDzsGpBYMESI": 16475094,
+    "1HFdhcKsoUsschtrRgZQg0": 4551153,
+    "4koKk08EQRI31mYmT3pFLa": 17533340,
+    "1zV7wp9YIk93iPBt5H8p9q": 11231204,
+    "2uDHWI4FtmH75wXb3az2gV": 10235737,
+    "6D4iyiFyofBN9tm2QIbdFs": 14433543,
+    "7rUX6wmXFcRJDRu5nLCxrV": 5378801,
+    "1I7TOu1yoEKQDvUMvlRVxm": 14768328
    },
    "latest": {
     "name": "Messy (Piano Version - Instrumental)",
@@ -15747,7 +15747,7 @@
    "youtubeSubs": 10100
   }
  ],
- "updated": "2026-10-24T04:13+08:00",
+ "updated": "2026-10-24T09:20+08:00",
  "releases": {
   "58jbB5biKaLhxTlIIFgkNp": {
    "name": "Modern Hymns: He Reigns",
