@@ -15977,9 +15977,67 @@
    },
    "youtubeViews": 5187649,
    "youtubeSubs": 10100
+  },
+  {
+   "date": "2026-10-29",
+   "spotifyListeners": 311687,
+   "spotifyFollowers": 5869,
+   "cities": [
+    {
+     "city": "Singapore",
+     "country": "SG",
+     "n": 6263
+    },
+    {
+     "city": "Sydney",
+     "country": "AU",
+     "n": 3527
+    },
+    {
+     "city": "Quezon City",
+     "country": "PH",
+     "n": 3175
+    },
+    {
+     "city": "Dallas",
+     "country": "US",
+     "n": 2752
+    },
+    {
+     "city": "Melbourne",
+     "country": "AU",
+     "n": 2660
+    }
+   ],
+   "tracks": {
+    "2cFTkx42FZd2ZrdmeEMesH": 21628905,
+    "6VMu6afp2ren85DwON6xxt": 7359908,
+    "6uV4dBjHZGzDzsGpBYMESI": 16501098,
+    "4koKk08EQRI31mYmT3pFLa": 17553568,
+    "1HFdhcKsoUsschtrRgZQg0": 4570627,
+    "1zV7wp9YIk93iPBt5H8p9q": 11249602,
+    "2uDHWI4FtmH75wXb3az2gV": 10249555,
+    "6D4iyiFyofBN9tm2QIbdFs": 14446933,
+    "7rUX6wmXFcRJDRu5nLCxrV": 5392015,
+    "1I7TOu1yoEKQDvUMvlRVxm": 14781042
+   },
+   "latest": {
+    "name": "Messy (Piano Version - Instrumental)",
+    "date": "2026-10-23",
+    "type": "Single"
+   },
+   "counts": {
+    "albums": 42,
+    "singles": 37,
+    "discoveredOn": 100,
+    "featuredIn": 2,
+    "relatedArtists": 40
+   },
+   "youtubeViews": 5187649,
+   "youtubeSubs": 10200
   }
  ],
- "updated": "2026-10-28T19:01+08:00",
+ "updated": "2026-10-29T05:30+08:00",
  "releases": {
   "58jbB5biKaLhxTlIIFgkNp": {
    "name": "Modern Hymns: He Reigns",
