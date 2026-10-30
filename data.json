@@ -16080,13 +16080,13 @@
     "1I7TOu1yoEKQDvUMvlRVxm": 14783870
    },
    "latest": {
-    "name": "Messy (Piano Version - Instrumental)",
-    "date": "2026-10-23",
+    "name": "Dracula (Piano Version - Instrumental)",
+    "date": "2026-10-30",
     "type": "Single"
    },
    "counts": {
     "albums": 42,
-    "singles": 37,
+    "singles": 38,
     "discoveredOn": 100,
     "featuredIn": 2,
     "relatedArtists": 40
@@ -16095,7 +16095,7 @@
    "youtubeSubs": 10200
   }
  ],
- "updated": "2026-10-30T10:24+08:00",
+ "updated": "2026-10-30T19:12+08:00",
  "releases": {
   "58jbB5biKaLhxTlIIFgkNp": {
    "name": "Modern Hymns: He Reigns",
@@ -16352,6 +16352,12 @@
   "2gg66MDZ3T3Ws1JogfOrtP": {
    "name": "Messy (Piano Version - Instrumental)",
    "date": "2026-10-23",
+   "type": "Single",
+   "tracks": 1
+  },
+  "5k2OeG1ZSGjpQgbyyRIjtL": {
+   "name": "Dracula (Piano Version - Instrumental)",
+   "date": "2026-10-30",
    "type": "Single",
    "tracks": 1
   }
