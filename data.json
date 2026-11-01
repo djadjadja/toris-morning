@@ -16209,9 +16209,67 @@
    },
    "youtubeViews": 5240447,
    "youtubeSubs": 10200
+  },
+  {
+   "date": "2026-11-02",
+   "spotifyListeners": 312953,
+   "spotifyFollowers": 5879,
+   "cities": [
+    {
+     "city": "Singapore",
+     "country": "SG",
+     "n": 6302
+    },
+    {
+     "city": "Sydney",
+     "country": "AU",
+     "n": 3524
+    },
+    {
+     "city": "Quezon City",
+     "country": "PH",
+     "n": 3178
+    },
+    {
+     "city": "Dallas",
+     "country": "US",
+     "n": 2770
+    },
+    {
+     "city": "S\u00e3o Paulo",
+     "country": "BR",
+     "n": 2664
+    }
+   ],
+   "tracks": {
+    "2cFTkx42FZd2ZrdmeEMesH": 21654047,
+    "6VMu6afp2ren85DwON6xxt": 7382275,
+    "6uV4dBjHZGzDzsGpBYMESI": 16516289,
+    "4koKk08EQRI31mYmT3pFLa": 17566303,
+    "1HFdhcKsoUsschtrRgZQg0": 4583848,
+    "1zV7wp9YIk93iPBt5H8p9q": 11261591,
+    "6D4iyiFyofBN9tm2QIbdFs": 14455520,
+    "2uDHWI4FtmH75wXb3az2gV": 10257209,
+    "7rUX6wmXFcRJDRu5nLCxrV": 5401156,
+    "1I7TOu1yoEKQDvUMvlRVxm": 14789438
+   },
+   "latest": {
+    "name": "Dracula (Piano Version - Instrumental)",
+    "date": "2026-10-30",
+    "type": "Single"
+   },
+   "counts": {
+    "albums": 42,
+    "singles": 38,
+    "discoveredOn": 100,
+    "featuredIn": 3,
+    "relatedArtists": 40
+   },
+   "youtubeViews": 5240447,
+   "youtubeSubs": 10200
   }
  ],
- "updated": "2026-11-01T19:42+08:00",
+ "updated": "2026-11-02T04:57+08:00",
  "releases": {
   "58jbB5biKaLhxTlIIFgkNp": {
    "name": "Modern Hymns: He Reigns",
