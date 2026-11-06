@@ -16445,7 +16445,7 @@
   {
    "date": "2026-11-06",
    "spotifyListeners": 315092,
-   "spotifyFollowers": 5886,
+   "spotifyFollowers": 5889,
    "cities": [
     {
      "city": "Singapore",
@@ -16486,13 +16486,13 @@
     "1I7TOu1yoEKQDvUMvlRVxm": 14803313
    },
    "latest": {
-    "name": "Dracula (Piano Version - Instrumental)",
-    "date": "2026-10-30",
+    "name": "Fix You (Piano Version - Instrumental)",
+    "date": "2026-11-06",
     "type": "Single"
    },
    "counts": {
     "albums": 42,
-    "singles": 38,
+    "singles": 39,
     "discoveredOn": 100,
     "featuredIn": 2,
     "relatedArtists": 40
@@ -16501,7 +16501,7 @@
    "youtubeSubs": 10300
   }
  ],
- "updated": "2026-11-06T11:09+08:00",
+ "updated": "2026-11-06T20:44+08:00",
  "releases": {
   "58jbB5biKaLhxTlIIFgkNp": {
    "name": "Modern Hymns: He Reigns",
@@ -16764,6 +16764,12 @@
   "5k2OeG1ZSGjpQgbyyRIjtL": {
    "name": "Dracula (Piano Version - Instrumental)",
    "date": "2026-10-30",
+   "type": "Single",
+   "tracks": 1
+  },
+  "5Nfoa4Tven0UXulT0l8jgT": {
+   "name": "Fix You (Piano Version - Instrumental)",
+   "date": "2026-11-06",
    "type": "Single",
    "tracks": 1
   }
