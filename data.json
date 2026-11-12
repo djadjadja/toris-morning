@@ -16792,46 +16792,46 @@
   },
   {
    "date": "2026-11-12",
-   "spotifyListeners": 317645,
+   "spotifyListeners": 317178,
    "spotifyFollowers": 5896,
    "cities": [
     {
      "city": "Singapore",
      "country": "SG",
-     "n": 6250
+     "n": 6232
     },
     {
      "city": "Sydney",
      "country": "AU",
-     "n": 3573
+     "n": 3556
     },
     {
      "city": "Quezon City",
      "country": "PH",
-     "n": 3145
+     "n": 3118
     },
     {
      "city": "S\u00e3o Paulo",
      "country": "BR",
-     "n": 2883
+     "n": 2905
     },
     {
      "city": "Dallas",
      "country": "US",
-     "n": 2810
+     "n": 2836
     }
    ],
    "tracks": {
-    "2cFTkx42FZd2ZrdmeEMesH": 21744829,
-    "6VMu6afp2ren85DwON6xxt": 7451066,
-    "6uV4dBjHZGzDzsGpBYMESI": 16565571,
-    "1HFdhcKsoUsschtrRgZQg0": 4626794,
-    "4koKk08EQRI31mYmT3pFLa": 17608234,
-    "1zV7wp9YIk93iPBt5H8p9q": 11299481,
-    "2uDHWI4FtmH75wXb3az2gV": 10290911,
-    "6D4iyiFyofBN9tm2QIbdFs": 14482878,
-    "7rUX6wmXFcRJDRu5nLCxrV": 5428888,
-    "1I7TOu1yoEKQDvUMvlRVxm": 14816063
+    "2cFTkx42FZd2ZrdmeEMesH": 21753441,
+    "6VMu6afp2ren85DwON6xxt": 7457461,
+    "6uV4dBjHZGzDzsGpBYMESI": 16570803,
+    "1HFdhcKsoUsschtrRgZQg0": 4631193,
+    "4koKk08EQRI31mYmT3pFLa": 17612380,
+    "1zV7wp9YIk93iPBt5H8p9q": 11303415,
+    "2uDHWI4FtmH75wXb3az2gV": 10294281,
+    "6D4iyiFyofBN9tm2QIbdFs": 14486024,
+    "7rUX6wmXFcRJDRu5nLCxrV": 5431862,
+    "1I7TOu1yoEKQDvUMvlRVxm": 14818858
    },
    "latest": {
     "name": "Fix You (Piano Version - Instrumental)",
@@ -16849,7 +16849,7 @@
    "youtubeSubs": 10300
   }
  ],
- "updated": "2026-11-12T07:20+08:00",
+ "updated": "2026-11-12T11:35+08:00",
  "releases": {
   "58jbB5biKaLhxTlIIFgkNp": {
    "name": "Modern Hymns: He Reigns",
