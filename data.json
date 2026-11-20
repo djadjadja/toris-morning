@@ -17268,7 +17268,7 @@
   {
    "date": "2026-11-20",
    "spotifyListeners": 314888,
-   "spotifyFollowers": 5921,
+   "spotifyFollowers": 5926,
    "cities": [
     {
      "city": "Singapore",
@@ -17309,8 +17309,8 @@
     "1I7TOu1yoEKQDvUMvlRVxm": 14840827
    },
    "latest": {
-    "name": "No Broke Boys (Piano Version - Instrumental)",
-    "date": "2026-11-13",
+    "name": "Both Sides Now (Piano Version - Instrumental)",
+    "date": "2026-11-20",
     "type": "Single"
    },
    "next": {
@@ -17320,7 +17320,7 @@
    },
    "counts": {
     "albums": 42,
-    "singles": 40,
+    "singles": 41,
     "discoveredOn": 100,
     "featuredIn": 1,
     "relatedArtists": 40
@@ -17329,7 +17329,7 @@
    "youtubeSubs": 10500
   }
  ],
- "updated": "2026-11-20T11:51+08:00",
+ "updated": "2026-11-20T21:51+08:00",
  "releases": {
   "58jbB5biKaLhxTlIIFgkNp": {
    "name": "Modern Hymns: He Reigns",
@@ -17604,6 +17604,12 @@
   "3WV4fgBrsbvDPFltZEjAMV": {
    "name": "No Broke Boys (Piano Version - Instrumental)",
    "date": "2026-11-13",
+   "type": "Single",
+   "tracks": 1
+  },
+  "6JgiLxX0Xslqk95mJXsj4d": {
+   "name": "Both Sides Now (Piano Version - Instrumental)",
+   "date": "2026-11-20",
    "type": "Single",
    "tracks": 1
   }
