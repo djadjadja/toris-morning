@@ -17517,9 +17517,72 @@
    },
    "youtubeViews": 5532875,
    "youtubeSubs": 10500
+  },
+  {
+   "date": "2026-11-24",
+   "spotifyListeners": 310943,
+   "spotifyFollowers": 5934,
+   "cities": [
+    {
+     "city": "Singapore",
+     "country": "SG",
+     "n": 5865
+    },
+    {
+     "city": "Sydney",
+     "country": "AU",
+     "n": 3455
+    },
+    {
+     "city": "S\u00e3o Paulo",
+     "country": "BR",
+     "n": 2973
+    },
+    {
+     "city": "Quezon City",
+     "country": "PH",
+     "n": 2914
+    },
+    {
+     "city": "Dallas",
+     "country": "US",
+     "n": 2676
+    }
+   ],
+   "tracks": {
+    "2cFTkx42FZd2ZrdmeEMesH": 21849175,
+    "6VMu6afp2ren85DwON6xxt": 7537661,
+    "6uV4dBjHZGzDzsGpBYMESI": 16629350,
+    "1HFdhcKsoUsschtrRgZQg0": 4679204,
+    "4koKk08EQRI31mYmT3pFLa": 17661405,
+    "1zV7wp9YIk93iPBt5H8p9q": 11346375,
+    "2uDHWI4FtmH75wXb3az2gV": 10332085,
+    "6D4iyiFyofBN9tm2QIbdFs": 14518671,
+    "7rUX6wmXFcRJDRu5nLCxrV": 5464959,
+    "1I7TOu1yoEKQDvUMvlRVxm": 14850093
+   },
+   "latest": {
+    "name": "Both Sides Now (Piano Version - Instrumental)",
+    "date": "2026-11-20",
+    "type": "Single"
+   },
+   "next": {
+    "name": "The Sleep Project (10th Anniversary Edition)",
+    "date": "2026-11-27",
+    "type": "Album"
+   },
+   "counts": {
+    "albums": 42,
+    "singles": 41,
+    "discoveredOn": 100,
+    "featuredIn": 2,
+    "relatedArtists": 40
+   },
+   "youtubeViews": 5558868,
+   "youtubeSubs": 10500
   }
  ],
- "updated": "2026-11-23T23:42+08:00",
+ "updated": "2026-11-24T11:10+08:00",
  "releases": {
   "58jbB5biKaLhxTlIIFgkNp": {
    "name": "Modern Hymns: He Reigns",
